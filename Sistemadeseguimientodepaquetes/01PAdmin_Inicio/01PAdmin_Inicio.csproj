@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9F14E0BF-2BB0-474F-A78C-87968B12F421}</ProjectGuid>
+    <ProjectGuid>{7E709984-4E0E-4000-A84A-71C04205650B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_01Presentacion</RootNamespace>
-    <AssemblyName>01Presentacion</AssemblyName>
+    <RootNamespace>_01PAdmin_Inicio</RootNamespace>
+    <AssemblyName>01PAdmin_Inicio</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -54,6 +54,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -75,16 +78,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\02LogicaNegocios\02LogicaNegocios.csproj">
-      <Project>{0d81b751-39d8-4529-8022-26f722d0cca8}</Project>
-      <Name>02LogicaNegocios</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\04Entidades\04Entidades.csproj">
-      <Project>{491d129d-c053-44d9-8279-56f6e001fa90}</Project>
-      <Name>04Entidades</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
