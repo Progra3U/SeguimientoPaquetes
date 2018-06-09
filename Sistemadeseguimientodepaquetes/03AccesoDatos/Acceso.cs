@@ -12,7 +12,7 @@ namespace _03AccesoDatos
     {
         #region Atributos
 
-        private string cadenaConexion; //pendiente el string de conexion a db
+        private string cadenaConexion = Properties.Settings.Default.Conexion;
         private SqlConnection objConexion;
 
         #endregion

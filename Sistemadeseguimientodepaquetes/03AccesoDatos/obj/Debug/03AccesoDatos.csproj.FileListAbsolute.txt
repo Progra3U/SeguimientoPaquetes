@@ -1,7 +1,8 @@
-C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\03AccesoDatos\bin\Debug\03AccesoDatos.dll
-C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\03AccesoDatos\bin\Debug\03AccesoDatos.pdb
-C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\03AccesoDatos\bin\Debug\04Entidades.dll
-C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\03AccesoDatos\bin\Debug\04Entidades.pdb
-C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\03AccesoDatos\obj\Debug\03AccesoDatos.csprojResolveAssemblyReference.cache
-C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\03AccesoDatos\obj\Debug\03AccesoDatos.dll
-C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\03AccesoDatos\obj\Debug\03AccesoDatos.pdb
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\03AccesoDatos\bin\Debug\03AccesoDatos.dll
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\03AccesoDatos\bin\Debug\03AccesoDatos.pdb
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\03AccesoDatos\bin\Debug\04Entidades.dll
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\03AccesoDatos\bin\Debug\04Entidades.pdb
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\03AccesoDatos\obj\Debug\03AccesoDatos.csprojResolveAssemblyReference.cache
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\03AccesoDatos\obj\Debug\03AccesoDatos.dll
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\03AccesoDatos\obj\Debug\03AccesoDatos.pdb
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\03AccesoDatos\bin\Debug\03AccesoDatos.dll.config

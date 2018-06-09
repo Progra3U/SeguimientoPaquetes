@@ -1,1 +1,21 @@
-C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\01Presentacion.exe.config
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\01Presentacion.exe.config
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\01Presentacion.exe
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\01Presentacion.pdb
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\02LogicadeNegocios.dll
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\04Entidades.dll
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\02LogicadeNegocios.pdb
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\04Entidades.pdb
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.csprojResolveAssemblyReference.cache
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.FormLogin.resources
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Properties.Resources.resources
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.csproj.GenerateResource.Cache
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.exe
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.pdb
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador.resources
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Usuario.resources
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Cliente.resources
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Cliente.resources
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Inicio.resources
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Pedido.resources
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Producto.resources
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Usuario.resources
