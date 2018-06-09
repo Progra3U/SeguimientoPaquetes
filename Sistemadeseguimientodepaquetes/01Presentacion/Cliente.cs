@@ -15,7 +15,7 @@ namespace _01Presentacion
         public Cliente(string nombre)
         {
             InitializeComponent();
-            lblCliente.Text = nombre;
+            lblTipoUsuario.Text = nombre;
         }
     }
 }

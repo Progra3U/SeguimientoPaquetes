@@ -52,7 +52,7 @@
             // 
             // BarraPrincipal
             // 
-            this.BarraPrincipal.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.BarraPrincipal.BackColor = System.Drawing.Color.LightSkyBlue;
             this.BarraPrincipal.Controls.Add(this.icon);
             this.BarraPrincipal.Controls.Add(this.btnRestaurar);
             this.BarraPrincipal.Controls.Add(this.btnMinimizar);
@@ -149,9 +149,9 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.LightSeaGreen;
+            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
