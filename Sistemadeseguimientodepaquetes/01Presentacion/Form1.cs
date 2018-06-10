@@ -14,6 +14,10 @@ namespace _01Presentacion
 {
     public partial class FormLogin : Form
     {
+        //referenciamos las librerias de Entidades y Logica de negocions
+        _04Entidades.SQLSentencia objE = new _04Entidades.SQLSentencia();
+        _02LogicadeNegocios.Logica objLN = new _02LogicadeNegocios.Logica();
+
         public FormLogin()
         {
             InitializeComponent();
@@ -63,7 +67,7 @@ namespace _01Presentacion
         #endregion
 
         #region CodigoLoginELIMINARPOSTERIORMENTE
-        SqlConnection con = new SqlConnection(@"Server=JPRR1ER\SQLSERVER;Database=SeguimientoPaquetesTest;Trusted_Connection=True;");
+        /*SqlConnection con = new SqlConnection(@"Server=JPRR1ER\SQLSERVER;Database=SeguimientoPaquetesTest;Trusted_Connection=True;");
         public void login(string usuario, string password)
         {
             try
@@ -105,12 +109,37 @@ namespace _01Presentacion
             {
                 con.Close();
             }
-        }
+        }*/
         #endregion
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            login(this.txtUsuario.Text, this.txtPassword.Text);
+            DataTable dt = new DataTable();
+            objE.user = txtUsuario.Text;
+            objE.password = txtPassword.Text;
+            dt = objLN.LNlogin(objE);
+
+
+            if (dt.Rows.Count == 1)
+            {
+                this.Hide();
+                if (dt.Rows[0][2].ToString() == "ADMIN")
+                {
+                    new Administrador(dt.Rows[0][0].ToString()).Show();
+                }
+                else if (dt.Rows[0][2].ToString() == "USER")
+                {
+                    new Usuario(dt.Rows[0][0].ToString()).Show();
+                }
+                else if (dt.Rows[0][2].ToString() == "CLIENT")
+                {
+                    new Cliente(dt.Rows[0][0].ToString()).Show();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Usuario o contraseña Invalidos");
+            }
         }
     }
 }

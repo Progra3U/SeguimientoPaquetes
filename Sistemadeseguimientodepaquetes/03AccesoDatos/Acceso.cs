@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient; //namespace para ADO.NET
 using _04Entidades; //namespace que referencia a capa de entidades
+using System.Data;
 
 namespace _03AccesoDatos
 {
@@ -16,6 +17,7 @@ namespace _03AccesoDatos
         private SqlConnection objConexion;
 
         #endregion
+
         #region Constructor
 
         public Acceso()
@@ -37,6 +39,7 @@ namespace _03AccesoDatos
         }
 
         #endregion
+
         #region Metodos
 
         private void ABRIR() //metodo para verificar si la conexion esta cerrada y abrirla
@@ -75,6 +78,21 @@ namespace _03AccesoDatos
             }
         }
 
+        #endregion
+
+        #region Login
+        public DataTable ADLogin(_04Entidades.SQLSentencia obj)
+        {
+            SqlCommand cmd = new SqlCommand("nombreprocesotabla", objConexion);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("nombreprocesoVariable", obj.user);
+            cmd.Parameters.AddWithValue("nombreprocesoVariable", obj.password);
+            cmd.Parameters.AddWithValue("nombreprocesoVariable", obj.tipouser);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable datatable = new DataTable();
+            sda.Fill(datatable);
+            return datatable;
+        }
         #endregion
     }
 }

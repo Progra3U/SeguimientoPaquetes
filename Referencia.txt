@@ -1,0 +1,18 @@
+Crear LOGIN en N capas + SQL Server - Visual Studio C#
+https://www.youtube.com/watch?v=029mcnErUj8
+
+
+Use nombre basedatos
+
+Create table USUARIOS
+USUARIO nvarchar(30),
+PASSWORD nvarchar(15)
+TIPO_USUARIO nvarchar(15)
+Go
+
+Create proc Login
+@Usuario nvarchar(30),
+@Password nvarchar(15),
+@Tipo_Usuario nvarchar(15)
+Go
+
