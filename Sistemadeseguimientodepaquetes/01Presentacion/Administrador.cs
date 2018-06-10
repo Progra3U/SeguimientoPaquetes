@@ -86,8 +86,6 @@ namespace _01Presentacion
 
         #region Botones inicio_productos_pedidos_clientes_Usuarios
 
-        #endregion
-
         private void btnProductos_Click(object sender, EventArgs e)
         {
             AbrirFormularioHijo(new Administrador_Producto());
@@ -112,5 +110,7 @@ namespace _01Presentacion
         {
             AbrirFormularioHijo(new Administrador_Usuario());
         }
+        #endregion
+
     }
 }
