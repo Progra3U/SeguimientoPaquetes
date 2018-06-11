@@ -11,9 +11,9 @@ namespace _04Entidades
         private string peticion;
 
         #region Login
-        public string user { get; set; }
-        public string password { get; set; }
-        public string tipouser { get; set; }
+        public string iduser { get; set; }
+        public string password { get; set; }      
+        public string typeuser { get; set; }
         #endregion
 
         public SQLSentencia()

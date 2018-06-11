@@ -16,6 +16,7 @@ namespace _03AccesoDatos
         private string cadenaConexion = Properties.Settings.Default.Conexion;
         private SqlConnection objConexion;
 
+
         #endregion
 
         #region Constructor
@@ -81,13 +82,16 @@ namespace _03AccesoDatos
         #endregion
 
         #region Login
-        public DataTable ADLogin(_04Entidades.SQLSentencia obj)
+        public DataTable ADLogin(_04Entidades.SQLSentencia objE)
         {
-            SqlCommand cmd = new SqlCommand("nombreprocesotabla", objConexion);
+            SqlCommand cmd = new SqlCommand("LOGIN", objConexion);
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("nombreprocesoVariable", obj.user);
-            cmd.Parameters.AddWithValue("nombreprocesoVariable", obj.password);
-            cmd.Parameters.AddWithValue("nombreprocesoVariable", obj.tipouser);
+            cmd.Parameters.AddWithValue("@IDUSER", objE.iduser);
+            cmd.Parameters.AddWithValue("@PASS", objE.password);
+            cmd.Parameters.AddWithValue("@TIPO_USER", objE.typeuser);
+            //cmd.Parameters.AddWithValue("@NOMBREUSER", objE.nameUser);
+            //cmd.Parameters.AddWithValue("@TIPO_USER", objE.typeuser);
+            //cmd.Parameters.AddWithValue("@ESTADO_USER", objE.stateUser);
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             DataTable datatable = new DataTable();
             sda.Fill(datatable);

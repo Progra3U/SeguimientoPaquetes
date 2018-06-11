@@ -46,3 +46,7 @@ C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquet
 C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Usuario_Inicio.resources
 C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Usuario_Pedido.resources
 C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Usuario_Producto.resources
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\03AccesoDatos.dll
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\03AccesoDatos.pdb
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\EntityFramework.dll
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\EntityFramework.xml

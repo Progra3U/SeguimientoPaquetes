@@ -26,8 +26,8 @@ namespace _03AccesoDatos.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=JPRR1ER\\SQLSERVER;Initial Catalog=SeguimientoPaquetesTest;User ID=sa;" +
-            "Password=123456")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=JPRR1ER\\SQLSERVER;Initial Catalog=SeguimientoPaquetes;User ID=sa;Pass" +
+            "word=123456")]
         public string Conexion {
             get {
                 return ((string)(this["Conexion"]));

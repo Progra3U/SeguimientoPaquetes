@@ -7,3 +7,14 @@ C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaque
 C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\02LogicadeNegocios\obj\Debug\02LogicadeNegocios.csprojResolveAssemblyReference.cache
 C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\02LogicadeNegocios\obj\Debug\02LogicadeNegocios.dll
 C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\02LogicadeNegocios\obj\Debug\02LogicadeNegocios.pdb
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\02LogicadeNegocios\bin\Debug\02LogicadeNegocios.dll
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\02LogicadeNegocios\bin\Debug\02LogicadeNegocios.pdb
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\02LogicadeNegocios\bin\Debug\03AccesoDatos.dll
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\02LogicadeNegocios\bin\Debug\04Entidades.dll
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\02LogicadeNegocios\bin\Debug\03AccesoDatos.pdb
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\02LogicadeNegocios\bin\Debug\04Entidades.pdb
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\02LogicadeNegocios\obj\Debug\02LogicadeNegocios.csprojResolveAssemblyReference.cache
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\02LogicadeNegocios\obj\Debug\02LogicadeNegocios.dll
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\02LogicadeNegocios\obj\Debug\02LogicadeNegocios.pdb
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\02LogicadeNegocios\bin\Debug\EntityFramework.dll
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\02LogicadeNegocios\bin\Debug\EntityFramework.xml

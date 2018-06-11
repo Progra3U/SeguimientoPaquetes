@@ -115,8 +115,9 @@ namespace _01Presentacion
         private void btnLogin_Click(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            objE.user = txtUsuario.Text;
+            objE.iduser = txtUsuario.Text;
             objE.password = txtPassword.Text;
+            objE.typeuser = comboTipo.Text;
             dt = objLN.LNlogin(objE);
 
 

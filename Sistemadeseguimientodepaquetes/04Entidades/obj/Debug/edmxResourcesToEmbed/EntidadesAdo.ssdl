@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SeguimientoPaquetesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DESTINO">
+    <Key>
+      <PropertyRef Name="IDDESTINO" />
+    </Key>
+    <Property Name="IDDESTINO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PAIS" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="CIUDAD" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="INPUESTO" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ENVIO">
+    <Key>
+      <PropertyRef Name="IDENVIO" />
+    </Key>
+    <Property Name="IDENVIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESC_ENVIO" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ESTADO">
+    <Key>
+      <PropertyRef Name="IDESTADO" />
+    </Key>
+    <Property Name="IDESTADO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESC_ESTADO" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ORIGEN">
+    <Key>
+      <PropertyRef Name="IDORIGEN" />
+    </Key>
+    <Property Name="IDORIGEN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PAIS" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="CIUDAD" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PAGO">
+    <Key>
+      <PropertyRef Name="IDPAGO" />
+    </Key>
+    <Property Name="IDPAGO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESC_PAGO" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PEDIDOS">
+    <Key>
+      <PropertyRef Name="IDPEDIDO" />
+      <PropertyRef Name="IDUSUARIO" />
+      <PropertyRef Name="IDORIGEN" />
+      <PropertyRef Name="IDDESTINO" />
+      <PropertyRef Name="IDPAGO" />
+      <PropertyRef Name="IDENVIO" />
+      <PropertyRef Name="IDESTADO" />
+    </Key>
+    <Property Name="IDPEDIDO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDUSUARIO" Type="int" Nullable="false" />
+    <Property Name="IDORIGEN" Type="int" Nullable="false" />
+    <Property Name="IDDESTINO" Type="int" Nullable="false" />
+    <Property Name="IDPAGO" Type="int" Nullable="false" />
+    <Property Name="IDENVIO" Type="int" Nullable="false" />
+    <Property Name="IDESTADO" Type="int" Nullable="false" />
+    <Property Name="TOTAL" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="USUARIOS">
+    <Key>
+      <PropertyRef Name="IDUSUARIO" />
+    </Key>
+    <Property Name="IDUSUARIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBREUSER" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="ALIASUSER" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="PASSWORD" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="TIPO_USUARIO" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="ESTADO_USUARIO" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_PEDIDOS_DESTINO">
+    <End Role="DESTINO" Type="Self.DESTINO" Multiplicity="1" />
+    <End Role="PEDIDOS" Type="Self.PEDIDOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DESTINO">
+        <PropertyRef Name="IDDESTINO" />
+      </Principal>
+      <Dependent Role="PEDIDOS">
+        <PropertyRef Name="IDDESTINO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PEDIDOS_ENVIO">
+    <End Role="ENVIO" Type="Self.ENVIO" Multiplicity="1" />
+    <End Role="PEDIDOS" Type="Self.PEDIDOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ENVIO">
+        <PropertyRef Name="IDENVIO" />
+      </Principal>
+      <Dependent Role="PEDIDOS">
+        <PropertyRef Name="IDENVIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PEDIDOS_ESTADO">
+    <End Role="ESTADO" Type="Self.ESTADO" Multiplicity="1" />
+    <End Role="PEDIDOS" Type="Self.PEDIDOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADO">
+        <PropertyRef Name="IDESTADO" />
+      </Principal>
+      <Dependent Role="PEDIDOS">
+        <PropertyRef Name="IDESTADO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PEDIDOS_ORIGEN">
+    <End Role="ORIGEN" Type="Self.ORIGEN" Multiplicity="1" />
+    <End Role="PEDIDOS" Type="Self.PEDIDOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ORIGEN">
+        <PropertyRef Name="IDORIGEN" />
+      </Principal>
+      <Dependent Role="PEDIDOS">
+        <PropertyRef Name="IDORIGEN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PEDIDOS_PAGO">
+    <End Role="PAGO" Type="Self.PAGO" Multiplicity="1" />
+    <End Role="PEDIDOS" Type="Self.PEDIDOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PAGO">
+        <PropertyRef Name="IDPAGO" />
+      </Principal>
+      <Dependent Role="PEDIDOS">
+        <PropertyRef Name="IDPAGO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PEDIDOS_PEDIDOS">
+    <End Role="PEDIDOS" Type="Self.PEDIDOS" Multiplicity="1" />
+    <End Role="PEDIDOS1" Type="Self.PEDIDOS" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="PEDIDOS">
+        <PropertyRef Name="IDPEDIDO" />
+        <PropertyRef Name="IDUSUARIO" />
+        <PropertyRef Name="IDORIGEN" />
+        <PropertyRef Name="IDDESTINO" />
+        <PropertyRef Name="IDPAGO" />
+        <PropertyRef Name="IDENVIO" />
+        <PropertyRef Name="IDESTADO" />
+      </Principal>
+      <Dependent Role="PEDIDOS1">
+        <PropertyRef Name="IDPEDIDO" />
+        <PropertyRef Name="IDUSUARIO" />
+        <PropertyRef Name="IDORIGEN" />
+        <PropertyRef Name="IDDESTINO" />
+        <PropertyRef Name="IDPAGO" />
+        <PropertyRef Name="IDENVIO" />
+        <PropertyRef Name="IDESTADO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SeguimientoPaquetesModelStoreContainer">
+    <EntitySet Name="DESTINO" EntityType="Self.DESTINO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ENVIO" EntityType="Self.ENVIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ESTADO" EntityType="Self.ESTADO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ORIGEN" EntityType="Self.ORIGEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PAGO" EntityType="Self.PAGO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PEDIDOS" EntityType="Self.PEDIDOS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USUARIOS" EntityType="Self.USUARIOS" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_PEDIDOS_DESTINO" Association="Self.FK_PEDIDOS_DESTINO">
+      <End Role="DESTINO" EntitySet="DESTINO" />
+      <End Role="PEDIDOS" EntitySet="PEDIDOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PEDIDOS_ENVIO" Association="Self.FK_PEDIDOS_ENVIO">
+      <End Role="ENVIO" EntitySet="ENVIO" />
+      <End Role="PEDIDOS" EntitySet="PEDIDOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PEDIDOS_ESTADO" Association="Self.FK_PEDIDOS_ESTADO">
+      <End Role="ESTADO" EntitySet="ESTADO" />
+      <End Role="PEDIDOS" EntitySet="PEDIDOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PEDIDOS_ORIGEN" Association="Self.FK_PEDIDOS_ORIGEN">
+      <End Role="ORIGEN" EntitySet="ORIGEN" />
+      <End Role="PEDIDOS" EntitySet="PEDIDOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PEDIDOS_PAGO" Association="Self.FK_PEDIDOS_PAGO">
+      <End Role="PAGO" EntitySet="PAGO" />
+      <End Role="PEDIDOS" EntitySet="PEDIDOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PEDIDOS_PEDIDOS" Association="Self.FK_PEDIDOS_PEDIDOS">
+      <End Role="PEDIDOS" EntitySet="PEDIDOS" />
+      <End Role="PEDIDOS1" EntitySet="PEDIDOS" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
