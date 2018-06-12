@@ -11,7 +11,7 @@ namespace _02LogicadeNegocios
 {
     public class Logica
     {
-        #region Login
+        #region ProcesoLogin
         _03AccesoDatos.Acceso objAD = new _03AccesoDatos.Acceso();
 
         public DataTable LNlogin(_04Entidades.SQLSentencia objE)

@@ -1,0 +1,30 @@
+use SeguimientoPaquetes
+--insert into ESTADO values ('PROCESANDO'),('FLETE'),('CASI LLEGANDO'),('EN ADUANA'),('RUTA A LA TIENDA'),('LISTO PARA RETIRAR')
+--SELECT * FROM ESTADO 
+--INSERT INTO PAGO VALUES ('TARJETA CREDITO'),('TARJETA DEBITO'),('EFECTIVO')
+--SELECT * FROM PAGO
+--INSERT INTO ENVIO VALUES ('TERRESTRE'),('MARITIMO'),('AEREO')
+--SELECT * FROM ENVIO
+--INSERT INTO DESTINO VALUES ('Alabama (AL)','Montgomery',200),('Alaska (AK)','Juneau',200),('Arizona (AZ)','Phoenix',200),
+--						('Arkansas (AR)','Little Rock',200),('California (CA)','Sacramento',200),('Carolina del Norte (NC)','Raleigh',200),
+--						('Carolina del Sur (SC)','Columbia',300),('Colorado (CO)','Denver',300),('Connecticut (CT)','Hartford',300),
+--						('Dakota del Norte (ND)','Bismarck',400),('Dakota del Sur (SD)','Pierre',400),('Delaware (DE)','Dover',400),
+--						('Florida (FL)','Tallahassee',250),('Georgia (GA)','Atlanta',250),('Hawái (HI)','Honolulu',250),
+--						('Idaho (ID)','Boise',350),('Illinois (IL)','Springfield',350),('Indiana (IN)','Indianápolis',350),
+--						('Iowa (IA)','Des Moines',100),('Kansas (KS)','Topeka',100),('Kentucky (KY)','Frankfort',100),
+--						('Luisiana (LA)','Baton Rouge',175),('Maine (ME)','Augusta',175),('Maryland (MD)','Annapolis',175),
+--						('Massachusetts (MA)','Boston',390),('Míchigan (MI)','Lansing',390),('Minnesota (MN)','Saint Paul',390),
+--						('Misisipi (MS)','Jackson',225),('Misuri (MO)','Jefferson City',225),('Montana (MT)','Helena',225),
+--						('Nebraska (NE)','Lincoln',400),('Nevada (NV)','Carson City',400),('Nueva Jersey (NJ)','Trenton',400),
+--						('Nueva York (NY)','Albany',400),('Nuevo Hampshire (NH)','Concord',400),('Nuevo México (NM)','Santa Fe',400),
+--						('Ohio (OH)','Columbus',400),('Oklahoma (OK)','Oklahoma City',400),('Oregón (OR)','Salem',400),
+--						('Pensilvania (PA)','Harrisburg',150),('Rhode Island (RI)','Providence',150),('Tennessee (TN)','Nashville',150),
+--						('Texas (TX)','Austin',150),('Utah (UT)','Salt Lake City',150),('Vermont (VT)','Montpelier',150),
+--						('Virginia (VA)','Richmond',225),('Virginia Occidental (WV)','Charleston',225),('Washington (WA)','Olympia',225),
+--						('Wisconsin (WI)','Madison',225),('Wyoming (WY)','Cheyenne',225)
+--SELECT * FROM DESTINO
+--SELECT * FROM ORIGEN
+--INSERT INTO USUARIOS VALUES ('CARLOS','ADMINC','1234','ADMIN',1),
+--							('PABLO','USERP','5678','USER',1),
+--							('SERGIO','CLIENTC','9090','CLIENT',1)
+--SELECT * FROM USUARIOS

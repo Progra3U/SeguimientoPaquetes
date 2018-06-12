@@ -81,14 +81,14 @@ namespace _03AccesoDatos
 
         #endregion
 
-        #region Login
+        #region ProcesoLogin
         public DataTable ADLogin(_04Entidades.SQLSentencia objE)
         {
             SqlCommand cmd = new SqlCommand("LOGIN", objConexion);
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@IDUSER", objE.iduser);
-            cmd.Parameters.AddWithValue("@PASS", objE.password);
-            cmd.Parameters.AddWithValue("@TIPO_USER", objE.typeuser);
+            cmd.Parameters.AddWithValue("@PASSW", objE.password);
+            //cmd.Parameters.AddWithValue("@TIPO_USER", objE.typeuser);
             //cmd.Parameters.AddWithValue("@NOMBREUSER", objE.nameUser);
             //cmd.Parameters.AddWithValue("@TIPO_USER", objE.typeuser);
             //cmd.Parameters.AddWithValue("@ESTADO_USER", objE.stateUser);

@@ -114,33 +114,40 @@ namespace _01Presentacion
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            #region ProcesoLogin
             DataTable dt = new DataTable();
             objE.iduser = txtUsuario.Text;
             objE.password = txtPassword.Text;
-            objE.typeuser = comboTipo.Text;
+            //objE.typeuser = comboTipo.Text;
             dt = objLN.LNlogin(objE);
 
 
             if (dt.Rows.Count == 1)
             {
                 this.Hide();
-                if (dt.Rows[0][2].ToString() == "ADMIN")
+                if (dt.Rows[0][4].ToString() == "ADMIN" && dt.Rows[0][5].ToString() == "1")
                 {
-                    new Administrador(dt.Rows[0][0].ToString()).Show();
+                    new Administrador(dt.Rows[0][1].ToString()).Show();
                 }
-                else if (dt.Rows[0][2].ToString() == "USER")
+                else if (dt.Rows[0][4].ToString() == "USER" && dt.Rows[0][5].ToString() == "1")
                 {
-                    new Usuario(dt.Rows[0][0].ToString()).Show();
+                    new Usuario(dt.Rows[0][1].ToString()).Show();
                 }
-                else if (dt.Rows[0][2].ToString() == "CLIENT")
+                else if (dt.Rows[0][4].ToString() == "CLIENT" && dt.Rows[0][5].ToString() == "1")
                 {
-                    new Cliente(dt.Rows[0][0].ToString()).Show();
+                    new Cliente(dt.Rows[0][1].ToString()).Show();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario Inactivo");
+                    this.Show();
                 }
             }
             else
             {
                 MessageBox.Show("Usuario o contraseña Invalidos");
             }
+            #endregion
         }
     }
 }

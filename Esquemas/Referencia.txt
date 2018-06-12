@@ -1,0 +1,6 @@
+Create proc LOGIN
+@IDUSER nvarchar(30),
+@PASSW nvarchar(30)
+AS
+SELECT * FROM USUARIOS WHERE ALIAS=@IDUSER AND PASS=@PASSW 
+Go

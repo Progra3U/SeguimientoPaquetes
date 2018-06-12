@@ -50,3 +50,6 @@ C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquet
 C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\03AccesoDatos.pdb
 C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\EntityFramework.dll
 C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\EntityFramework.xml
+C:\Users\Www-R\Videos\SeguimientoPaquetes2BACK\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\01Presentacion.exe.config
+C:\Users\Www-R\Videos\SeguimientoPaquetes2BACK\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.exe
+C:\Users\Www-R\Videos\SeguimientoPaquetes2BACK\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.pdb

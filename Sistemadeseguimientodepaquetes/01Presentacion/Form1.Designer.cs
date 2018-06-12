@@ -40,7 +40,6 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.comboTipo = new System.Windows.Forms.ComboBox();
             this.BarraPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
@@ -138,7 +137,6 @@
             // panelLogin
             // 
             this.panelLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.panelLogin.Controls.Add(this.comboTipo);
             this.panelLogin.Controls.Add(this.btnLogin);
             this.panelLogin.Controls.Add(this.txtPassword);
             this.panelLogin.Controls.Add(this.txtUsuario);
@@ -146,7 +144,7 @@
             this.panelLogin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelLogin.Location = new System.Drawing.Point(0, 35);
             this.panelLogin.Name = "panelLogin";
-            this.panelLogin.Size = new System.Drawing.Size(292, 154);
+            this.panelLogin.Size = new System.Drawing.Size(292, 125);
             this.panelLogin.TabIndex = 1;
             // 
             // btnLogin
@@ -157,7 +155,7 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(161, 101);
+            this.btnLogin.Location = new System.Drawing.Point(161, 84);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 25);
             this.btnLogin.TabIndex = 4;
@@ -194,27 +192,11 @@
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
             // 
-            // comboTipo
-            // 
-            this.comboTipo.AutoCompleteCustomSource.AddRange(new string[] {
-            "CLIENT",
-            "ADMIN",
-            "USER"});
-            this.comboTipo.FormattingEnabled = true;
-            this.comboTipo.Items.AddRange(new object[] {
-            "CLIENT",
-            "ADMIN",
-            "USER"});
-            this.comboTipo.Location = new System.Drawing.Point(12, 120);
-            this.comboTipo.Name = "comboTipo";
-            this.comboTipo.Size = new System.Drawing.Size(100, 21);
-            this.comboTipo.TabIndex = 5;
-            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(292, 189);
+            this.ClientSize = new System.Drawing.Size(292, 160);
             this.Controls.Add(this.panelLogin);
             this.Controls.Add(this.BarraPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -249,7 +231,6 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox icon;
-        private System.Windows.Forms.ComboBox comboTipo;
     }
 }
 
