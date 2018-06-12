@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace _01Presentacion
 {
-    public partial class Usuario_Producto : Form
+    public partial class Administrador_Destino : Form
     {
-        public Usuario_Producto()
+        public Administrador_Destino()
         {
             InitializeComponent();
         }

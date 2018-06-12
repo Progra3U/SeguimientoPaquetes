@@ -87,9 +87,14 @@ namespace _01Presentacion
         #endregion
 
         #region Botones inicio_productos_pedidos
-        private void btnProductos_Click(object sender, EventArgs e)
+        /*private void btnProductos_Click(object sender, EventArgs e)
         {
             AbrirFormularioHijo(new Cliente_Producto());
+        }*/
+
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new Cliente_Inicio(lblTipoUsuario.Text));
         }
 
         private void btnPedidos_Click(object sender, EventArgs e)
@@ -97,10 +102,13 @@ namespace _01Presentacion
             AbrirFormularioHijo(new Cliente_Pedido());
         }
 
-        private void btnInicio_Click(object sender, EventArgs e)
+        private void btnDoPedido_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new Cliente_Inicio(lblTipoUsuario.Text));
+            AbrirFormularioHijo(new Cliente_DoPedido());
         }
+
         #endregion
+
+
     }
 }

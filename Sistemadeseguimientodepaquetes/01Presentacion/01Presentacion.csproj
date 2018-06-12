@@ -58,11 +58,41 @@
     <Compile Include="Administrador_Cliente.Designer.cs">
       <DependentUpon>Administrador_Cliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administrador_Destino.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador_Destino.Designer.cs">
+      <DependentUpon>Administrador_Destino.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador_Envios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador_Envios.Designer.cs">
+      <DependentUpon>Administrador_Envios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador_Estados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador_Estados.Designer.cs">
+      <DependentUpon>Administrador_Estados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrador_Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Administrador_Inicio.Designer.cs">
       <DependentUpon>Administrador_Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador_Origen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador_Origen.Designer.cs">
+      <DependentUpon>Administrador_Origen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador_Pagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador_Pagos.Designer.cs">
+      <DependentUpon>Administrador_Pagos.cs</DependentUpon>
     </Compile>
     <Compile Include="Administrador_Pedido.cs">
       <SubType>Form</SubType>
@@ -100,12 +130,6 @@
     <Compile Include="Cliente_Pedido.Designer.cs">
       <DependentUpon>Cliente_Pedido.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cliente_Producto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cliente_Producto.Designer.cs">
-      <DependentUpon>Cliente_Producto.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +144,12 @@
     <Compile Include="Usuario.Designer.cs">
       <DependentUpon>Usuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cliente_DoPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cliente_DoPedido.Designer.cs">
+      <DependentUpon>Cliente_DoPedido.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usuario_Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,20 +162,29 @@
     <Compile Include="Usuario_Pedido.Designer.cs">
       <DependentUpon>Usuario_Pedido.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuario_Producto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Usuario_Producto.Designer.cs">
-      <DependentUpon>Usuario_Producto.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Administrador.resx">
       <DependentUpon>Administrador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador_Cliente.resx">
       <DependentUpon>Administrador_Cliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administrador_Destino.resx">
+      <DependentUpon>Administrador_Destino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador_Envios.resx">
+      <DependentUpon>Administrador_Envios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador_Estados.resx">
+      <DependentUpon>Administrador_Estados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administrador_Inicio.resx">
       <DependentUpon>Administrador_Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador_Origen.resx">
+      <DependentUpon>Administrador_Origen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador_Pagos.resx">
+      <DependentUpon>Administrador_Pagos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador_Pedido.resx">
       <DependentUpon>Administrador_Pedido.cs</DependentUpon>
@@ -165,9 +204,6 @@
     <EmbeddedResource Include="Cliente_Pedido.resx">
       <DependentUpon>Cliente_Pedido.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cliente_Producto.resx">
-      <DependentUpon>Cliente_Producto.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -183,14 +219,14 @@
     <EmbeddedResource Include="Usuario.resx">
       <DependentUpon>Usuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Cliente_DoPedido.resx">
+      <DependentUpon>Cliente_DoPedido.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Usuario_Inicio.resx">
       <DependentUpon>Usuario_Inicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuario_Pedido.resx">
       <DependentUpon>Usuario_Pedido.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Usuario_Producto.resx">
-      <DependentUpon>Usuario_Producto.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

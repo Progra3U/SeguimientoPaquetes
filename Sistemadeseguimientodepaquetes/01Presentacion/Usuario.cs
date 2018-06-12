@@ -87,10 +87,6 @@ namespace _01Presentacion
         #endregion
 
         #region Botones inicio_productos_pedidos
-        private void btnProductos_Click(object sender, EventArgs e)
-        {
-            AbrirFormularioHijo(new Usuario_Producto());
-        }
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {

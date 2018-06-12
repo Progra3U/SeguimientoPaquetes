@@ -1,0 +1,16 @@
+From
+Administrador_Cliente:
+
+
+Administrador_Usuario:
+Guardar:
+guarda todos los campos menos en idusuario
+
+Buscar
+buscar por: id usuario, nombre y usuario
+
+Editar y Eliminar 
+editar y eliminar por id usuario
+
+Tabla Usuarios:
+invocar toda la tabla en el dataGrid

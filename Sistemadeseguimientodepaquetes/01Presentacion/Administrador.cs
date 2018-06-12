@@ -86,10 +86,15 @@ namespace _01Presentacion
 
         #region Botones inicio_productos_pedidos_clientes_Usuarios
 
-        private void btnProductos_Click(object sender, EventArgs e)
+        /*private void btnProductos_Click(object sender, EventArgs e)
         {
             AbrirFormularioHijo(new Administrador_Producto());
-        }
+        }*/
+
+        /*private void btnClientes_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new Administrador_Cliente());
+        }*/
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
@@ -101,16 +106,35 @@ namespace _01Presentacion
             AbrirFormularioHijo(new Administrador_Pedido());
         }
 
-        private void btnClientes_Click(object sender, EventArgs e)
-        {
-            AbrirFormularioHijo(new Administrador_Cliente());
-        }
-
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
             AbrirFormularioHijo(new Administrador_Usuario());
         }
         #endregion
 
+        private void btnDestinos_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new Administrador_Destino());
+        }
+
+        private void btnOrigen_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new Administrador_Origen());
+        }
+
+        private void btnEnvio_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new Administrador_Envios());
+        }
+
+        private void btnPagos_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new Administrador_Pagos());
+        }
+
+        private void btnEstado_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new Administrador_Estados());
+        }
     }
 }
