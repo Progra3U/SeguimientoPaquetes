@@ -42,7 +42,7 @@
             this.panelCentral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCentral.Location = new System.Drawing.Point(0, 35);
             this.panelCentral.Name = "panelCentral";
-            this.panelCentral.Size = new System.Drawing.Size(388, 187);
+            this.panelCentral.Size = new System.Drawing.Size(404, 226);
             this.panelCentral.TabIndex = 6;
             // 
             // BarraTitulo
@@ -52,13 +52,14 @@
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(388, 35);
+            this.BarraTitulo.Size = new System.Drawing.Size(404, 35);
             this.BarraTitulo.TabIndex = 5;
             // 
             // icono
             // 
+            this.icono.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.icono.Image = ((System.Drawing.Image)(resources.GetObject("icono.Image")));
-            this.icono.Location = new System.Drawing.Point(3, 7);
+            this.icono.Location = new System.Drawing.Point(367, 4);
             this.icono.Name = "icono";
             this.icono.Size = new System.Drawing.Size(25, 25);
             this.icono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -69,7 +70,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(388, 222);
+            this.ClientSize = new System.Drawing.Size(404, 261);
             this.Controls.Add(this.panelCentral);
             this.Controls.Add(this.BarraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
