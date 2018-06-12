@@ -30,30 +30,44 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuario_Pedido));
             this.panelCentral = new System.Windows.Forms.Panel();
+            this.icono = new System.Windows.Forms.PictureBox();
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.btnGuardar = new System.Windows.Forms.PictureBox();
             this.btnBuscar = new System.Windows.Forms.PictureBox();
             this.btnEditar = new System.Windows.Forms.PictureBox();
             this.btnBorrar = new System.Windows.Forms.PictureBox();
-            this.icono = new System.Windows.Forms.PictureBox();
+            this.dataGrid = new System.Windows.Forms.DataGridView();
             this.panelCentral.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.icono)).BeginInit();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBorrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icono)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // panelCentral
             // 
             this.panelCentral.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelCentral.Controls.Add(this.dataGrid);
             this.panelCentral.Controls.Add(this.icono);
             this.panelCentral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCentral.Location = new System.Drawing.Point(0, 35);
             this.panelCentral.Name = "panelCentral";
             this.panelCentral.Size = new System.Drawing.Size(404, 226);
             this.panelCentral.TabIndex = 9;
+            // 
+            // icono
+            // 
+            this.icono.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.icono.Image = ((System.Drawing.Image)(resources.GetObject("icono.Image")));
+            this.icono.Location = new System.Drawing.Point(376, 198);
+            this.icono.Name = "icono";
+            this.icono.Size = new System.Drawing.Size(25, 25);
+            this.icono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.icono.TabIndex = 0;
+            this.icono.TabStop = false;
             // 
             // BarraTitulo
             // 
@@ -112,16 +126,15 @@
             this.btnBorrar.TabIndex = 2;
             this.btnBorrar.TabStop = false;
             // 
-            // icono
+            // dataGrid
             // 
-            this.icono.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.icono.Image = ((System.Drawing.Image)(resources.GetObject("icono.Image")));
-            this.icono.Location = new System.Drawing.Point(376, 198);
-            this.icono.Name = "icono";
-            this.icono.Size = new System.Drawing.Size(25, 25);
-            this.icono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.icono.TabIndex = 0;
-            this.icono.TabStop = false;
+            this.dataGrid.AllowUserToOrderColumns = true;
+            this.dataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrid.Location = new System.Drawing.Point(12, 140);
+            this.dataGrid.Name = "dataGrid";
+            this.dataGrid.Size = new System.Drawing.Size(358, 74);
+            this.dataGrid.TabIndex = 10;
             // 
             // Usuario_Pedido
             // 
@@ -136,12 +149,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuario_Pedido";
             this.panelCentral.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.icono)).EndInit();
             this.BarraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBorrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icono)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -154,5 +168,6 @@
         private System.Windows.Forms.PictureBox btnEditar;
         private System.Windows.Forms.PictureBox btnBorrar;
         private System.Windows.Forms.PictureBox icono;
+        private System.Windows.Forms.DataGridView dataGrid;
     }
 }

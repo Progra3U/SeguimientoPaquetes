@@ -36,6 +36,7 @@
             this.btnBorrar = new System.Windows.Forms.PictureBox();
             this.panelCentral = new System.Windows.Forms.Panel();
             this.icono = new System.Windows.Forms.PictureBox();
+            this.dataGrid = new System.Windows.Forms.DataGridView();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
@@ -43,6 +44,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnBorrar)).BeginInit();
             this.panelCentral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icono)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // BarraTitulo
@@ -105,6 +107,7 @@
             // panelCentral
             // 
             this.panelCentral.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelCentral.Controls.Add(this.dataGrid);
             this.panelCentral.Controls.Add(this.icono);
             this.panelCentral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCentral.Location = new System.Drawing.Point(0, 0);
@@ -122,6 +125,16 @@
             this.icono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.icono.TabIndex = 0;
             this.icono.TabStop = false;
+            // 
+            // dataGrid
+            // 
+            this.dataGrid.AllowUserToOrderColumns = true;
+            this.dataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrid.Location = new System.Drawing.Point(12, 175);
+            this.dataGrid.Name = "dataGrid";
+            this.dataGrid.Size = new System.Drawing.Size(358, 74);
+            this.dataGrid.TabIndex = 3;
             // 
             // Usuario_Producto
             // 
@@ -142,6 +155,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnBorrar)).EndInit();
             this.panelCentral.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.icono)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -154,5 +168,6 @@
         private System.Windows.Forms.PictureBox btnBorrar;
         private System.Windows.Forms.Panel panelCentral;
         private System.Windows.Forms.PictureBox icono;
+        private System.Windows.Forms.DataGridView dataGrid;
     }
 }

@@ -93,7 +93,7 @@ namespace _01Presentacion
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new Administrador_Inicio());
+            AbrirFormularioHijo(new Administrador_Inicio(lblTipoUsuario.Text));
         }
 
         private void btnPedidos_Click(object sender, EventArgs e)

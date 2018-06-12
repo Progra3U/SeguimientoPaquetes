@@ -99,7 +99,7 @@ namespace _01Presentacion
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new Cliente_Inicio());
+            AbrirFormularioHijo(new Cliente_Inicio(lblTipoUsuario.Text));
         }
         #endregion
     }

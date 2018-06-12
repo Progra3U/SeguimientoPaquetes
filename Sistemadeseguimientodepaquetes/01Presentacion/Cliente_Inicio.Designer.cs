@@ -30,8 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cliente_Inicio));
             this.panelCentral = new System.Windows.Forms.Panel();
+            this.lblTipoUsuario = new System.Windows.Forms.Label();
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.icono = new System.Windows.Forms.PictureBox();
+            this.panelCentral.SuspendLayout();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icono)).BeginInit();
             this.SuspendLayout();
@@ -39,11 +41,23 @@
             // panelCentral
             // 
             this.panelCentral.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelCentral.Controls.Add(this.lblTipoUsuario);
             this.panelCentral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCentral.Location = new System.Drawing.Point(0, 35);
             this.panelCentral.Name = "panelCentral";
             this.panelCentral.Size = new System.Drawing.Size(404, 226);
             this.panelCentral.TabIndex = 6;
+            // 
+            // lblTipoUsuario
+            // 
+            this.lblTipoUsuario.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblTipoUsuario.AutoSize = true;
+            this.lblTipoUsuario.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoUsuario.Location = new System.Drawing.Point(12, 196);
+            this.lblTipoUsuario.Name = "lblTipoUsuario";
+            this.lblTipoUsuario.Size = new System.Drawing.Size(63, 21);
+            this.lblTipoUsuario.TabIndex = 0;
+            this.lblTipoUsuario.Text = "label1";
             // 
             // BarraTitulo
             // 
@@ -78,6 +92,8 @@
             this.Name = "Cliente_Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cliente_Inicio";
+            this.panelCentral.ResumeLayout(false);
+            this.panelCentral.PerformLayout();
             this.BarraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.icono)).EndInit();
             this.ResumeLayout(false);
@@ -89,5 +105,6 @@
         private System.Windows.Forms.Panel panelCentral;
         private System.Windows.Forms.Panel BarraTitulo;
         private System.Windows.Forms.PictureBox icono;
+        private System.Windows.Forms.Label lblTipoUsuario;
     }
 }

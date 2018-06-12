@@ -12,9 +12,10 @@ namespace _01Presentacion
 {
     public partial class Cliente_Inicio : Form
     {
-        public Cliente_Inicio()
+        public Cliente_Inicio(string Usuario)
         {
             InitializeComponent();
+            lblTipoUsuario.Text = "Bienvenido (a) " + Usuario;
         }
     }
 }

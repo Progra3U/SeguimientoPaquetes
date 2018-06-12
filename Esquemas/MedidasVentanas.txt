@@ -1,0 +1,25 @@
+principal
+650,300
+
+barra arriba
+650,35
+
+panel lateral
+130, 265
+
+panelcontenedor
+520, 265
+
+//////////////////////////////////
+principal
+520, 265
+
+barra arriba
+520,35
+
+panel central
+520, 230
+
+
+
+
