@@ -31,19 +31,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuario_Producto));
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.btnGuardar = new System.Windows.Forms.PictureBox();
+            this.icono = new System.Windows.Forms.PictureBox();
             this.btnBuscar = new System.Windows.Forms.PictureBox();
             this.btnEditar = new System.Windows.Forms.PictureBox();
             this.btnBorrar = new System.Windows.Forms.PictureBox();
             this.panelCentral = new System.Windows.Forms.Panel();
-            this.icono = new System.Windows.Forms.PictureBox();
             this.dataGrid = new System.Windows.Forms.DataGridView();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icono)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBorrar)).BeginInit();
             this.panelCentral.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.icono)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,31 +51,42 @@
             // 
             this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.BarraTitulo.Controls.Add(this.btnGuardar);
+            this.BarraTitulo.Controls.Add(this.icono);
             this.BarraTitulo.Controls.Add(this.btnBuscar);
             this.BarraTitulo.Controls.Add(this.btnEditar);
             this.BarraTitulo.Controls.Add(this.btnBorrar);
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(404, 35);
+            this.BarraTitulo.Size = new System.Drawing.Size(520, 35);
             this.BarraTitulo.TabIndex = 8;
             // 
             // btnGuardar
             // 
             this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.Location = new System.Drawing.Point(283, 7);
+            this.btnGuardar.Location = new System.Drawing.Point(399, 7);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(25, 25);
             this.btnGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnGuardar.TabIndex = 5;
             this.btnGuardar.TabStop = false;
             // 
+            // icono
+            // 
+            this.icono.Image = ((System.Drawing.Image)(resources.GetObject("icono.Image")));
+            this.icono.Location = new System.Drawing.Point(3, 7);
+            this.icono.Name = "icono";
+            this.icono.Size = new System.Drawing.Size(25, 25);
+            this.icono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.icono.TabIndex = 0;
+            this.icono.TabStop = false;
+            // 
             // btnBuscar
             // 
             this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(314, 7);
+            this.btnBuscar.Location = new System.Drawing.Point(430, 7);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(25, 25);
             this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -86,7 +97,7 @@
             // 
             this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
-            this.btnEditar.Location = new System.Drawing.Point(345, 7);
+            this.btnEditar.Location = new System.Drawing.Point(461, 7);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(25, 25);
             this.btnEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -97,7 +108,7 @@
             // 
             this.btnBorrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBorrar.Image = ((System.Drawing.Image)(resources.GetObject("btnBorrar.Image")));
-            this.btnBorrar.Location = new System.Drawing.Point(376, 7);
+            this.btnBorrar.Location = new System.Drawing.Point(492, 7);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(25, 25);
             this.btnBorrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -108,53 +119,41 @@
             // 
             this.panelCentral.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelCentral.Controls.Add(this.dataGrid);
-            this.panelCentral.Controls.Add(this.icono);
             this.panelCentral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCentral.Location = new System.Drawing.Point(0, 0);
             this.panelCentral.Name = "panelCentral";
-            this.panelCentral.Size = new System.Drawing.Size(404, 261);
+            this.panelCentral.Size = new System.Drawing.Size(520, 265);
             this.panelCentral.TabIndex = 9;
-            // 
-            // icono
-            // 
-            this.icono.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.icono.Image = ((System.Drawing.Image)(resources.GetObject("icono.Image")));
-            this.icono.Location = new System.Drawing.Point(376, 233);
-            this.icono.Name = "icono";
-            this.icono.Size = new System.Drawing.Size(25, 25);
-            this.icono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.icono.TabIndex = 0;
-            this.icono.TabStop = false;
             // 
             // dataGrid
             // 
             this.dataGrid.AllowUserToOrderColumns = true;
-            this.dataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid.Location = new System.Drawing.Point(12, 175);
+            this.dataGrid.Location = new System.Drawing.Point(3, 188);
             this.dataGrid.Name = "dataGrid";
-            this.dataGrid.Size = new System.Drawing.Size(358, 74);
-            this.dataGrid.TabIndex = 3;
+            this.dataGrid.Size = new System.Drawing.Size(514, 74);
+            this.dataGrid.TabIndex = 5;
             // 
             // Usuario_Producto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(404, 261);
+            this.ClientSize = new System.Drawing.Size(520, 265);
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.panelCentral);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Usuario_Producto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Usuario_Productos";
+            this.Text = "jajaja";
             this.BarraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icono)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBorrar)).EndInit();
             this.panelCentral.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.icono)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
             this.ResumeLayout(false);
 

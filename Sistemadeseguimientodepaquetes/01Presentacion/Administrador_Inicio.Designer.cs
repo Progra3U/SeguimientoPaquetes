@@ -50,8 +50,9 @@
             // 
             // icono
             // 
+            this.icono.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.icono.Image = ((System.Drawing.Image)(resources.GetObject("icono.Image")));
-            this.icono.Location = new System.Drawing.Point(3, 7);
+            this.icono.Location = new System.Drawing.Point(483, 4);
             this.icono.Name = "icono";
             this.icono.Size = new System.Drawing.Size(25, 25);
             this.icono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -72,10 +73,10 @@
             // 
             this.lblTipoUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblTipoUsuario.AutoSize = true;
-            this.lblTipoUsuario.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipoUsuario.Location = new System.Drawing.Point(12, 200);
             this.lblTipoUsuario.Name = "lblTipoUsuario";
-            this.lblTipoUsuario.Size = new System.Drawing.Size(63, 21);
+            this.lblTipoUsuario.Size = new System.Drawing.Size(66, 24);
             this.lblTipoUsuario.TabIndex = 0;
             this.lblTipoUsuario.Text = "label1";
             // 
