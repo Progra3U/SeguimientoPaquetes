@@ -41,7 +41,7 @@ namespace _03AccesoDatos
 
         #endregion
 
-        #region Metodos
+        #region Metodos para Abrir y cerrar Conexion
 
         private void ABRIR() //metodo para verificar si la conexion esta cerrada y abrirla
         {
@@ -57,6 +57,9 @@ namespace _03AccesoDatos
                 objConexion.Close();
             }
         }
+        #endregion
+
+        #region Metodos para hacer peticiones a la Base de datos
         public int EjecutarSentencia(SQLSentencia objPeticion)
         {
             /*Este metodo se puede utilizar para actualizar, insertar o eliminar info en las tablas de la db*/

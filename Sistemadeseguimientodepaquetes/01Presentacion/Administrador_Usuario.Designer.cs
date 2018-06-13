@@ -36,15 +36,15 @@
             this.btnEditar = new System.Windows.Forms.PictureBox();
             this.btnBorrar = new System.Windows.Forms.PictureBox();
             this.panelCentral = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.txtEstadoCB = new System.Windows.Forms.ComboBox();
             this.dataGrid = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtTipoUserCB = new System.Windows.Forms.ComboBox();
+            this.txtIdUsuario = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtAlias = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.Tabla = new System.Windows.Forms.Label();
@@ -131,15 +131,15 @@
             // panelCentral
             // 
             this.panelCentral.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelCentral.Controls.Add(this.comboBox2);
+            this.panelCentral.Controls.Add(this.txtEstadoCB);
             this.panelCentral.Controls.Add(this.dataGrid);
-            this.panelCentral.Controls.Add(this.comboBox1);
-            this.panelCentral.Controls.Add(this.textBox1);
-            this.panelCentral.Controls.Add(this.textBox6);
+            this.panelCentral.Controls.Add(this.txtTipoUserCB);
+            this.panelCentral.Controls.Add(this.txtIdUsuario);
+            this.panelCentral.Controls.Add(this.txtNombre);
             this.panelCentral.Controls.Add(this.label1);
-            this.panelCentral.Controls.Add(this.textBox5);
+            this.panelCentral.Controls.Add(this.txtPassword);
             this.panelCentral.Controls.Add(this.label2);
-            this.panelCentral.Controls.Add(this.textBox4);
+            this.panelCentral.Controls.Add(this.txtAlias);
             this.panelCentral.Controls.Add(this.label3);
             this.panelCentral.Controls.Add(this.label4);
             this.panelCentral.Controls.Add(this.Tabla);
@@ -151,17 +151,17 @@
             this.panelCentral.Size = new System.Drawing.Size(520, 320);
             this.panelCentral.TabIndex = 5;
             // 
-            // comboBox2
+            // txtEstadoCB
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.txtEstadoCB.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstadoCB.FormattingEnabled = true;
+            this.txtEstadoCB.Items.AddRange(new object[] {
             "1",
             "0"});
-            this.comboBox2.Location = new System.Drawing.Point(103, 74);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(83, 28);
-            this.comboBox2.TabIndex = 31;
+            this.txtEstadoCB.Location = new System.Drawing.Point(103, 74);
+            this.txtEstadoCB.Name = "txtEstadoCB";
+            this.txtEstadoCB.Size = new System.Drawing.Size(83, 27);
+            this.txtEstadoCB.TabIndex = 31;
             // 
             // dataGrid
             // 
@@ -172,34 +172,34 @@
             this.dataGrid.Size = new System.Drawing.Size(514, 144);
             this.dataGrid.TabIndex = 3;
             // 
-            // comboBox1
+            // txtTipoUserCB
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.txtTipoUserCB.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTipoUserCB.FormattingEnabled = true;
+            this.txtTipoUserCB.Items.AddRange(new object[] {
             "CLIENT",
             "ADMIN",
             "USER"});
-            this.comboBox1.Location = new System.Drawing.Point(326, 74);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(177, 28);
-            this.comboBox1.TabIndex = 30;
+            this.txtTipoUserCB.Location = new System.Drawing.Point(326, 74);
+            this.txtTipoUserCB.Name = "txtTipoUserCB";
+            this.txtTipoUserCB.Size = new System.Drawing.Size(177, 27);
+            this.txtTipoUserCB.TabIndex = 30;
             // 
-            // textBox1
+            // txtIdUsuario
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(103, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(83, 27);
-            this.textBox1.TabIndex = 26;
+            this.txtIdUsuario.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdUsuario.Location = new System.Drawing.Point(103, 5);
+            this.txtIdUsuario.Name = "txtIdUsuario";
+            this.txtIdUsuario.Size = new System.Drawing.Size(83, 27);
+            this.txtIdUsuario.TabIndex = 26;
             // 
-            // textBox6
+            // txtNombre
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(273, 5);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(230, 27);
-            this.textBox6.TabIndex = 29;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(273, 5);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(230, 27);
+            this.txtNombre.TabIndex = 29;
             // 
             // label1
             // 
@@ -207,17 +207,17 @@
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(192, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 20);
+            this.label1.Size = new System.Drawing.Size(74, 19);
             this.label1.TabIndex = 19;
             this.label1.Text = "Nombre:";
             // 
-            // textBox5
+            // txtPassword
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(103, 38);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(83, 27);
-            this.textBox5.TabIndex = 28;
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(103, 38);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(83, 27);
+            this.txtPassword.TabIndex = 28;
             // 
             // label2
             // 
@@ -225,17 +225,17 @@
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(192, 46);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 20);
+            this.label2.Size = new System.Drawing.Size(68, 19);
             this.label2.TabIndex = 20;
             this.label2.Text = "Usuario:";
             // 
-            // textBox4
+            // txtAlias
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(273, 41);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(230, 27);
-            this.textBox4.TabIndex = 27;
+            this.txtAlias.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAlias.Location = new System.Drawing.Point(273, 41);
+            this.txtAlias.Name = "txtAlias";
+            this.txtAlias.Size = new System.Drawing.Size(230, 27);
+            this.txtAlias.TabIndex = 27;
             // 
             // label3
             // 
@@ -243,7 +243,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(11, 46);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 20);
+            this.label3.Size = new System.Drawing.Size(82, 19);
             this.label3.TabIndex = 21;
             this.label3.Text = "Password:";
             // 
@@ -253,7 +253,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(192, 82);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(128, 20);
+            this.label4.Size = new System.Drawing.Size(128, 19);
             this.label4.TabIndex = 22;
             this.label4.Text = "Tipo de Usuario:";
             // 
@@ -263,7 +263,7 @@
             this.Tabla.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tabla.Location = new System.Drawing.Point(389, 151);
             this.Tabla.Name = "Tabla";
-            this.Tabla.Size = new System.Drawing.Size(114, 20);
+            this.Tabla.Size = new System.Drawing.Size(114, 19);
             this.Tabla.TabIndex = 25;
             this.Tabla.Text = "Tabla Usuarios";
             // 
@@ -273,7 +273,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(11, 79);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 20);
+            this.label5.Size = new System.Drawing.Size(62, 19);
             this.label5.TabIndex = 23;
             this.label5.Text = "Estado:";
             // 
@@ -283,7 +283,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(11, 13);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 20);
+            this.label6.Size = new System.Drawing.Size(86, 19);
             this.label6.TabIndex = 24;
             this.label6.Text = "Id Usuario:";
             // 
@@ -322,14 +322,14 @@
         private System.Windows.Forms.PictureBox btnBorrar;
         private System.Windows.Forms.Panel panelCentral;
         private System.Windows.Forms.DataGridView dataGrid;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.ComboBox txtEstadoCB;
+        private System.Windows.Forms.ComboBox txtTipoUserCB;
+        private System.Windows.Forms.TextBox txtIdUsuario;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtAlias;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label Tabla;

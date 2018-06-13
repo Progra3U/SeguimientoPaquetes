@@ -19,8 +19,19 @@ namespace _01Presentacion
             InitializeComponent();
         }
 
-        
-        #region  Botones_Guardar_Buscar_Editar_Eliminar
+
+        #region  Botones_Guardar_Buscar_Editar_Eliminar Form Administrador_Destino
+        public DESTINO processoBase()
+        {
+            DESTINO destino = new DESTINO();
+            destino.IDDESTINO = Convert.ToInt16(txtIdDestino.Text.Trim());
+            destino.PAIS = txtPais.Text.Trim();
+            destino.CIUDAD = txtCiudad.Text.Trim();
+            destino.IMPUESTO = Convert.ToInt16(txtImpuesto.Text.Trim());
+            //_02LogicadeNegocios.Logica.GuardarDato(destino);
+            return destino;
+        }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             try
@@ -33,22 +44,45 @@ namespace _01Presentacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al guardar Datos de Destino" + ex.Message);
+                MessageBox.Show("Error al Guardar Datos en Tabla Destino" + ex.Message);
             }
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                //Agregar proceso
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al Buscar Datos de Tabla Destino" + ex.Message);
+            }
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                _02LogicadeNegocios.Logica.ModificarDato(processoBase());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al Editar Datos de Tabla Destino" + ex.Message);
+            }
 
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                _02LogicadeNegocios.Logica.EliminarDato(processoBase());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al Elminar Datos de Tabla Destino" + ex.Message);
+            }
 
         }
         #endregion
