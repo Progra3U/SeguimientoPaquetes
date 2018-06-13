@@ -59,7 +59,7 @@
             // 
             this.logo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
-            this.logo.Location = new System.Drawing.Point(3, 7);
+            this.logo.Location = new System.Drawing.Point(12, 4);
             this.logo.Name = "logo";
             this.logo.Size = new System.Drawing.Size(25, 25);
             this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -68,7 +68,7 @@
             // 
             // Barratitulo
             // 
-            this.Barratitulo.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.Barratitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.Barratitulo.Controls.Add(this.btnRestaurar);
             this.Barratitulo.Controls.Add(this.btnMinimizar);
             this.Barratitulo.Controls.Add(this.btnMaximizar);
@@ -87,7 +87,7 @@
             this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.Image")));
-            this.btnRestaurar.Location = new System.Drawing.Point(591, 6);
+            this.btnRestaurar.Location = new System.Drawing.Point(591, 7);
             this.btnRestaurar.Name = "btnRestaurar";
             this.btnRestaurar.Size = new System.Drawing.Size(25, 25);
             this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -139,7 +139,8 @@
             // 
             this.lblTipoUsuario.AutoSize = true;
             this.lblTipoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoUsuario.Location = new System.Drawing.Point(34, 7);
+            this.lblTipoUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblTipoUsuario.Location = new System.Drawing.Point(44, 7);
             this.lblTipoUsuario.Name = "lblTipoUsuario";
             this.lblTipoUsuario.Size = new System.Drawing.Size(68, 24);
             this.lblTipoUsuario.TabIndex = 1;
@@ -173,7 +174,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(0, 79);
+            this.pictureBox3.Location = new System.Drawing.Point(3, 115);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(30, 30);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -199,7 +200,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 115);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 79);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(30, 30);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

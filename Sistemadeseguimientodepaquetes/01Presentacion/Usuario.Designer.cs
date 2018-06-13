@@ -57,7 +57,7 @@
             this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.Image")));
-            this.btnRestaurar.Location = new System.Drawing.Point(591, 6);
+            this.btnRestaurar.Location = new System.Drawing.Point(529, 6);
             this.btnRestaurar.Name = "btnRestaurar";
             this.btnRestaurar.Size = new System.Drawing.Size(25, 25);
             this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -109,7 +109,7 @@
             // 
             this.logo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
-            this.logo.Location = new System.Drawing.Point(3, 7);
+            this.logo.Location = new System.Drawing.Point(12, 7);
             this.logo.Name = "logo";
             this.logo.Size = new System.Drawing.Size(25, 25);
             this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -120,7 +120,8 @@
             // 
             this.lblTipoUsuario.AutoSize = true;
             this.lblTipoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoUsuario.Location = new System.Drawing.Point(34, 7);
+            this.lblTipoUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblTipoUsuario.Location = new System.Drawing.Point(43, 6);
             this.lblTipoUsuario.Name = "lblTipoUsuario";
             this.lblTipoUsuario.Size = new System.Drawing.Size(74, 24);
             this.lblTipoUsuario.TabIndex = 1;
@@ -128,7 +129,7 @@
             // 
             // Barratitulo
             // 
-            this.Barratitulo.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.Barratitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.Barratitulo.Controls.Add(this.btnRestaurar);
             this.Barratitulo.Controls.Add(this.btnMinimizar);
             this.Barratitulo.Controls.Add(this.btnMaximizar);

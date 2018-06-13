@@ -34,17 +34,11 @@
             this.dataGrid = new System.Windows.Forms.DataGridView();
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.btnGuardar = new System.Windows.Forms.PictureBox();
-            this.btnBuscar = new System.Windows.Forms.PictureBox();
-            this.btnEditar = new System.Windows.Forms.PictureBox();
-            this.btnBorrar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.icono)).BeginInit();
             this.panelCentral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBorrar)).BeginInit();
             this.SuspendLayout();
             // 
             // icono
@@ -79,12 +73,9 @@
             // 
             // BarraTitulo
             // 
-            this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.BarraTitulo.Controls.Add(this.icono);
             this.BarraTitulo.Controls.Add(this.btnGuardar);
-            this.BarraTitulo.Controls.Add(this.btnBuscar);
-            this.BarraTitulo.Controls.Add(this.btnEditar);
-            this.BarraTitulo.Controls.Add(this.btnBorrar);
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
@@ -95,47 +86,14 @@
             // 
             this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.Location = new System.Drawing.Point(399, 7);
+            this.btnGuardar.Location = new System.Drawing.Point(483, 4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(25, 25);
             this.btnGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnGuardar.TabIndex = 5;
             this.btnGuardar.TabStop = false;
             // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(430, 7);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(25, 25);
-            this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnBuscar.TabIndex = 4;
-            this.btnBuscar.TabStop = false;
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
-            this.btnEditar.Location = new System.Drawing.Point(461, 7);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(25, 25);
-            this.btnEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnEditar.TabIndex = 3;
-            this.btnEditar.TabStop = false;
-            // 
-            // btnBorrar
-            // 
-            this.btnBorrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBorrar.Image = ((System.Drawing.Image)(resources.GetObject("btnBorrar.Image")));
-            this.btnBorrar.Location = new System.Drawing.Point(492, 7);
-            this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(25, 25);
-            this.btnBorrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnBorrar.TabIndex = 2;
-            this.btnBorrar.TabStop = false;
-            // 
-            // Usuario_DoPedido
+            // Cliente_DoPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -143,16 +101,13 @@
             this.Controls.Add(this.panelCentral);
             this.Controls.Add(this.BarraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Usuario_DoPedido";
+            this.Name = "Cliente_DoPedido";
             this.Text = "Usuario_DoPedido";
             ((System.ComponentModel.ISupportInitialize)(this.icono)).EndInit();
             this.panelCentral.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
             this.BarraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBorrar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -164,8 +119,5 @@
         private System.Windows.Forms.DataGridView dataGrid;
         private System.Windows.Forms.Panel BarraTitulo;
         private System.Windows.Forms.PictureBox btnGuardar;
-        private System.Windows.Forms.PictureBox btnBuscar;
-        private System.Windows.Forms.PictureBox btnEditar;
-        private System.Windows.Forms.PictureBox btnBorrar;
     }
 }

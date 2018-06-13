@@ -52,12 +52,6 @@
     <Compile Include="Administrador.Designer.cs">
       <DependentUpon>Administrador.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administrador_Cliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador_Cliente.Designer.cs">
-      <DependentUpon>Administrador_Cliente.cs</DependentUpon>
-    </Compile>
     <Compile Include="Administrador_Destino.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,12 +93,6 @@
     </Compile>
     <Compile Include="Administrador_Pedido.Designer.cs">
       <DependentUpon>Administrador_Pedido.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Administrador_Producto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador_Producto.Designer.cs">
-      <DependentUpon>Administrador_Producto.cs</DependentUpon>
     </Compile>
     <Compile Include="Administrador_Usuario.cs">
       <SubType>Form</SubType>
@@ -165,9 +153,6 @@
     <EmbeddedResource Include="Administrador.resx">
       <DependentUpon>Administrador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administrador_Cliente.resx">
-      <DependentUpon>Administrador_Cliente.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Administrador_Destino.resx">
       <DependentUpon>Administrador_Destino.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,9 +173,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador_Pedido.resx">
       <DependentUpon>Administrador_Pedido.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador_Producto.resx">
-      <DependentUpon>Administrador_Producto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador_Usuario.resx">
       <DependentUpon>Administrador_Usuario.cs</DependentUpon>
