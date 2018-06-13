@@ -22,7 +22,7 @@ namespace _04Entidades
         public int IDDESTINO { get; set; }
         public string PAIS { get; set; }
         public string CIUDAD { get; set; }
-        public int INPUESTO { get; set; }
+        public int IMPUESTO { get; set; }
     
         public virtual ICollection<PEDIDO> PEDIDOS { get; set; }
     }

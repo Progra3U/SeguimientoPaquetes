@@ -14,11 +14,18 @@ namespace _04Entidades
     
     public partial class USUARIO
     {
+        public USUARIO()
+        {
+            this.PEDIDOS = new HashSet<PEDIDO>();
+        }
+    
         public int IDUSUARIO { get; set; }
-        public string NOMBREUSER { get; set; }
-        public string ALIASUSER { get; set; }
-        public string PASSWORD { get; set; }
+        public string NOMBRE { get; set; }
+        public string ALIAS { get; set; }
+        public string PASS { get; set; }
         public string TIPO_USUARIO { get; set; }
         public string ESTADO_USUARIO { get; set; }
+    
+        public virtual ICollection<PEDIDO> PEDIDOS { get; set; }
     }
 }

@@ -22,13 +22,13 @@ namespace _04Entidades
         public int IDENVIO { get; set; }
         public int IDESTADO { get; set; }
         public int TOTAL { get; set; }
+        public string DESCRIPCION { get; set; }
     
         public virtual DESTINO DESTINO { get; set; }
         public virtual ENVIO ENVIO { get; set; }
         public virtual ESTADO ESTADO { get; set; }
         public virtual ORIGEN ORIGEN { get; set; }
         public virtual PAGO PAGO { get; set; }
-        public virtual PEDIDO PEDIDOS1 { get; set; }
-        public virtual PEDIDO PEDIDO1 { get; set; }
+        public virtual USUARIO USUARIO { get; set; }
     }
 }

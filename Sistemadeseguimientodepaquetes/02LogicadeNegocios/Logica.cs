@@ -19,5 +19,15 @@ namespace _02LogicadeNegocios
             return objAD.ADLogin(objE);
         }
         #endregion
+
+        #region MetodosGuardarDatosEnTablas
+        public static void GuardarDato(DESTINO destino) //Metodo para agregar usuario
+        {
+            SQLSentencia sentencia = new SQLSentencia();
+            sentencia.PETICION = @"INSERT INTO Usuarios VALUES ('" + destino.PAIS + "','" + destino.CIUDAD + "','" + destino.IMPUESTO + "')";
+            _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+            objAcceso.EjecutarSentencia(sentencia);
+        }
+        #endregion
     }
 }

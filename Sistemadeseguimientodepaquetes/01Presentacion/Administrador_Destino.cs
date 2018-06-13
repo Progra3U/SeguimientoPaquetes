@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using _02LogicadeNegocios;
+using _04Entidades;
 
 namespace _01Presentacion
 {
@@ -16,5 +18,39 @@ namespace _01Presentacion
         {
             InitializeComponent();
         }
+
+        
+        #region  Botones_Guardar_Buscar_Editar_Eliminar
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DESTINO destino = new DESTINO();
+                destino.PAIS = txtPais.Text.Trim();
+                destino.CIUDAD = txtCiudad.Text.Trim();
+                destino.IMPUESTO = Convert.ToInt16(txtImpuesto.Text.Trim());
+                _02LogicadeNegocios.Logica.GuardarDato(destino);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al guardar Datos de Destino" + ex.Message);
+            }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
     }
 }

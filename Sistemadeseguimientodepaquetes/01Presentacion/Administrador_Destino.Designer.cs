@@ -36,11 +36,11 @@
             this.btnEditar = new System.Windows.Forms.PictureBox();
             this.btnBorrar = new System.Windows.Forms.PictureBox();
             this.panelCentral = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtImpuesto = new System.Windows.Forms.TextBox();
+            this.txtPais = new System.Windows.Forms.TextBox();
+            this.txtCiudad = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtIdDestino = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -94,6 +94,7 @@
             this.btnGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnGuardar.TabIndex = 5;
             this.btnGuardar.TabStop = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnBuscar
             // 
@@ -105,6 +106,7 @@
             this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.TabStop = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnEditar
             // 
@@ -116,6 +118,7 @@
             this.btnEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnEditar.TabIndex = 3;
             this.btnEditar.TabStop = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnBorrar
             // 
@@ -127,15 +130,16 @@
             this.btnBorrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnBorrar.TabIndex = 2;
             this.btnBorrar.TabStop = false;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // panelCentral
             // 
             this.panelCentral.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelCentral.Controls.Add(this.textBox5);
-            this.panelCentral.Controls.Add(this.textBox3);
-            this.panelCentral.Controls.Add(this.textBox2);
+            this.panelCentral.Controls.Add(this.txtImpuesto);
+            this.panelCentral.Controls.Add(this.txtPais);
+            this.panelCentral.Controls.Add(this.txtCiudad);
             this.panelCentral.Controls.Add(this.label7);
-            this.panelCentral.Controls.Add(this.textBox4);
+            this.panelCentral.Controls.Add(this.txtIdDestino);
             this.panelCentral.Controls.Add(this.label2);
             this.panelCentral.Controls.Add(this.label5);
             this.panelCentral.Controls.Add(this.label3);
@@ -151,29 +155,29 @@
             this.panelCentral.Size = new System.Drawing.Size(520, 355);
             this.panelCentral.TabIndex = 7;
             // 
-            // textBox5
+            // txtImpuesto
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(242, 160);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(120, 27);
-            this.textBox5.TabIndex = 37;
+            this.txtImpuesto.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtImpuesto.Location = new System.Drawing.Point(242, 160);
+            this.txtImpuesto.Name = "txtImpuesto";
+            this.txtImpuesto.Size = new System.Drawing.Size(120, 27);
+            this.txtImpuesto.TabIndex = 37;
             // 
-            // textBox3
+            // txtPais
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(242, 94);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(120, 27);
-            this.textBox3.TabIndex = 36;
+            this.txtPais.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPais.Location = new System.Drawing.Point(242, 94);
+            this.txtPais.Name = "txtPais";
+            this.txtPais.Size = new System.Drawing.Size(120, 27);
+            this.txtPais.TabIndex = 36;
             // 
-            // textBox2
+            // txtCiudad
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(242, 127);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(120, 27);
-            this.textBox2.TabIndex = 35;
+            this.txtCiudad.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCiudad.Location = new System.Drawing.Point(242, 127);
+            this.txtCiudad.Name = "txtCiudad";
+            this.txtCiudad.Size = new System.Drawing.Size(120, 27);
+            this.txtCiudad.TabIndex = 35;
             // 
             // label7
             // 
@@ -185,13 +189,13 @@
             this.label7.TabIndex = 34;
             this.label7.Text = "Impuesto:";
             // 
-            // textBox4
+            // txtIdDestino
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(242, 61);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(120, 27);
-            this.textBox4.TabIndex = 33;
+            this.txtIdDestino.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdDestino.Location = new System.Drawing.Point(242, 61);
+            this.txtIdDestino.Name = "txtIdDestino";
+            this.txtIdDestino.Size = new System.Drawing.Size(120, 27);
+            this.txtIdDestino.TabIndex = 33;
             // 
             // label2
             // 
@@ -316,11 +320,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Tabla;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtImpuesto;
+        private System.Windows.Forms.TextBox txtPais;
+        private System.Windows.Forms.TextBox txtCiudad;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtIdDestino;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
