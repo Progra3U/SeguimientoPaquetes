@@ -84,7 +84,7 @@ namespace _03AccesoDatos
         #endregion
 
         #region Metod para obtener Informacion de las Tablas
-            #region Administrador_Destino
+        #region Administrador_Destino
             public List<DESTINO> Obtener_Destino(SQLSentencia objsentencia)
             {
                 List<DESTINO> lstDestino = new List<DESTINO>();
@@ -121,22 +121,160 @@ namespace _03AccesoDatos
 
                 return lstDestino;
             }
-            #endregion
+        #endregion
 
-            #region Administrador_Envios
-            #endregion
+        #region Administrador_Envios
+        public List<ENVIO> Obtener_Envio(SQLSentencia objsentencia)
+        {
+            List<ENVIO> lstEnvio = new List<ENVIO>();
+            System.Data.DataTable dt = new System.Data.DataTable();
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
 
-            #region Administrador_Estados
-            #endregion
+                cmd.CommandText = objsentencia.PETICION;
+                cmd.Connection = objConexion;
+                cmd.CommandType = System.Data.CommandType.Text;
 
-            #region Administrador_Origen
-            #endregion
+                SqlDataAdapter objcarga = new SqlDataAdapter(cmd);
+                objcarga.Fill(dt);
 
-            #region Administrador_Pagos
-            #endregion
+                foreach (System.Data.DataRow item in dt.Rows)
+                {
+                    ENVIO objEnvio = new ENVIO();
+                    objEnvio.IDENVIO = Convert.ToInt16(item.ItemArray[0].ToString());
+                    objEnvio.DESC_ENVIO = item.ItemArray[1].ToString();
+                    objEnvio.PRECIO_ENVIO = Convert.ToInt16(item.ItemArray[2].ToString());
+                    lstEnvio.Add(objEnvio);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                this.CERRAR();
+            }
 
-            #region Administrador_Pedido
-            public List<PEDIDOS> Obtener_Pedidos(SQLSentencia objSentencia)
+            return lstEnvio;
+        }
+        #endregion
+
+        #region Administrador_Estados
+        public List<ESTADO> Obtener_Estado(SQLSentencia objsentencia)
+        {
+            List<ESTADO> lstEstado = new List<ESTADO>();
+            System.Data.DataTable dt = new System.Data.DataTable();
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.CommandText = objsentencia.PETICION;
+                cmd.Connection = objConexion;
+                cmd.CommandType = System.Data.CommandType.Text;
+
+                SqlDataAdapter objcarga = new SqlDataAdapter(cmd);
+                objcarga.Fill(dt);
+
+                foreach (System.Data.DataRow item in dt.Rows)
+                {
+                    ESTADO objEstado = new ESTADO();
+                    objEstado.IDESTADO = Convert.ToInt16(item.ItemArray[0].ToString());
+                    objEstado.DESC_ESTADO= item.ItemArray[1].ToString();
+                    lstEstado.Add(objEstado);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                this.CERRAR();
+            }
+
+            return lstEstado;
+        }
+        #endregion
+
+        #region Administrador_Origen
+        public List<ORIGEN> Obtener_Origen(SQLSentencia objsentencia)
+        {
+            List<ORIGEN> lstOrigen= new List<ORIGEN>();
+            System.Data.DataTable dt = new System.Data.DataTable();
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.CommandText = objsentencia.PETICION;
+                cmd.Connection = objConexion;
+                cmd.CommandType = System.Data.CommandType.Text;
+
+                SqlDataAdapter objcarga = new SqlDataAdapter(cmd);
+                objcarga.Fill(dt);
+
+                foreach (System.Data.DataRow item in dt.Rows)
+                {
+                    ORIGEN objOrigen= new ORIGEN();
+                    objOrigen.IDORIGEN = Convert.ToInt16(item.ItemArray[0].ToString());
+                    objOrigen.PAIS = item.ItemArray[1].ToString();
+                    objOrigen.CIUDAD = item.ItemArray[2].ToString();
+                    lstOrigen.Add(objOrigen);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                this.CERRAR();
+            }
+
+            return lstOrigen;
+        }
+        #endregion
+
+        #region Administrador_Pagos
+        public List<PAGO> Obtener_Pago(SQLSentencia objsentencia)
+        {
+            List<PAGO> lstPago = new List<PAGO>();
+            System.Data.DataTable dt = new System.Data.DataTable();
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.CommandText = objsentencia.PETICION;
+                cmd.Connection = objConexion;
+                cmd.CommandType = System.Data.CommandType.Text;
+
+                SqlDataAdapter objcarga = new SqlDataAdapter(cmd);
+                objcarga.Fill(dt);
+
+                foreach (System.Data.DataRow item in dt.Rows)
+                {
+                    PAGO objPago = new PAGO();
+                    objPago.IDPAGO = Convert.ToInt16(item.ItemArray[0].ToString());
+                    objPago.DESC_PAGO = item.ItemArray[1].ToString();
+                    lstPago.Add(objPago);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                this.CERRAR();
+            }
+
+            return lstPago;
+        }
+        #endregion
+
+        #region Administrador_Pedido
+        public List<PEDIDOS> Obtener_Pedidos(SQLSentencia objSentencia)
             {
                 List<PEDIDOS> lstPedidos = new List<PEDIDOS>();
                 System.Data.DataTable dt = new System.Data.DataTable();
@@ -176,7 +314,7 @@ namespace _03AccesoDatos
             }
             #endregion
 
-            #region Administrador_Usuario
+        #region Administrador_Usuario
             public List<USUARIOS> Obtener_Usuarios(SQLSentencia objSentencia)
             {
                 List<USUARIOS> lstUsuarios = new List<USUARIOS>();

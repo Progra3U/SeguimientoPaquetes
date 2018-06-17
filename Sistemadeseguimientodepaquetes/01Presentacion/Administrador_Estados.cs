@@ -18,6 +18,32 @@ namespace _01Presentacion
         {
             InitializeComponent();
         }
+       
+        #region Metodo Limpiar
+        public void Limpiar()
+        {
+            this.txtIdEstado.Text = "";
+            this.txtDescEstado.Text = "";
+          
+        }
+        #endregion
+
+        #region Metodo para cargar info del DataGrid
+        private void CargarEstados()
+        {
+            try
+            {
+                List<ESTADO> lstEstado = Logica.obtEstado();
+                this.dataGrid.DataSource = lstEstado;
+                this.dataGrid.Refresh();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+        #endregion
 
         #region  Botones_Guardar_Buscar_Editar_Eliminar Form Administrador_ESTADO
         public ESTADO processoBase()
@@ -32,9 +58,11 @@ namespace _01Presentacion
             try
             {
                 ESTADO estado = new ESTADO();
-                estado.IDESTADO = Convert.ToInt16(txtIdEstado.Text.Trim());
+              //  estado.IDESTADO = Convert.ToInt16(txtIdEstado.Text.Trim());
                 estado.DESC_ESTADO = txtDescEstado.Text.Trim();
                 _02LogicadeNegocios.Logica.GuardarDato(estado);
+                MessageBox.Show("Estado Agregado");
+                Limpiar(); this.Close();
             }
             catch (Exception ex)
             {
@@ -78,5 +106,29 @@ namespace _01Presentacion
             }
         }
         #endregion
+
+        #region Evento Cargar Al Abrir
+        private void Administrador_Estado_Load(object sender, EventArgs e)
+        {
+            this.CargarEstados();
+        }
+        #endregion
+
+        #region EventoDatagrid
+        private void dataGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                this.txtIdEstado.Text = dataGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
+                this.txtDescEstado.Text = dataGrid.Rows[e.RowIndex].Cells[1].Value.ToString();
+                
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
     }
 }

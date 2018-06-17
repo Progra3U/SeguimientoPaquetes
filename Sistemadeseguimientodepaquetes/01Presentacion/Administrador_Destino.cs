@@ -66,7 +66,7 @@ namespace _01Presentacion
                 destino.CIUDAD = txtCiudad.Text.Trim();
                 destino.IMPUESTO = Convert.ToInt16(txtImpuesto.Text.Trim());
                 _02LogicadeNegocios.Logica.GuardarDato(destino);
-                MessageBox.Show("Usuario Agregado");
+                MessageBox.Show("Destino Agregado");
                 Limpiar(); this.Close();
             }
             catch (Exception ex)

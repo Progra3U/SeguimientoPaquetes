@@ -19,6 +19,32 @@ namespace _01Presentacion
             InitializeComponent();
         }
 
+        #region Metodo Limpiar
+        public void Limpiar()
+        {
+            this.txtIdPago.Text = "";
+            this.txtDescPago.Text = "";
+           
+        }
+        #endregion
+
+        #region Metodo para cargar info del DataGrid
+        private void CargarPago()
+        {
+            try
+            {
+                List<PAGO> lstPago = Logica.obtPago();
+                this.dataGrid.DataSource = lstPago;
+                this.dataGrid.Refresh();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+        #endregion
+
         #region  Botones_Guardar_Buscar_Editar_Eliminar Form Administrador_Pago
         public PAGO processoBase()
         {
@@ -36,9 +62,11 @@ namespace _01Presentacion
             try
             {
                 PAGO pago = new PAGO();
-                pago.IDPAGO = Convert.ToInt16(txtIdPago.Text.Trim());
+                //pago.IDPAGO = Convert.ToInt16(txtIdPago.Text.Trim());
                 pago.DESC_PAGO = txtDescPago.Text.Trim();
                 _02LogicadeNegocios.Logica.GuardarDato(pago);
+                MessageBox.Show("Pago Agregado");
+                Limpiar(); this.Close();
             }
             catch (Exception ex)
             {
@@ -82,5 +110,29 @@ namespace _01Presentacion
             }
         }
         #endregion
+
+        #region Evento Cargar Al Abrir
+        private void Administrador_Pago_Load(object sender, EventArgs e)
+        {
+            this.CargarPago();
+        }
+        #endregion
+
+        #region EventoDatagrid
+        private void dataGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                this.txtIdPago.Text = dataGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
+                this.txtDescPago.Text = dataGrid.Rows[e.RowIndex].Cells[1].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
     }
 }
+
+    
