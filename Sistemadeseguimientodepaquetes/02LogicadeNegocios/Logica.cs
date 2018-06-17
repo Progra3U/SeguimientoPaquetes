@@ -281,17 +281,38 @@ namespace _02LogicadeNegocios
                     throw ex;
                 }
             }
-            public static void BuscarDato(PEDIDOS pedido) //Metodo para Buscar informacion en la tabla DESTINO
+            public static List<PEDIDOS> BuscarDatoU(PEDIDOS pedido) //Metodo para Buscar informacion en la tabla DESTINO
+            {
+                try
                 {
                     SQLSentencia sentencia = new SQLSentencia();
-                    sentencia.PETICION = @"";
-                    _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                    objAcceso.EjecutarSentencia(sentencia);
+                    sentencia.PETICION = @"SELECT IDPEDIDO, IDUSUARIO, IDORIGEN, IDDESTINO, IDPAGO, IDENVIO, IDESTADO, TOTAL, DESCRIPCION  FROM PEDIDOS WHERE IDPEDIDO='"+ pedido.IDUSUARIO+ "'";
+                    Acceso objacceso = new Acceso();
+                    return objacceso.Obtener_Pedidos(sentencia);
                 }
-            #endregion
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            public static List<PEDIDOS> BuscarDatoP(PEDIDOS pedido) //Metodo para Buscar informacion en la tabla DESTINO
+            {
+                try
+                {
+                    SQLSentencia sentencia = new SQLSentencia();
+                    sentencia.PETICION = @"SELECT IDPEDIDO, IDUSUARIO, IDORIGEN, IDDESTINO, IDPAGO, IDENVIO, IDESTADO, TOTAL, DESCRIPCION  FROM PEDIDOS WHERE IDPEDIDO='" + pedido.IDPEDIDO + "'";
+                    Acceso objacceso = new Acceso();
+                    return objacceso.Obtener_Pedidos(sentencia);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        #endregion
 
-            #region Metodos Para Tabla USUARIO
-            public static void GuardarDato(USUARIOS user) //Metodo para Agregar informacion a la tabla DESTINO
+        #region Metodos Para Tabla USUARIO
+        public static void GuardarDato(USUARIOS user) //Metodo para Agregar informacion a la tabla DESTINO
             {
                 try
                 {

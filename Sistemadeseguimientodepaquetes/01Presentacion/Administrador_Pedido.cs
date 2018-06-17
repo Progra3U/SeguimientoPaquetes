@@ -130,6 +130,10 @@ namespace _01Presentacion
             }
 
         }
+        private void btnBuscar_Click_1(object sender, EventArgs e)
+        {
+
+        }
         #endregion
 
         #region Evento Cargar Al Abrir
@@ -160,5 +164,6 @@ namespace _01Presentacion
             }
         }
         #endregion
+
     }
 }

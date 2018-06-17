@@ -30,40 +30,249 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuario_Pedido));
             this.panelCentral = new System.Windows.Forms.Panel();
+            this.txtIdEstadoCB = new System.Windows.Forms.ComboBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.txtIdPago = new System.Windows.Forms.TextBox();
+            this.txtIdEnvio = new System.Windows.Forms.TextBox();
+            this.txtIdOrigen = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtIdDestino = new System.Windows.Forms.TextBox();
+            this.txtIdUsuario = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtIdPedido = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.dataGrid = new System.Windows.Forms.DataGridView();
             this.icono = new System.Windows.Forms.PictureBox();
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.btnGuardar = new System.Windows.Forms.PictureBox();
             this.btnBuscar = new System.Windows.Forms.PictureBox();
-            this.btnEditar = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtEleccionCB = new System.Windows.Forms.ComboBox();
             this.panelCentral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icono)).BeginInit();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).BeginInit();
             this.SuspendLayout();
             // 
             // panelCentral
             // 
             this.panelCentral.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelCentral.Controls.Add(this.txtEleccionCB);
+            this.panelCentral.Controls.Add(this.label10);
+            this.panelCentral.Controls.Add(this.txtIdEstadoCB);
+            this.panelCentral.Controls.Add(this.txtTotal);
+            this.panelCentral.Controls.Add(this.txtIdPago);
+            this.panelCentral.Controls.Add(this.txtIdEnvio);
+            this.panelCentral.Controls.Add(this.txtIdOrigen);
+            this.panelCentral.Controls.Add(this.txtDescripcion);
+            this.panelCentral.Controls.Add(this.txtIdDestino);
+            this.panelCentral.Controls.Add(this.txtIdUsuario);
+            this.panelCentral.Controls.Add(this.label9);
+            this.panelCentral.Controls.Add(this.label8);
+            this.panelCentral.Controls.Add(this.label7);
+            this.panelCentral.Controls.Add(this.label5);
+            this.panelCentral.Controls.Add(this.label4);
+            this.panelCentral.Controls.Add(this.label3);
+            this.panelCentral.Controls.Add(this.label2);
+            this.panelCentral.Controls.Add(this.label1);
+            this.panelCentral.Controls.Add(this.txtIdPedido);
+            this.panelCentral.Controls.Add(this.label6);
             this.panelCentral.Controls.Add(this.dataGrid);
             this.panelCentral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCentral.Location = new System.Drawing.Point(0, 35);
             this.panelCentral.Name = "panelCentral";
-            this.panelCentral.Size = new System.Drawing.Size(520, 230);
+            this.panelCentral.Size = new System.Drawing.Size(520, 320);
             this.panelCentral.TabIndex = 9;
+            // 
+            // txtIdEstadoCB
+            // 
+            this.txtIdEstadoCB.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdEstadoCB.FormattingEnabled = true;
+            this.txtIdEstadoCB.Location = new System.Drawing.Point(334, 103);
+            this.txtIdEstadoCB.Name = "txtIdEstadoCB";
+            this.txtIdEstadoCB.Size = new System.Drawing.Size(154, 27);
+            this.txtIdEstadoCB.TabIndex = 66;
+            // 
+            // txtTotal
+            // 
+            this.txtTotal.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotal.Location = new System.Drawing.Point(334, 136);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.ReadOnly = true;
+            this.txtTotal.Size = new System.Drawing.Size(154, 27);
+            this.txtTotal.TabIndex = 65;
+            // 
+            // txtIdPago
+            // 
+            this.txtIdPago.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdPago.Location = new System.Drawing.Point(98, 136);
+            this.txtIdPago.Name = "txtIdPago";
+            this.txtIdPago.ReadOnly = true;
+            this.txtIdPago.Size = new System.Drawing.Size(137, 27);
+            this.txtIdPago.TabIndex = 64;
+            // 
+            // txtIdEnvio
+            // 
+            this.txtIdEnvio.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdEnvio.Location = new System.Drawing.Point(98, 103);
+            this.txtIdEnvio.Name = "txtIdEnvio";
+            this.txtIdEnvio.ReadOnly = true;
+            this.txtIdEnvio.Size = new System.Drawing.Size(137, 27);
+            this.txtIdEnvio.TabIndex = 63;
+            // 
+            // txtIdOrigen
+            // 
+            this.txtIdOrigen.Enabled = false;
+            this.txtIdOrigen.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdOrigen.Location = new System.Drawing.Point(98, 70);
+            this.txtIdOrigen.Name = "txtIdOrigen";
+            this.txtIdOrigen.ReadOnly = true;
+            this.txtIdOrigen.Size = new System.Drawing.Size(137, 27);
+            this.txtIdOrigen.TabIndex = 62;
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion.Location = new System.Drawing.Point(98, 175);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.ReadOnly = true;
+            this.txtDescripcion.Size = new System.Drawing.Size(390, 27);
+            this.txtDescripcion.TabIndex = 61;
+            // 
+            // txtIdDestino
+            // 
+            this.txtIdDestino.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdDestino.Location = new System.Drawing.Point(334, 70);
+            this.txtIdDestino.Name = "txtIdDestino";
+            this.txtIdDestino.ReadOnly = true;
+            this.txtIdDestino.Size = new System.Drawing.Size(154, 27);
+            this.txtIdDestino.TabIndex = 59;
+            // 
+            // txtIdUsuario
+            // 
+            this.txtIdUsuario.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdUsuario.Location = new System.Drawing.Point(334, 36);
+            this.txtIdUsuario.Name = "txtIdUsuario";
+            this.txtIdUsuario.ReadOnly = true;
+            this.txtIdUsuario.Size = new System.Drawing.Size(154, 27);
+            this.txtIdUsuario.TabIndex = 58;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(40, 183);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(48, 19);
+            this.label9.TabIndex = 56;
+            this.label9.Text = "Desc:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(250, 44);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(68, 19);
+            this.label8.TabIndex = 55;
+            this.label8.Text = "Usuario:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(25, 73);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(63, 19);
+            this.label7.TabIndex = 54;
+            this.label7.Text = "Origen:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(250, 78);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(69, 19);
+            this.label5.TabIndex = 53;
+            this.label5.Text = "Destino:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(38, 144);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(50, 19);
+            this.label4.TabIndex = 52;
+            this.label4.Text = "Pago:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(36, 111);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 19);
+            this.label3.TabIndex = 51;
+            this.label3.Text = "Envio:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(253, 82);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 19);
+            this.label2.TabIndex = 50;
+            this.label2.Text = "Estado:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(253, 115);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 19);
+            this.label1.TabIndex = 49;
+            this.label1.Text = "Total:";
+            // 
+            // txtIdPedido
+            // 
+            this.txtIdPedido.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdPedido.Location = new System.Drawing.Point(98, 36);
+            this.txtIdPedido.Name = "txtIdPedido";
+            this.txtIdPedido.ReadOnly = true;
+            this.txtIdPedido.Size = new System.Drawing.Size(137, 27);
+            this.txtIdPedido.TabIndex = 48;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(9, 44);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 19);
+            this.label6.TabIndex = 47;
+            this.label6.Text = "Pedido #:";
             // 
             // dataGrid
             // 
             this.dataGrid.AllowUserToOrderColumns = true;
-            this.dataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid.Location = new System.Drawing.Point(3, 153);
+            this.dataGrid.Location = new System.Drawing.Point(3, 207);
             this.dataGrid.Name = "dataGrid";
-            this.dataGrid.Size = new System.Drawing.Size(514, 74);
-            this.dataGrid.TabIndex = 4;
+            this.dataGrid.Size = new System.Drawing.Size(514, 106);
+            this.dataGrid.TabIndex = 46;
             // 
             // icono
             // 
@@ -81,7 +290,6 @@
             this.BarraTitulo.Controls.Add(this.btnGuardar);
             this.BarraTitulo.Controls.Add(this.icono);
             this.BarraTitulo.Controls.Add(this.btnBuscar);
-            this.BarraTitulo.Controls.Add(this.btnEditar);
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
@@ -92,40 +300,54 @@
             // 
             this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.Location = new System.Drawing.Point(421, 7);
+            this.btnGuardar.Location = new System.Drawing.Point(435, 4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(25, 25);
             this.btnGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnGuardar.TabIndex = 5;
             this.btnGuardar.TabStop = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnBuscar
             // 
             this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(452, 7);
+            this.btnBuscar.Location = new System.Drawing.Point(466, 4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(25, 25);
             this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.TabStop = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // btnEditar
+            // label10
             // 
-            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
-            this.btnEditar.Location = new System.Drawing.Point(483, 7);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(25, 25);
-            this.btnEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnEditar.TabIndex = 3;
-            this.btnEditar.TabStop = false;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(94, 6);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(94, 19);
+            this.label10.TabIndex = 67;
+            this.label10.Text = "Buscar por: ";
+            // 
+            // txtEleccionCB
+            // 
+            this.txtEleccionCB.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEleccionCB.FormattingEnabled = true;
+            this.txtEleccionCB.Items.AddRange(new object[] {
+            "Pedido",
+            "Usuario"});
+            this.txtEleccionCB.Location = new System.Drawing.Point(203, 6);
+            this.txtEleccionCB.Name = "txtEleccionCB";
+            this.txtEleccionCB.Size = new System.Drawing.Size(154, 27);
+            this.txtEleccionCB.TabIndex = 68;
+            this.txtEleccionCB.SelectedIndexChanged += new System.EventHandler(this.txtEleccionCB_SelectedIndexChanged);
             // 
             // Usuario_Pedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(520, 265);
+            this.ClientSize = new System.Drawing.Size(520, 355);
             this.Controls.Add(this.panelCentral);
             this.Controls.Add(this.BarraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -134,12 +356,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuario_Pedido";
             this.panelCentral.ResumeLayout(false);
+            this.panelCentral.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icono)).EndInit();
             this.BarraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -149,8 +371,27 @@
         private System.Windows.Forms.Panel BarraTitulo;
         private System.Windows.Forms.PictureBox btnGuardar;
         private System.Windows.Forms.PictureBox btnBuscar;
-        private System.Windows.Forms.PictureBox btnEditar;
         private System.Windows.Forms.PictureBox icono;
+        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.TextBox txtIdPago;
+        private System.Windows.Forms.TextBox txtIdEnvio;
+        private System.Windows.Forms.TextBox txtIdOrigen;
+        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.TextBox txtIdDestino;
+        private System.Windows.Forms.TextBox txtIdUsuario;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtIdPedido;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGrid;
+        private System.Windows.Forms.ComboBox txtIdEstadoCB;
+        private System.Windows.Forms.ComboBox txtEleccionCB;
+        private System.Windows.Forms.Label label10;
     }
 }
