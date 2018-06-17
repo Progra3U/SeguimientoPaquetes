@@ -36,9 +36,9 @@
             this.btnEditar = new System.Windows.Forms.PictureBox();
             this.btnBorrar = new System.Windows.Forms.PictureBox();
             this.panelCentral = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtdesc = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtenvio = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -129,9 +129,9 @@
             // panelCentral
             // 
             this.panelCentral.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelCentral.Controls.Add(this.textBox3);
+            this.panelCentral.Controls.Add(this.txtdesc);
             this.panelCentral.Controls.Add(this.textBox5);
-            this.panelCentral.Controls.Add(this.textBox2);
+            this.panelCentral.Controls.Add(this.txtenvio);
             this.panelCentral.Controls.Add(this.label2);
             this.panelCentral.Controls.Add(this.label7);
             this.panelCentral.Controls.Add(this.label5);
@@ -147,13 +147,13 @@
             this.panelCentral.Size = new System.Drawing.Size(520, 355);
             this.panelCentral.TabIndex = 7;
             // 
-            // textBox3
+            // txtdesc
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(253, 93);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(115, 27);
-            this.textBox3.TabIndex = 57;
+            this.txtdesc.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdesc.Location = new System.Drawing.Point(253, 93);
+            this.txtdesc.Name = "txtdesc";
+            this.txtdesc.Size = new System.Drawing.Size(115, 27);
+            this.txtdesc.TabIndex = 57;
             // 
             // textBox5
             // 
@@ -163,13 +163,13 @@
             this.textBox5.Size = new System.Drawing.Size(115, 27);
             this.textBox5.TabIndex = 56;
             // 
-            // textBox2
+            // txtenvio
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(253, 60);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(115, 27);
-            this.textBox2.TabIndex = 55;
+            this.txtenvio.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtenvio.Location = new System.Drawing.Point(253, 60);
+            this.txtenvio.Name = "txtenvio";
+            this.txtenvio.Size = new System.Drawing.Size(115, 27);
+            this.txtenvio.TabIndex = 55;
             // 
             // label2
             // 
@@ -294,9 +294,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Tabla;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtdesc;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtenvio;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;

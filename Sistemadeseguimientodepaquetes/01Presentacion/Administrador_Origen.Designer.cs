@@ -36,11 +36,11 @@
             this.btnEditar = new System.Windows.Forms.PictureBox();
             this.btnBorrar = new System.Windows.Forms.PictureBox();
             this.panelCentral = new System.Windows.Forms.Panel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.cuidad = new System.Windows.Forms.TextBox();
+            this.tpais = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.texori = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGrid = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -129,11 +129,11 @@
             // panelCentral
             // 
             this.panelCentral.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelCentral.Controls.Add(this.textBox7);
-            this.panelCentral.Controls.Add(this.textBox2);
+            this.panelCentral.Controls.Add(this.cuidad);
+            this.panelCentral.Controls.Add(this.tpais);
             this.panelCentral.Controls.Add(this.label2);
             this.panelCentral.Controls.Add(this.label8);
-            this.panelCentral.Controls.Add(this.textBox4);
+            this.panelCentral.Controls.Add(this.texori);
             this.panelCentral.Controls.Add(this.label3);
             this.panelCentral.Controls.Add(this.dataGrid);
             this.panelCentral.Controls.Add(this.textBox1);
@@ -147,21 +147,21 @@
             this.panelCentral.Size = new System.Drawing.Size(520, 355);
             this.panelCentral.TabIndex = 7;
             // 
-            // textBox7
+            // cuidad
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(239, 128);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(120, 27);
-            this.textBox7.TabIndex = 36;
+            this.cuidad.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cuidad.Location = new System.Drawing.Point(239, 128);
+            this.cuidad.Name = "cuidad";
+            this.cuidad.Size = new System.Drawing.Size(120, 27);
+            this.cuidad.TabIndex = 36;
             // 
-            // textBox2
+            // tpais
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(239, 95);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(120, 27);
-            this.textBox2.TabIndex = 35;
+            this.tpais.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tpais.Location = new System.Drawing.Point(239, 95);
+            this.tpais.Name = "tpais";
+            this.tpais.Size = new System.Drawing.Size(120, 27);
+            this.tpais.TabIndex = 35;
             // 
             // label2
             // 
@@ -183,13 +183,13 @@
             this.label8.TabIndex = 33;
             this.label8.Text = "Pais:";
             // 
-            // textBox4
+            // texori
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(239, 62);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(120, 27);
-            this.textBox4.TabIndex = 32;
+            this.texori.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.texori.Location = new System.Drawing.Point(239, 62);
+            this.texori.Name = "texori";
+            this.texori.Size = new System.Drawing.Size(120, 27);
+            this.texori.TabIndex = 32;
             // 
             // label3
             // 
@@ -294,11 +294,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Tabla;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox cuidad;
+        private System.Windows.Forms.TextBox tpais;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox texori;
         private System.Windows.Forms.Label label3;
     }
 }

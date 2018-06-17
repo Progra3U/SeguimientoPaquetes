@@ -55,15 +55,129 @@ namespace _02LogicadeNegocios
         #endregion
 
         #region Metodos Para Tabla ENVIO 
+        public static void GuardarDato(ENVIO envio) //Metodo para Agregar informacion a la tabla Envio
+        {
+            SQLSentencia sentencia = new SQLSentencia();
+            sentencia.PETICION = @"INSERT INTO ENVIO VALUES ('" + envio.IDENVIO + "','" + envio.DESC_ENVIO + "','"+ "')";
+            _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+            objAcceso.EjecutarSentencia(sentencia);
+        }
+        public static void ModificarDato(ENVIO envio) //Metodo para Modificar informacion en la tabla envio
+        {
+            SQLSentencia sentencia = new SQLSentencia();
+            sentencia.PETICION = @"UPDATE ENVIO SET IDENVIO='" + envio.IDENVIO + "', DESC_ENVIO='" + envio.DESC_ENVIO+ "', IMPUESTO='" + "' WHERE IDENVIO='" + envio.IDENVIO + "'";
+            _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+            objAcceso.EjecutarSentencia(sentencia);
+        }
+        public static void EliminarDato(ENVIO envio) //Metodo para Eliminar informacion en la tabla envio
+        {
+            SQLSentencia sentencia = new SQLSentencia();
+            sentencia.PETICION = @"DELETE FROM ENVIO WHERE IDENVIO='" + envio.IDENVIO + "'";
+            _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+            objAcceso.EjecutarSentencia(sentencia);
+        }
+        public static void BuscarDato(ENVIO envio) //Metodo para Buscar informacion en la tabla envio
+        {
+            SQLSentencia sentencia = new SQLSentencia();
+            sentencia.PETICION = @"";
+            _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+            objAcceso.EjecutarSentencia(sentencia);
+        }
+
         #endregion
 
         #region Metodos Para Tabla ESTADO 
+        public static void GuardarDato(ESTADO estado) //Metodo para Agregar informacion a la tabla Estado
+        {
+            SQLSentencia sentencia = new SQLSentencia();
+            sentencia.PETICION = @"INSERT INTO ESTADO VALUES ('" + estado.IDESTADO + "','" + estado.DESC_ESTADO + "','" + "')";
+            _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+            objAcceso.EjecutarSentencia(sentencia);
+        }
+        public static void ModificarDato(ESTADO estado) //Metodo para Modificar informacion en la tabla Estado
+        {
+            SQLSentencia sentencia = new SQLSentencia();
+            sentencia.PETICION = @"UPDATE ESTADO SET IDESTADO='" + estado.IDESTADO + "', DESC_ESTADO='" + estado.DESC_ESTADO  + "' WHERE IDESTADO='" + estado.IDESTADO + "'";
+            _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+            objAcceso.EjecutarSentencia(sentencia);
+        }
+        public static void EliminarDato(ESTADO estado) //Metodo para Eliminar informacion en la tabla Estado
+        {
+            SQLSentencia sentencia = new SQLSentencia();
+            sentencia.PETICION = @"DELETE FROM ESTADO WHERE IDESTADO='" + estado.IDESTADO+ "'";
+            _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+            objAcceso.EjecutarSentencia(sentencia);
+        }
+        public static void BuscarDato(ESTADO estado) //Metodo para Buscar informacion en la tabla Estado
+        {
+            SQLSentencia sentencia = new SQLSentencia();
+            sentencia.PETICION = @"";
+            _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+            objAcceso.EjecutarSentencia(sentencia);
+        }
+
         #endregion
 
         #region Metodos Para Tabla ORIGEN 
+        public static void GuardarDato(ORIGEN origen) //Metodo para Agregar informacion a la tabla Origen
+        {
+            SQLSentencia sentencia = new SQLSentencia();
+            sentencia.PETICION = @"INSERT INTO ORIGEN VALUES ('" + origen.IDORIGEN + "','" + origen.PAIS + "','" +origen.CIUDAD +"')";
+            _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+            objAcceso.EjecutarSentencia(sentencia);
+        }
+        public static void ModificarDato(ORIGEN origen) //Metodo para Modificar informacion en la tabla Origen
+        {
+            SQLSentencia sentencia = new SQLSentencia();
+            sentencia.PETICION = @"UPDATE ORIGEN SET IDORIGEN='" + origen.IDORIGEN + "', PAIS='" + origen.PAIS + "', CIUDAD='" + origen.CIUDAD + "' WHERE IDORIGEN='" + origen.IDORIGEN + "'";
+            _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+            objAcceso.EjecutarSentencia(sentencia);
+        }
+        public static void EliminarDato(ORIGEN origen) //Metodo para Eliminar informacion en la tabla origen
+        {
+            SQLSentencia sentencia = new SQLSentencia();
+            sentencia.PETICION = @"DELETE FROM ORIGEN WHERE IDORIGEN='" + origen.IDORIGEN + "'";
+            _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+            objAcceso.EjecutarSentencia(sentencia);
+        }
+        public static void BuscarDato(ORIGEN origen) //Metodo para Buscar informacion en la tabla origen
+        {
+            SQLSentencia sentencia = new SQLSentencia();
+            sentencia.PETICION = @"";
+            _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+            objAcceso.EjecutarSentencia(sentencia);
+        }
         #endregion
 
         #region Metodos Para Tabla PAGO 
+        public static void GuardarDato(PAGO pago) //Metodo para Agregar informacion a la tabla Pago
+        {
+            SQLSentencia sentencia = new SQLSentencia();
+            sentencia.PETICION = @"INSERT INTO PAGO VALUES ('" + pago.IDPAGO + "','" + pago.DESC_PAGO + "','" + "')";
+            _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+            objAcceso.EjecutarSentencia(sentencia);
+        }
+        public static void ModificarDato(PAGO pago) //Metodo para Modificar informacion en la tabla Pago
+        {
+            SQLSentencia sentencia = new SQLSentencia();
+            sentencia.PETICION = @"UPDATE PAGO SET IDPAGO='" + pago.IDPAGO + "', PAIS='" + pago.DESC_PAGO + "' WHERE IDPAGO='" + pago.IDPAGO + "'";
+            _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+            objAcceso.EjecutarSentencia(sentencia);
+        }
+        public static void EliminarDato(PAGO pago) //Metodo para Eliminar informacion en la tabla Pago
+        {
+            SQLSentencia sentencia = new SQLSentencia();
+            sentencia.PETICION = @"DELETE FROM PAGO WHERE IDPAGO='" + pago.IDPAGO + "'";
+            _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+            objAcceso.EjecutarSentencia(sentencia);
+        }
+        public static void BuscarDato(PAGO pago) //Metodo para Buscar informacion en la tabla Pago
+        {
+            SQLSentencia sentencia = new SQLSentencia();
+            sentencia.PETICION = @"";
+            _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+            objAcceso.EjecutarSentencia(sentencia);
+        }
         #endregion
 
         #region Metodos Para Tabla PEDIDOS 

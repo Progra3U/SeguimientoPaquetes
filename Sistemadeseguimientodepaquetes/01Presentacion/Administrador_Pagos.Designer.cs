@@ -36,8 +36,8 @@
             this.btnBorrar = new System.Windows.Forms.PictureBox();
             this.icono = new System.Windows.Forms.PictureBox();
             this.panelCentral = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.texdes = new System.Windows.Forms.TextBox();
+            this.txtpag = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGrid = new System.Windows.Forms.DataGridView();
@@ -127,8 +127,8 @@
             // panelCentral
             // 
             this.panelCentral.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelCentral.Controls.Add(this.textBox4);
-            this.panelCentral.Controls.Add(this.textBox2);
+            this.panelCentral.Controls.Add(this.texdes);
+            this.panelCentral.Controls.Add(this.txtpag);
             this.panelCentral.Controls.Add(this.label2);
             this.panelCentral.Controls.Add(this.label3);
             this.panelCentral.Controls.Add(this.dataGrid);
@@ -143,23 +143,21 @@
             this.panelCentral.Size = new System.Drawing.Size(520, 355);
             this.panelCentral.TabIndex = 9;
             // 
-            // textBox4
+            // texdes
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(216, 102);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(203, 27);
-            this.textBox4.TabIndex = 45;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.texdes.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.texdes.Location = new System.Drawing.Point(216, 102);
+            this.texdes.Name = "texdes";
+            this.texdes.Size = new System.Drawing.Size(203, 27);
+            this.texdes.TabIndex = 45;
             // 
-            // textBox2
+            // txtpag
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(216, 60);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(99, 27);
-            this.textBox2.TabIndex = 44;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtpag.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpag.Location = new System.Drawing.Point(216, 60);
+            this.txtpag.Name = "txtpag";
+            this.txtpag.Size = new System.Drawing.Size(99, 27);
+            this.txtpag.TabIndex = 44;
             // 
             // label2
             // 
@@ -170,7 +168,6 @@
             this.label2.Size = new System.Drawing.Size(68, 20);
             this.label2.TabIndex = 43;
             this.label2.Text = "Id Pago:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -181,7 +178,6 @@
             this.label3.Size = new System.Drawing.Size(89, 20);
             this.label3.TabIndex = 42;
             this.label3.Text = "Desc Pago:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // dataGrid
             // 
@@ -276,8 +272,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Tabla;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox texdes;
+        private System.Windows.Forms.TextBox txtpag;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
     }
