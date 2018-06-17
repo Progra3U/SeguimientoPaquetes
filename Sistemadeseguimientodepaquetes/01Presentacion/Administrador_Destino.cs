@@ -67,7 +67,7 @@ namespace _01Presentacion
                 destino.IMPUESTO = Convert.ToInt16(txtImpuesto.Text.Trim());
                 _02LogicadeNegocios.Logica.GuardarDato(destino);
                 MessageBox.Show("Usuario Agregado");
-                Limpiar();
+                Limpiar(); this.Close();
             }
             catch (Exception ex)
             {
@@ -93,7 +93,7 @@ namespace _01Presentacion
             {
                 _02LogicadeNegocios.Logica.ModificarDato(processoBase());
                 MessageBox.Show("Usuario Editado");
-                Limpiar();
+                Limpiar(); this.Close();
             }
             catch (Exception ex)
             {
@@ -108,7 +108,7 @@ namespace _01Presentacion
             {
                 _02LogicadeNegocios.Logica.EliminarDato(processoBase());
                 MessageBox.Show("Usuario Borrado");
-                Limpiar();
+                Limpiar(); this.Close();
             }
             catch (Exception ex)
             {

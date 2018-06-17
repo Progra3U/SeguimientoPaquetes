@@ -81,7 +81,7 @@ namespace _01Presentacion
                 pedido.DESCRIPCION = txtDescripcion.Text.Trim();
                 _02LogicadeNegocios.Logica.GuardarDato(pedido);
                 MessageBox.Show("Usuario Agregado");
-                Limpiar();
+                Limpiar(); this.Close();
             }
             catch (Exception ex)
             {
@@ -107,7 +107,7 @@ namespace _01Presentacion
             {
                 _02LogicadeNegocios.Logica.ModificarDato(processoBase());
                 MessageBox.Show("Usuario Editado");
-                Limpiar();
+                Limpiar(); this.Close();
             }
             catch (Exception ex)
             {
@@ -122,7 +122,7 @@ namespace _01Presentacion
             {
                 _02LogicadeNegocios.Logica.EliminarDato(processoBase());
                 MessageBox.Show("Usuario Borrado");
-                Limpiar();
+                Limpiar(); this.Close();
             }
             catch (Exception ex)
             {
