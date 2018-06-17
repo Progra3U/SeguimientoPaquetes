@@ -16,13 +16,13 @@ namespace _04Entidades
     {
         public ORIGEN()
         {
-            this.PEDIDOS = new HashSet<PEDIDO>();
+            this.PEDIDOS = new HashSet<PEDIDOS>();
         }
     
         public int IDORIGEN { get; set; }
         public string PAIS { get; set; }
         public string CIUDAD { get; set; }
     
-        public virtual ICollection<PEDIDO> PEDIDOS { get; set; }
+        public virtual ICollection<PEDIDOS> PEDIDOS { get; set; }
     }
 }

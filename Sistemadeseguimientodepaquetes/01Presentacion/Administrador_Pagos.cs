@@ -23,18 +23,21 @@ namespace _01Presentacion
         public PAGO processoBase()
         {
             PAGO pago = new PAGO();
-            pago.IDPAGO = Convert.ToInt16(txtpag.Text.Trim());
-            pago.DESC_PAGO = texdes.Text.Trim();
+            pago.IDPAGO = Convert.ToInt16(txtIdPago.Text.Trim());
+            pago.DESC_PAGO = txtDescPago.Text.Trim();
             return pago;
         }
-
+        private void label2_Click(object sender, EventArgs e)
+        {
+            
+        }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             try
             {
                 PAGO pago = new PAGO();
-                pago.IDPAGO = Convert.ToInt16(txtpag.Text.Trim());
-                pago.DESC_PAGO = texdes.Text.Trim();
+                pago.IDPAGO = Convert.ToInt16(txtIdPago.Text.Trim());
+                pago.DESC_PAGO = txtDescPago.Text.Trim();
                 _02LogicadeNegocios.Logica.GuardarDato(pago);
             }
             catch (Exception ex)
@@ -65,7 +68,6 @@ namespace _01Presentacion
             {
                 MessageBox.Show("Error al Editar Datos de Tabla Pago" + ex.Message);
             }
-
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
@@ -78,7 +80,6 @@ namespace _01Presentacion
             {
                 MessageBox.Show("Error al Elminar Datos de Tabla Pago" + ex.Message);
             }
-
         }
         #endregion
     }

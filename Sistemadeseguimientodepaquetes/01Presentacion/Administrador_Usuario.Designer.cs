@@ -94,6 +94,7 @@
             this.btnGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnGuardar.TabIndex = 5;
             this.btnGuardar.TabStop = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnBuscar
             // 
@@ -105,6 +106,7 @@
             this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.TabStop = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnEditar
             // 
@@ -116,6 +118,7 @@
             this.btnEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnEditar.TabIndex = 3;
             this.btnEditar.TabStop = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnBorrar
             // 
@@ -127,6 +130,7 @@
             this.btnBorrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnBorrar.TabIndex = 2;
             this.btnBorrar.TabStop = false;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // panelCentral
             // 
@@ -156,21 +160,22 @@
             this.txtEstadoCB.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEstadoCB.FormattingEnabled = true;
             this.txtEstadoCB.Items.AddRange(new object[] {
-            "1",
-            "0"});
+            "ACTIVO",
+            "INACTIVO"});
             this.txtEstadoCB.Location = new System.Drawing.Point(103, 74);
             this.txtEstadoCB.Name = "txtEstadoCB";
-            this.txtEstadoCB.Size = new System.Drawing.Size(83, 27);
+            this.txtEstadoCB.Size = new System.Drawing.Size(83, 28);
             this.txtEstadoCB.TabIndex = 31;
             // 
             // dataGrid
             // 
             this.dataGrid.AllowUserToOrderColumns = true;
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid.Location = new System.Drawing.Point(3, 173);
+            this.dataGrid.Location = new System.Drawing.Point(3, 143);
             this.dataGrid.Name = "dataGrid";
-            this.dataGrid.Size = new System.Drawing.Size(514, 144);
+            this.dataGrid.Size = new System.Drawing.Size(514, 174);
             this.dataGrid.TabIndex = 3;
+            this.dataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellClick);
             // 
             // txtTipoUserCB
             // 
@@ -182,7 +187,7 @@
             "USER"});
             this.txtTipoUserCB.Location = new System.Drawing.Point(326, 74);
             this.txtTipoUserCB.Name = "txtTipoUserCB";
-            this.txtTipoUserCB.Size = new System.Drawing.Size(177, 27);
+            this.txtTipoUserCB.Size = new System.Drawing.Size(177, 28);
             this.txtTipoUserCB.TabIndex = 30;
             // 
             // txtIdUsuario
@@ -207,7 +212,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(192, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 19);
+            this.label1.Size = new System.Drawing.Size(74, 20);
             this.label1.TabIndex = 19;
             this.label1.Text = "Nombre:";
             // 
@@ -225,7 +230,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(192, 46);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 19);
+            this.label2.Size = new System.Drawing.Size(68, 20);
             this.label2.TabIndex = 20;
             this.label2.Text = "Usuario:";
             // 
@@ -243,7 +248,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(11, 46);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 19);
+            this.label3.Size = new System.Drawing.Size(82, 20);
             this.label3.TabIndex = 21;
             this.label3.Text = "Password:";
             // 
@@ -253,7 +258,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(192, 82);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(128, 19);
+            this.label4.Size = new System.Drawing.Size(128, 20);
             this.label4.TabIndex = 22;
             this.label4.Text = "Tipo de Usuario:";
             // 
@@ -261,9 +266,9 @@
             // 
             this.Tabla.AutoSize = true;
             this.Tabla.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tabla.Location = new System.Drawing.Point(389, 151);
+            this.Tabla.Location = new System.Drawing.Point(389, 120);
             this.Tabla.Name = "Tabla";
-            this.Tabla.Size = new System.Drawing.Size(114, 19);
+            this.Tabla.Size = new System.Drawing.Size(114, 20);
             this.Tabla.TabIndex = 25;
             this.Tabla.Text = "Tabla Usuarios";
             // 
@@ -273,7 +278,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(11, 79);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 19);
+            this.label5.Size = new System.Drawing.Size(62, 20);
             this.label5.TabIndex = 23;
             this.label5.Text = "Estado:";
             // 
@@ -283,7 +288,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(11, 13);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 19);
+            this.label6.Size = new System.Drawing.Size(86, 20);
             this.label6.TabIndex = 24;
             this.label6.Text = "Id Usuario:";
             // 
@@ -299,6 +304,7 @@
             this.Name = "Administrador_Usuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administracion de Usuarios";
+            this.Load += new System.EventHandler(this.Administrador_Usuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.icono)).EndInit();
             this.BarraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).EndInit();

@@ -7,7 +7,7 @@
     <Property Name="IDDESTINO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="PAIS" Type="nvarchar" MaxLength="30" Nullable="false" />
     <Property Name="CIUDAD" Type="nvarchar" MaxLength="30" Nullable="false" />
-    <Property Name="INPUESTO" Type="int" Nullable="false" />
+    <Property Name="IMPUESTO" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="ENVIO">
     <Key>
@@ -15,6 +15,7 @@
     </Key>
     <Property Name="IDENVIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="DESC_ENVIO" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="PRECIO_ENVIO" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="ESTADO">
     <Key>
@@ -56,15 +57,16 @@
     <Property Name="IDENVIO" Type="int" Nullable="false" />
     <Property Name="IDESTADO" Type="int" Nullable="false" />
     <Property Name="TOTAL" Type="int" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="USUARIOS">
     <Key>
       <PropertyRef Name="IDUSUARIO" />
     </Key>
     <Property Name="IDUSUARIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="NOMBREUSER" Type="nvarchar" MaxLength="30" Nullable="false" />
-    <Property Name="ALIASUSER" Type="nvarchar" MaxLength="30" Nullable="false" />
-    <Property Name="PASSWORD" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="NOMBRE" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="ALIAS" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="PASS" Type="nvarchar" MaxLength="30" Nullable="false" />
     <Property Name="TIPO_USUARIO" Type="nvarchar" MaxLength="30" Nullable="false" />
     <Property Name="ESTADO_USUARIO" Type="nvarchar" MaxLength="30" Nullable="false" />
   </EntityType>
@@ -128,27 +130,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_PEDIDOS_PEDIDOS">
-    <End Role="PEDIDOS" Type="Self.PEDIDOS" Multiplicity="1" />
-    <End Role="PEDIDOS1" Type="Self.PEDIDOS" Multiplicity="0..1" />
+  <Association Name="FK_PEDIDOS_USUARIOS">
+    <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="1" />
+    <End Role="PEDIDOS" Type="Self.PEDIDOS" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="PEDIDOS">
-        <PropertyRef Name="IDPEDIDO" />
+      <Principal Role="USUARIOS">
         <PropertyRef Name="IDUSUARIO" />
-        <PropertyRef Name="IDORIGEN" />
-        <PropertyRef Name="IDDESTINO" />
-        <PropertyRef Name="IDPAGO" />
-        <PropertyRef Name="IDENVIO" />
-        <PropertyRef Name="IDESTADO" />
       </Principal>
-      <Dependent Role="PEDIDOS1">
-        <PropertyRef Name="IDPEDIDO" />
+      <Dependent Role="PEDIDOS">
         <PropertyRef Name="IDUSUARIO" />
-        <PropertyRef Name="IDORIGEN" />
-        <PropertyRef Name="IDDESTINO" />
-        <PropertyRef Name="IDPAGO" />
-        <PropertyRef Name="IDENVIO" />
-        <PropertyRef Name="IDESTADO" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -180,9 +170,9 @@
       <End Role="PAGO" EntitySet="PAGO" />
       <End Role="PEDIDOS" EntitySet="PEDIDOS" />
     </AssociationSet>
-    <AssociationSet Name="FK_PEDIDOS_PEDIDOS" Association="Self.FK_PEDIDOS_PEDIDOS">
+    <AssociationSet Name="FK_PEDIDOS_USUARIOS" Association="Self.FK_PEDIDOS_USUARIOS">
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
       <End Role="PEDIDOS" EntitySet="PEDIDOS" />
-      <End Role="PEDIDOS1" EntitySet="PEDIDOS" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

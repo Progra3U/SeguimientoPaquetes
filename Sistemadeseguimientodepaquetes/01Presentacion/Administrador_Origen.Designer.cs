@@ -36,11 +36,11 @@
             this.btnEditar = new System.Windows.Forms.PictureBox();
             this.btnBorrar = new System.Windows.Forms.PictureBox();
             this.panelCentral = new System.Windows.Forms.Panel();
-            this.cuidad = new System.Windows.Forms.TextBox();
-            this.tpais = new System.Windows.Forms.TextBox();
+            this.txtCiudad = new System.Windows.Forms.TextBox();
+            this.txtPais = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.texori = new System.Windows.Forms.TextBox();
+            this.txtIdOrigen = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGrid = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -92,6 +92,7 @@
             this.btnGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnGuardar.TabIndex = 5;
             this.btnGuardar.TabStop = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnBuscar
             // 
@@ -103,6 +104,7 @@
             this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.TabStop = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnEditar
             // 
@@ -114,6 +116,7 @@
             this.btnEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnEditar.TabIndex = 3;
             this.btnEditar.TabStop = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnBorrar
             // 
@@ -125,15 +128,16 @@
             this.btnBorrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnBorrar.TabIndex = 2;
             this.btnBorrar.TabStop = false;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // panelCentral
             // 
             this.panelCentral.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelCentral.Controls.Add(this.cuidad);
-            this.panelCentral.Controls.Add(this.tpais);
+            this.panelCentral.Controls.Add(this.txtCiudad);
+            this.panelCentral.Controls.Add(this.txtPais);
             this.panelCentral.Controls.Add(this.label2);
             this.panelCentral.Controls.Add(this.label8);
-            this.panelCentral.Controls.Add(this.texori);
+            this.panelCentral.Controls.Add(this.txtIdOrigen);
             this.panelCentral.Controls.Add(this.label3);
             this.panelCentral.Controls.Add(this.dataGrid);
             this.panelCentral.Controls.Add(this.textBox1);
@@ -147,21 +151,21 @@
             this.panelCentral.Size = new System.Drawing.Size(520, 355);
             this.panelCentral.TabIndex = 7;
             // 
-            // cuidad
+            // txtCiudad
             // 
-            this.cuidad.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cuidad.Location = new System.Drawing.Point(239, 128);
-            this.cuidad.Name = "cuidad";
-            this.cuidad.Size = new System.Drawing.Size(120, 27);
-            this.cuidad.TabIndex = 36;
+            this.txtCiudad.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCiudad.Location = new System.Drawing.Point(239, 128);
+            this.txtCiudad.Name = "txtCiudad";
+            this.txtCiudad.Size = new System.Drawing.Size(120, 27);
+            this.txtCiudad.TabIndex = 36;
             // 
-            // tpais
+            // txtPais
             // 
-            this.tpais.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tpais.Location = new System.Drawing.Point(239, 95);
-            this.tpais.Name = "tpais";
-            this.tpais.Size = new System.Drawing.Size(120, 27);
-            this.tpais.TabIndex = 35;
+            this.txtPais.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPais.Location = new System.Drawing.Point(239, 95);
+            this.txtPais.Name = "txtPais";
+            this.txtPais.Size = new System.Drawing.Size(120, 27);
+            this.txtPais.TabIndex = 35;
             // 
             // label2
             // 
@@ -183,13 +187,13 @@
             this.label8.TabIndex = 33;
             this.label8.Text = "Pais:";
             // 
-            // texori
+            // txtIdOrigen
             // 
-            this.texori.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.texori.Location = new System.Drawing.Point(239, 62);
-            this.texori.Name = "texori";
-            this.texori.Size = new System.Drawing.Size(120, 27);
-            this.texori.TabIndex = 32;
+            this.txtIdOrigen.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdOrigen.Location = new System.Drawing.Point(239, 62);
+            this.txtIdOrigen.Name = "txtIdOrigen";
+            this.txtIdOrigen.Size = new System.Drawing.Size(120, 27);
+            this.txtIdOrigen.TabIndex = 32;
             // 
             // label3
             // 
@@ -205,9 +209,9 @@
             // 
             this.dataGrid.AllowUserToOrderColumns = true;
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid.Location = new System.Drawing.Point(3, 212);
+            this.dataGrid.Location = new System.Drawing.Point(3, 182);
             this.dataGrid.Name = "dataGrid";
-            this.dataGrid.Size = new System.Drawing.Size(514, 140);
+            this.dataGrid.Size = new System.Drawing.Size(514, 170);
             this.dataGrid.TabIndex = 3;
             // 
             // textBox1
@@ -240,7 +244,7 @@
             // 
             this.Tabla.AutoSize = true;
             this.Tabla.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tabla.Location = new System.Drawing.Point(401, 190);
+            this.Tabla.Location = new System.Drawing.Point(401, 159);
             this.Tabla.Name = "Tabla";
             this.Tabla.Size = new System.Drawing.Size(102, 20);
             this.Tabla.TabIndex = 25;
@@ -294,11 +298,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Tabla;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox cuidad;
-        private System.Windows.Forms.TextBox tpais;
+        private System.Windows.Forms.TextBox txtCiudad;
+        private System.Windows.Forms.TextBox txtPais;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox texori;
+        private System.Windows.Forms.TextBox txtIdOrigen;
         private System.Windows.Forms.Label label3;
     }
 }

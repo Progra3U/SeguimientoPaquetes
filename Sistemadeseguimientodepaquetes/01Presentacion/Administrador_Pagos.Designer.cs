@@ -36,8 +36,8 @@
             this.btnBorrar = new System.Windows.Forms.PictureBox();
             this.icono = new System.Windows.Forms.PictureBox();
             this.panelCentral = new System.Windows.Forms.Panel();
-            this.texdes = new System.Windows.Forms.TextBox();
-            this.txtpag = new System.Windows.Forms.TextBox();
+            this.txtDescPago = new System.Windows.Forms.TextBox();
+            this.txtIdPago = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGrid = new System.Windows.Forms.DataGridView();
@@ -80,6 +80,7 @@
             this.btnGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnGuardar.TabIndex = 5;
             this.btnGuardar.TabStop = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnBuscar
             // 
@@ -91,6 +92,7 @@
             this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.TabStop = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnEditar
             // 
@@ -102,6 +104,7 @@
             this.btnEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnEditar.TabIndex = 3;
             this.btnEditar.TabStop = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnBorrar
             // 
@@ -113,6 +116,7 @@
             this.btnBorrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnBorrar.TabIndex = 2;
             this.btnBorrar.TabStop = false;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // icono
             // 
@@ -127,8 +131,8 @@
             // panelCentral
             // 
             this.panelCentral.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelCentral.Controls.Add(this.texdes);
-            this.panelCentral.Controls.Add(this.txtpag);
+            this.panelCentral.Controls.Add(this.txtDescPago);
+            this.panelCentral.Controls.Add(this.txtIdPago);
             this.panelCentral.Controls.Add(this.label2);
             this.panelCentral.Controls.Add(this.label3);
             this.panelCentral.Controls.Add(this.dataGrid);
@@ -143,21 +147,21 @@
             this.panelCentral.Size = new System.Drawing.Size(520, 355);
             this.panelCentral.TabIndex = 9;
             // 
-            // texdes
+            // txtDescPago
             // 
-            this.texdes.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.texdes.Location = new System.Drawing.Point(216, 102);
-            this.texdes.Name = "texdes";
-            this.texdes.Size = new System.Drawing.Size(203, 27);
-            this.texdes.TabIndex = 45;
+            this.txtDescPago.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescPago.Location = new System.Drawing.Point(216, 102);
+            this.txtDescPago.Name = "txtDescPago";
+            this.txtDescPago.Size = new System.Drawing.Size(203, 27);
+            this.txtDescPago.TabIndex = 45;
             // 
-            // txtpag
+            // txtIdPago
             // 
-            this.txtpag.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpag.Location = new System.Drawing.Point(216, 60);
-            this.txtpag.Name = "txtpag";
-            this.txtpag.Size = new System.Drawing.Size(99, 27);
-            this.txtpag.TabIndex = 44;
+            this.txtIdPago.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdPago.Location = new System.Drawing.Point(216, 60);
+            this.txtIdPago.Name = "txtIdPago";
+            this.txtIdPago.Size = new System.Drawing.Size(99, 27);
+            this.txtIdPago.TabIndex = 44;
             // 
             // label2
             // 
@@ -168,6 +172,7 @@
             this.label2.Size = new System.Drawing.Size(68, 20);
             this.label2.TabIndex = 43;
             this.label2.Text = "Id Pago:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -272,8 +277,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Tabla;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox texdes;
-        private System.Windows.Forms.TextBox txtpag;
+        private System.Windows.Forms.TextBox txtDescPago;
+        private System.Windows.Forms.TextBox txtIdPago;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
     }

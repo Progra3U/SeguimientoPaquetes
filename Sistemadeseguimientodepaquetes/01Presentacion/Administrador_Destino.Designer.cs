@@ -158,7 +158,7 @@
             // txtImpuesto
             // 
             this.txtImpuesto.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtImpuesto.Location = new System.Drawing.Point(242, 160);
+            this.txtImpuesto.Location = new System.Drawing.Point(362, 86);
             this.txtImpuesto.Name = "txtImpuesto";
             this.txtImpuesto.Size = new System.Drawing.Size(120, 27);
             this.txtImpuesto.TabIndex = 37;
@@ -166,7 +166,7 @@
             // txtPais
             // 
             this.txtPais.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPais.Location = new System.Drawing.Point(242, 94);
+            this.txtPais.Location = new System.Drawing.Point(362, 53);
             this.txtPais.Name = "txtPais";
             this.txtPais.Size = new System.Drawing.Size(120, 27);
             this.txtPais.TabIndex = 36;
@@ -174,7 +174,7 @@
             // txtCiudad
             // 
             this.txtCiudad.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCiudad.Location = new System.Drawing.Point(242, 127);
+            this.txtCiudad.Location = new System.Drawing.Point(131, 82);
             this.txtCiudad.Name = "txtCiudad";
             this.txtCiudad.Size = new System.Drawing.Size(120, 27);
             this.txtCiudad.TabIndex = 35;
@@ -183,7 +183,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(149, 167);
+            this.label7.Location = new System.Drawing.Point(269, 93);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(82, 20);
             this.label7.TabIndex = 34;
@@ -192,7 +192,7 @@
             // txtIdDestino
             // 
             this.txtIdDestino.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdDestino.Location = new System.Drawing.Point(242, 61);
+            this.txtIdDestino.Location = new System.Drawing.Point(131, 49);
             this.txtIdDestino.Name = "txtIdDestino";
             this.txtIdDestino.Size = new System.Drawing.Size(120, 27);
             this.txtIdDestino.TabIndex = 33;
@@ -201,7 +201,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(149, 64);
+            this.label2.Location = new System.Drawing.Point(38, 56);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 20);
             this.label2.TabIndex = 32;
@@ -211,7 +211,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(149, 130);
+            this.label5.Location = new System.Drawing.Point(38, 85);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 20);
             this.label5.TabIndex = 31;
@@ -221,7 +221,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(149, 97);
+            this.label3.Location = new System.Drawing.Point(269, 56);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 20);
             this.label3.TabIndex = 30;
@@ -231,10 +231,11 @@
             // 
             this.dataGrid.AllowUserToOrderColumns = true;
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid.Location = new System.Drawing.Point(3, 226);
+            this.dataGrid.Location = new System.Drawing.Point(3, 156);
             this.dataGrid.Name = "dataGrid";
-            this.dataGrid.Size = new System.Drawing.Size(514, 126);
+            this.dataGrid.Size = new System.Drawing.Size(514, 196);
             this.dataGrid.TabIndex = 3;
+            this.dataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellClick);
             // 
             // textBox1
             // 
@@ -266,7 +267,7 @@
             // 
             this.Tabla.AutoSize = true;
             this.Tabla.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tabla.Location = new System.Drawing.Point(388, 204);
+            this.Tabla.Location = new System.Drawing.Point(388, 133);
             this.Tabla.Name = "Tabla";
             this.Tabla.Size = new System.Drawing.Size(115, 20);
             this.Tabla.TabIndex = 25;
@@ -292,6 +293,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Administrador_Destino";
             this.Text = "Administrador_Destino";
+            this.Load += new System.EventHandler(this.Administrador_Destino_Load);
             ((System.ComponentModel.ISupportInitialize)(this.icono)).EndInit();
             this.BarraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).EndInit();

@@ -19,6 +19,32 @@ namespace _01Presentacion
             InitializeComponent();
         }
 
+        #region Metodo Limpiar
+        public void Limpiar()
+        {
+            this.txtIdDestino.Text = "";
+            this.txtPais.Text = "";
+            this.txtCiudad.Text = "";
+            this.txtImpuesto.Text = "";
+        }
+        #endregion
+
+        #region Metodo para cargar info del DataGrid
+        private void CargarDestinos()
+        {
+            try
+            {
+                List<DESTINO> lstDestino = Logica.obtDestinos();
+                this.dataGrid.DataSource = lstDestino;
+                this.dataGrid.Refresh();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+        #endregion
 
         #region  Botones_Guardar_Buscar_Editar_Eliminar Form Administrador_Destino
         public DESTINO processoBase()
@@ -28,7 +54,6 @@ namespace _01Presentacion
             destino.PAIS = txtPais.Text.Trim();
             destino.CIUDAD = txtCiudad.Text.Trim();
             destino.IMPUESTO = Convert.ToInt16(txtImpuesto.Text.Trim());
-            //_02LogicadeNegocios.Logica.GuardarDato(destino);
             return destino;
         }
 
@@ -41,6 +66,8 @@ namespace _01Presentacion
                 destino.CIUDAD = txtCiudad.Text.Trim();
                 destino.IMPUESTO = Convert.ToInt16(txtImpuesto.Text.Trim());
                 _02LogicadeNegocios.Logica.GuardarDato(destino);
+                MessageBox.Show("Usuario Agregado");
+                Limpiar();
             }
             catch (Exception ex)
             {
@@ -65,6 +92,8 @@ namespace _01Presentacion
             try
             {
                 _02LogicadeNegocios.Logica.ModificarDato(processoBase());
+                MessageBox.Show("Usuario Editado");
+                Limpiar();
             }
             catch (Exception ex)
             {
@@ -78,12 +107,38 @@ namespace _01Presentacion
             try
             {
                 _02LogicadeNegocios.Logica.EliminarDato(processoBase());
+                MessageBox.Show("Usuario Borrado");
+                Limpiar();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al Elminar Datos de Tabla Destino" + ex.Message);
             }
 
+        }
+        #endregion
+
+        #region Evento Cargar Al Abrir
+        private void Administrador_Destino_Load(object sender, EventArgs e)
+        {
+            this.CargarDestinos();
+        }
+        #endregion
+
+        #region EventoDatagrid
+        private void dataGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                this.txtIdDestino.Text = dataGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
+                this.txtPais.Text = dataGrid.Rows[e.RowIndex].Cells[1].Value.ToString();
+                this.txtCiudad.Text = dataGrid.Rows[e.RowIndex].Cells[2].Value.ToString();
+                this.txtImpuesto.Text = dataGrid.Rows[e.RowIndex].Cells[3].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
         #endregion
     }

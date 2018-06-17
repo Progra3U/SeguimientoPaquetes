@@ -22,50 +22,93 @@ namespace _02LogicadeNegocios
 
         #region Tablas
 
-        #region Metodos Para Tabla DESTINO 
-        public static void GuardarDato(DESTINO destino) //Metodo para Agregar informacion a la tabla DESTINO
-        {
-            SQLSentencia sentencia = new SQLSentencia();
-            sentencia.PETICION = @"INSERT INTO DESTINO VALUES ('" + destino.PAIS + "','" + destino.CIUDAD + "','" + destino.IMPUESTO + "')";
-            _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-            objAcceso.EjecutarSentencia(sentencia);
-        }
-        public static void ModificarDato(DESTINO destino) //Metodo para Modificar informacion en la tabla DESTINO
-        {
-            SQLSentencia sentencia = new SQLSentencia();
-            sentencia.PETICION = @"UPDATE DESTINO SET PAIS='" + destino.PAIS + "', CIUDAD='" + destino.CIUDAD + "', IMPUESTO='" + destino.IMPUESTO + "' WHERE IDDESTINO='" + destino.IDDESTINO + "'";
-            _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-            objAcceso.EjecutarSentencia(sentencia);
-        }
-        public static void EliminarDato(DESTINO destino) //Metodo para Eliminar informacion en la tabla DESTINO
-        {
-            SQLSentencia sentencia = new SQLSentencia();
-            sentencia.PETICION = @"DELETE FROM DESTINO WHERE IDDESTINO='" + destino.IDDESTINO + "'";
-            _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-            objAcceso.EjecutarSentencia(sentencia);
-        }
-        public static void BuscarDato(DESTINO destino) //Metodo para Buscar informacion en la tabla DESTINO
-        {
-            SQLSentencia sentencia = new SQLSentencia();
-            sentencia.PETICION = @"";
-            _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-            objAcceso.EjecutarSentencia(sentencia);
-        }
+            #region Metodos Para Tabla DESTINO 
+            public static void GuardarDato(DESTINO destino) //Metodo para Agregar informacion a la tabla DESTINO
+            {
+                try
+                {
+                    SQLSentencia sentencia = new SQLSentencia();
+                    sentencia.PETICION = @"INSERT INTO DESTINO VALUES ('" + destino.PAIS + "','" + destino.CIUDAD + "','" + destino.IMPUESTO + "')";
+                    _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                    objAcceso.EjecutarSentencia(sentencia);
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
+            }
+            public static void ModificarDato(DESTINO destino) //Metodo para Modificar informacion en la tabla DESTINO
+            {
+                try
+                {
+                    SQLSentencia sentencia = new SQLSentencia();
+                    sentencia.PETICION = @"UPDATE DESTINO SET PAIS='" + destino.PAIS + "', CIUDAD='" + destino.CIUDAD + "', IMPUESTO='" + destino.IMPUESTO + "' WHERE IDDESTINO='" + destino.IDDESTINO + "'";
+                    _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                    objAcceso.EjecutarSentencia(sentencia);
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
+            }
+            public static void EliminarDato(DESTINO destino) //Metodo para Eliminar informacion en la tabla DESTINO
+            {
+                try
+                {
+                    SQLSentencia sentencia = new SQLSentencia();
+                    sentencia.PETICION = @"DELETE FROM DESTINO WHERE IDDESTINO='" + destino.IDDESTINO + "'";
+                    _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                    objAcceso.EjecutarSentencia(sentencia);
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
+            }
+            public static List<DESTINO> obtDestinos()
+            {
+                try
+                {
+                    SQLSentencia sentencia = new SQLSentencia();
+                    sentencia.PETICION = @"SELECT IDDESTINO, PAIS, CIUDAD, IMPUESTO FROM DESTINO";
+                    Acceso objacceso = new Acceso();
+                    return objacceso.Obtener_Destino(sentencia);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            } 
+            public static void BuscarDato(DESTINO destino) //Metodo para Buscar informacion en la tabla DESTINO
+            {
+                try
+                {
+                    SQLSentencia sentencia = new SQLSentencia();
+                    sentencia.PETICION = @"";
+                    _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                    objAcceso.EjecutarSentencia(sentencia);
+                }
+                catch (Exception e)
+                {
+
+                    throw e;
+                }
+            }
 
         #endregion
 
-        #region Metodos Para Tabla ENVIO 
+            #region Metodos Para Tabla ENVIO 
         public static void GuardarDato(ENVIO envio) //Metodo para Agregar informacion a la tabla Envio
         {
             SQLSentencia sentencia = new SQLSentencia();
-            sentencia.PETICION = @"INSERT INTO ENVIO VALUES ('" + envio.IDENVIO + "','" + envio.DESC_ENVIO + "','"+ "')";
+            sentencia.PETICION = @"INSERT INTO ENVIO VALUES ('" + envio.DESC_ENVIO + "','" + envio.PRECIO_ENVIO + "','" + "')";
             _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
             objAcceso.EjecutarSentencia(sentencia);
         }
         public static void ModificarDato(ENVIO envio) //Metodo para Modificar informacion en la tabla envio
         {
             SQLSentencia sentencia = new SQLSentencia();
-            sentencia.PETICION = @"UPDATE ENVIO SET IDENVIO='" + envio.IDENVIO + "', DESC_ENVIO='" + envio.DESC_ENVIO+ "', IMPUESTO='" + "' WHERE IDENVIO='" + envio.IDENVIO + "'";
+            sentencia.PETICION = @"UPDATE ENVIO SET IDENVIO='" + envio.IDENVIO + "', DESC_ENVIO='" + envio.DESC_ENVIO + "', , PRECIO_ENVIO='" + envio.PRECIO_ENVIO + "' WHERE IDENVIO='" + envio.IDENVIO + "'";
             _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
             objAcceso.EjecutarSentencia(sentencia);
         }
@@ -83,10 +126,9 @@ namespace _02LogicadeNegocios
             _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
             objAcceso.EjecutarSentencia(sentencia);
         }
-
         #endregion
 
-        #region Metodos Para Tabla ESTADO 
+            #region Metodos Para Tabla ESTADO 
         public static void GuardarDato(ESTADO estado) //Metodo para Agregar informacion a la tabla Estado
         {
             SQLSentencia sentencia = new SQLSentencia();
@@ -97,14 +139,14 @@ namespace _02LogicadeNegocios
         public static void ModificarDato(ESTADO estado) //Metodo para Modificar informacion en la tabla Estado
         {
             SQLSentencia sentencia = new SQLSentencia();
-            sentencia.PETICION = @"UPDATE ESTADO SET IDESTADO='" + estado.IDESTADO + "', DESC_ESTADO='" + estado.DESC_ESTADO  + "' WHERE IDESTADO='" + estado.IDESTADO + "'";
+            sentencia.PETICION = @"UPDATE ESTADO SET IDESTADO='" + estado.IDESTADO + "', DESC_ESTADO='" + estado.DESC_ESTADO + "' WHERE IDESTADO='" + estado.IDESTADO + "'";
             _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
             objAcceso.EjecutarSentencia(sentencia);
         }
         public static void EliminarDato(ESTADO estado) //Metodo para Eliminar informacion en la tabla Estado
         {
             SQLSentencia sentencia = new SQLSentencia();
-            sentencia.PETICION = @"DELETE FROM ESTADO WHERE IDESTADO='" + estado.IDESTADO+ "'";
+            sentencia.PETICION = @"DELETE FROM ESTADO WHERE IDESTADO='" + estado.IDESTADO + "'";
             _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
             objAcceso.EjecutarSentencia(sentencia);
         }
@@ -115,14 +157,13 @@ namespace _02LogicadeNegocios
             _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
             objAcceso.EjecutarSentencia(sentencia);
         }
-
         #endregion
 
-        #region Metodos Para Tabla ORIGEN 
+            #region Metodos Para Tabla ORIGEN 
         public static void GuardarDato(ORIGEN origen) //Metodo para Agregar informacion a la tabla Origen
         {
             SQLSentencia sentencia = new SQLSentencia();
-            sentencia.PETICION = @"INSERT INTO ORIGEN VALUES ('" + origen.IDORIGEN + "','" + origen.PAIS + "','" +origen.CIUDAD +"')";
+            sentencia.PETICION = @"INSERT INTO ORIGEN VALUES ('" + origen.IDORIGEN + "','" + origen.PAIS + "','" + origen.CIUDAD + "')";
             _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
             objAcceso.EjecutarSentencia(sentencia);
         }
@@ -149,7 +190,7 @@ namespace _02LogicadeNegocios
         }
         #endregion
 
-        #region Metodos Para Tabla PAGO 
+            #region Metodos Para Tabla PAGO
         public static void GuardarDato(PAGO pago) //Metodo para Agregar informacion a la tabla Pago
         {
             SQLSentencia sentencia = new SQLSentencia();
@@ -180,67 +221,151 @@ namespace _02LogicadeNegocios
         }
         #endregion
 
-        #region Metodos Para Tabla PEDIDOS 
-        public static void GuardarDato(PEDIDO destino) //Metodo para Agregar informacion a la tabla DESTINO
-        {
-            SQLSentencia sentencia = new SQLSentencia();
-            sentencia.PETICION = @"INSERT INTO PEDIDOS VALUES ('" + destino.IDUSUARIO + "','" + destino.IDORIGEN + "','" + destino.IDDESTINO + "','" + destino.IDPAGO + "','" + destino.IDENVIO + "','" + destino.IDESTADO + "',,'" + destino.TOTAL + "',,'" + destino.DESCRIPCION + "')";
-            _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-            objAcceso.EjecutarSentencia(sentencia);
-        }
-        public static void ModificarDato(PEDIDO destino) //Metodo para Modificar informacion en la tabla DESTINO
-        {
-            SQLSentencia sentencia = new SQLSentencia();
-            sentencia.PETICION = @"UPDATE PEDIDOS SET IDUSUARIO='" + destino.IDUSUARIO + "', IDORIGEN='" + destino.IDORIGEN + "', IDDESTINO='" + destino.IDDESTINO + "', IDPAGO='" + destino.IDPAGO + "', IDENVIO='" + destino.IDENVIO + "', IDESTADO='" + destino.IDESTADO + "', TOTAL='" + destino.TOTAL + "', DESCRIPCION='" + destino.DESCRIPCION + "' WHERE IDPEDIDO='" + destino.IDPEDIDO + "'";
-            _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-            objAcceso.EjecutarSentencia(sentencia);
-        }
-        public static void EliminarDato(PEDIDO destino) //Metodo para Eliminar informacion en la tabla DESTINO
-        {
-            SQLSentencia sentencia = new SQLSentencia();
-            sentencia.PETICION = @"DELETE FROM PEDIDOS WHERE IDPEDIDO='" + destino.IDPEDIDO + "'";
-            _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-            objAcceso.EjecutarSentencia(sentencia);
-        }
-        public static void BuscarDato(PEDIDO destino) //Metodo para Buscar informacion en la tabla DESTINO
-        {
-            SQLSentencia sentencia = new SQLSentencia();
-            sentencia.PETICION = @"";
-            _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-            objAcceso.EjecutarSentencia(sentencia);
-        }
-        #endregion
+            #region Metodos Para Tabla PEDIDOS 
+        public static void GuardarDato(PEDIDOS pedido) //Metodo para Agregar informacion a la tabla DESTINO
+            {
+                try
+                {
+                    SQLSentencia sentencia = new SQLSentencia();
+                    sentencia.PETICION = @"INSERT INTO PEDIDOS VALUES ('" + pedido.IDUSUARIO + "','" + pedido.IDORIGEN + "','" + pedido.IDDESTINO + "','" + pedido.IDPAGO + "','" + pedido.IDENVIO + "','" + pedido.IDESTADO + "',,'" + pedido.TOTAL + "',,'" + pedido.DESCRIPCION + "')";
+                    _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                    objAcceso.EjecutarSentencia(sentencia);
+                }
+                catch (Exception e)
+                {
 
-        #region Metodos Para Tabla USUARIO
-        public static void GuardarDato(USUARIO destino) //Metodo para Agregar informacion a la tabla DESTINO
-        {
-            SQLSentencia sentencia = new SQLSentencia();
-            sentencia.PETICION = @"INSERT INTO USUARIOS VALUES ('" + destino.NOMBRE + "','" + destino.ALIAS + "','" + destino.PASS+ "','" + destino.TIPO_USUARIO + "','" + destino.ESTADO_USUARIO + "')";
-            _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-            objAcceso.EjecutarSentencia(sentencia);
-        }
-        public static void ModificarDato(USUARIO destino) //Metodo para Modificar informacion en la tabla DESTINO
-        {
-            SQLSentencia sentencia = new SQLSentencia();
-            sentencia.PETICION = @"UPDATE USUARIOS SET NOMBRE='" + destino.NOMBRE + "', ALIAS='" + destino.ALIAS + "', PASS='" + destino.PASS + "', TIPO_USUARIO='" + destino.TIPO_USUARIO + "', ESTADO_USUARIO='" + destino.ESTADO_USUARIO + "' WHERE IDUSUARIO='" + destino.IDUSUARIO + "'";
-            _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-            objAcceso.EjecutarSentencia(sentencia);
-        }
-        public static void EliminarDato(USUARIO destino) //Metodo para Eliminar informacion en la tabla DESTINO
-        {
-            SQLSentencia sentencia = new SQLSentencia();
-            sentencia.PETICION = @"DELETE FROM USUARIOS WHERE IDUSUARIO='" + destino.IDUSUARIO + "'";
-            _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-            objAcceso.EjecutarSentencia(sentencia);
-        }
-        public static void BuscarDato(USUARIO destino) //Metodo para Buscar informacion en la tabla DESTINO
-        {
-            SQLSentencia sentencia = new SQLSentencia();
-            sentencia.PETICION = @"";
-            _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-            objAcceso.EjecutarSentencia(sentencia);
-        }
-        #endregion
+                    throw e;
+                }
+            }
+            public static void ModificarDato(PEDIDOS pedido) //Metodo para Modificar informacion en la tabla DESTINO
+            {
+                try
+                {
+                    SQLSentencia sentencia = new SQLSentencia();
+                    sentencia.PETICION = @"UPDATE PEDIDOS SET IDUSUARIO='" + pedido.IDUSUARIO + "', IDORIGEN='" + pedido.IDORIGEN + "', IDDESTINO='" + pedido.IDDESTINO + "', IDPAGO='" + pedido.IDPAGO + "', IDENVIO='" + pedido.IDENVIO + "', IDESTADO='" + pedido.IDESTADO + "', TOTAL='" + pedido.TOTAL + "', DESCRIPCION='" + pedido.DESCRIPCION + "' WHERE IDPEDIDO='" + pedido.IDPEDIDO + "'";
+                    _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                    objAcceso.EjecutarSentencia(sentencia);
+                }
+                catch (Exception e)
+                {
+
+                    throw e;
+                }
+            }
+            public static void EliminarDato(PEDIDOS pedido) //Metodo para Eliminar informacion en la tabla DESTINO
+            {
+                try
+                {
+                    SQLSentencia sentencia = new SQLSentencia();
+                    sentencia.PETICION = @"DELETE FROM PEDIDOS WHERE IDPEDIDO='" + pedido.IDPEDIDO + "'";
+                    _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                    objAcceso.EjecutarSentencia(sentencia);
+                }
+                catch (Exception e)
+                {
+
+                    throw e;
+                }
+            }
+            public static List<PEDIDOS> obtPedidos()
+            {
+                try
+                {
+                    SQLSentencia sentencia = new SQLSentencia();
+                    sentencia.PETICION = @"SELECT IDPEDIDO, IDUSUARIO, IDORIGEN, IDDESTINO, IDPAGO, IDENVIO, IDESTADO, TOTAL, DESCRIPCION  FROM PEDIDOS";
+                    Acceso objacceso = new Acceso();
+                    return objacceso.Obtener_Pedidos(sentencia);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            public static void BuscarDato(PEDIDOS pedido) //Metodo para Buscar informacion en la tabla DESTINO
+                {
+                    SQLSentencia sentencia = new SQLSentencia();
+                    sentencia.PETICION = @"";
+                    _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                    objAcceso.EjecutarSentencia(sentencia);
+                }
+            #endregion
+
+            #region Metodos Para Tabla USUARIO
+            public static void GuardarDato(USUARIOS user) //Metodo para Agregar informacion a la tabla DESTINO
+            {
+                try
+                {
+                    SQLSentencia sentencia = new SQLSentencia();
+                    sentencia.PETICION = @"INSERT INTO USUARIOS VALUES ('" + user.NOMBRE + "','" + user.ALIAS + "','" + user.PASS + "','" + user.TIPO_USUARIO + "','" + user.ESTADO_USUARIO + "')";
+                    _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                    objAcceso.EjecutarSentencia(sentencia);
+                }
+                catch (Exception e)
+                {
+
+                    throw e;
+                }
+            }
+            public static void ModificarDato(USUARIOS user) //Metodo para Modificar informacion en la tabla DESTINO
+            {
+                try
+                {
+                    SQLSentencia sentencia = new SQLSentencia();
+                    sentencia.PETICION = @"UPDATE USUARIOS SET NOMBRE='" + user.NOMBRE + "', ALIAS='" + user.ALIAS + "', PASS='" + user.PASS + "', TIPO_USUARIO='" + user.TIPO_USUARIO + "', ESTADO_USUARIO='" + user.ESTADO_USUARIO + "' WHERE IDUSUARIO='" + user.IDUSUARIO + "'";
+                    _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                    objAcceso.EjecutarSentencia(sentencia);
+                }
+                catch (Exception e)
+                {
+
+                    throw e;
+                }
+            }
+            public static void EliminarDato(USUARIOS user) //Metodo para Eliminar informacion en la tabla DESTINO
+            {
+                try
+                {
+                    SQLSentencia sentencia = new SQLSentencia();
+                    sentencia.PETICION = @"DELETE FROM USUARIOS WHERE IDUSUARIO='" + user.IDUSUARIO + "'";
+                    _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                    objAcceso.EjecutarSentencia(sentencia);
+                }
+                catch (Exception e)
+                {
+
+                    throw e;
+                }
+            }
+            public static List<USUARIOS> obtUsuarios()
+            {
+                try
+                {
+                    SQLSentencia sentencia = new SQLSentencia();
+                    sentencia.PETICION = @"SELECT IDUSUARIO, NOMBRE, ALIAS, PASS, TIPO_USUARIO, ESTADO_USUARIO FROM USUARIOS";
+                    Acceso objacceso = new Acceso();
+                    return objacceso.Obtener_Usuarios(sentencia);
+            }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            public static void BuscarDato(USUARIOS destino) //Metodo para Buscar informacion en la tabla DESTINO
+            {
+                try
+                {
+                    SQLSentencia sentencia = new SQLSentencia();
+                    sentencia.PETICION = @"";
+                    _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                    objAcceso.EjecutarSentencia(sentencia);
+                }
+                catch (Exception e)
+                {
+
+                    throw e;
+                }
+            }
+            #endregion
 
         #endregion
     }

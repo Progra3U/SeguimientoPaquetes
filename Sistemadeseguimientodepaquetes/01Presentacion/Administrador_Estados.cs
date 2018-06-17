@@ -18,22 +18,22 @@ namespace _01Presentacion
         {
             InitializeComponent();
         }
+
         #region  Botones_Guardar_Buscar_Editar_Eliminar Form Administrador_ESTADO
-        public ESTADO  processoBase()
+        public ESTADO processoBase()
         {
             ESTADO estado = new ESTADO();
-            estado.IDESTADO = Convert.ToInt16(txtest.Text.Trim());
-            estado.DESC_ESTADO = textdesc.Text.Trim();
+            estado.IDESTADO = Convert.ToInt16(txtIdEstado.Text.Trim());
+            estado.DESC_ESTADO = txtDescEstado.Text.Trim();
             return estado;
         }
-
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             try
             {
                 ESTADO estado = new ESTADO();
-                estado.IDESTADO = Convert.ToInt16(txtest.Text.Trim());
-                estado.DESC_ESTADO = textdesc.Text.Trim();
+                estado.IDESTADO = Convert.ToInt16(txtIdEstado.Text.Trim());
+                estado.DESC_ESTADO = txtDescEstado.Text.Trim();
                 _02LogicadeNegocios.Logica.GuardarDato(estado);
             }
             catch (Exception ex)
@@ -64,7 +64,6 @@ namespace _01Presentacion
             {
                 MessageBox.Show("Error al Editar Datos de Tabla Estado" + ex.Message);
             }
-
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
@@ -77,7 +76,6 @@ namespace _01Presentacion
             {
                 MessageBox.Show("Error al Elminar Datos de Tabla Estado" + ex.Message);
             }
-
         }
         #endregion
     }

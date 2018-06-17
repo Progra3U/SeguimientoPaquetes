@@ -125,15 +125,15 @@ namespace _01Presentacion
             if (dt.Rows.Count == 1)
             {
                 this.Hide();
-                if (dt.Rows[0][4].ToString() == "ADMIN" && dt.Rows[0][5].ToString() == "1")
+                if (dt.Rows[0][4].ToString() == "ADMIN" && dt.Rows[0][5].ToString() == "ACTIVO")
                 {
                     new Administrador(dt.Rows[0][1].ToString()).Show();
                 }
-                else if (dt.Rows[0][4].ToString() == "USER" && dt.Rows[0][5].ToString() == "1")
+                else if (dt.Rows[0][4].ToString() == "USER" && dt.Rows[0][5].ToString() == "ACTIVO")
                 {
                     new Usuario(dt.Rows[0][1].ToString()).Show();
                 }
-                else if (dt.Rows[0][4].ToString() == "CLIENT" && dt.Rows[0][5].ToString() == "1")
+                else if (dt.Rows[0][4].ToString() == "CLIENT" && dt.Rows[0][5].ToString() == "ACTIVO")
                 {
                     new Cliente(dt.Rows[0][1].ToString()).Show();
                 }

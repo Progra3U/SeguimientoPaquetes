@@ -36,8 +36,8 @@
             this.btnEditar = new System.Windows.Forms.PictureBox();
             this.btnBorrar = new System.Windows.Forms.PictureBox();
             this.panelCentral = new System.Windows.Forms.Panel();
-            this.textdesc = new System.Windows.Forms.TextBox();
-            this.txtest = new System.Windows.Forms.TextBox();
+            this.txtDescEstado = new System.Windows.Forms.TextBox();
+            this.txtIdEstado = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.dataGrid = new System.Windows.Forms.DataGridView();
@@ -90,6 +90,7 @@
             this.btnGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnGuardar.TabIndex = 5;
             this.btnGuardar.TabStop = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnBuscar
             // 
@@ -101,6 +102,7 @@
             this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.TabStop = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnEditar
             // 
@@ -112,6 +114,7 @@
             this.btnEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnEditar.TabIndex = 3;
             this.btnEditar.TabStop = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnBorrar
             // 
@@ -123,12 +126,13 @@
             this.btnBorrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnBorrar.TabIndex = 2;
             this.btnBorrar.TabStop = false;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // panelCentral
             // 
             this.panelCentral.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelCentral.Controls.Add(this.textdesc);
-            this.panelCentral.Controls.Add(this.txtest);
+            this.panelCentral.Controls.Add(this.txtDescEstado);
+            this.panelCentral.Controls.Add(this.txtIdEstado);
             this.panelCentral.Controls.Add(this.label8);
             this.panelCentral.Controls.Add(this.label9);
             this.panelCentral.Controls.Add(this.dataGrid);
@@ -143,21 +147,21 @@
             this.panelCentral.Size = new System.Drawing.Size(520, 355);
             this.panelCentral.TabIndex = 7;
             // 
-            // textdesc
+            // txtDescEstado
             // 
-            this.textdesc.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textdesc.Location = new System.Drawing.Point(217, 106);
-            this.textdesc.Name = "textdesc";
-            this.textdesc.Size = new System.Drawing.Size(250, 27);
-            this.textdesc.TabIndex = 61;
+            this.txtDescEstado.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescEstado.Location = new System.Drawing.Point(217, 106);
+            this.txtDescEstado.Name = "txtDescEstado";
+            this.txtDescEstado.Size = new System.Drawing.Size(250, 27);
+            this.txtDescEstado.TabIndex = 61;
             // 
-            // txtest
+            // txtIdEstado
             // 
-            this.txtest.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtest.Location = new System.Drawing.Point(217, 71);
-            this.txtest.Name = "txtest";
-            this.txtest.Size = new System.Drawing.Size(74, 27);
-            this.txtest.TabIndex = 60;
+            this.txtIdEstado.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdEstado.Location = new System.Drawing.Point(217, 71);
+            this.txtIdEstado.Name = "txtIdEstado";
+            this.txtIdEstado.Size = new System.Drawing.Size(74, 27);
+            this.txtIdEstado.TabIndex = 60;
             // 
             // label8
             // 
@@ -165,9 +169,9 @@
             this.label8.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(88, 114);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(91, 20);
+            this.label8.Size = new System.Drawing.Size(101, 20);
             this.label8.TabIndex = 59;
-            this.label8.Text = "Desc Envio:";
+            this.label8.Text = "Desc Estado:";
             // 
             // label9
             // 
@@ -175,9 +179,9 @@
             this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(88, 79);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(70, 20);
+            this.label9.Size = new System.Drawing.Size(80, 20);
             this.label9.TabIndex = 58;
-            this.label9.Text = "Id Envio:";
+            this.label9.Text = "Id Estado:";
             // 
             // dataGrid
             // 
@@ -272,8 +276,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Tabla;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textdesc;
-        private System.Windows.Forms.TextBox txtest;
+        private System.Windows.Forms.TextBox txtDescEstado;
+        private System.Windows.Forms.TextBox txtIdEstado;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
     }

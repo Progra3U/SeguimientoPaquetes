@@ -16,12 +16,12 @@ namespace _04Entidades
     {
         public ESTADO()
         {
-            this.PEDIDOS = new HashSet<PEDIDO>();
+            this.PEDIDOS = new HashSet<PEDIDOS>();
         }
     
         public int IDESTADO { get; set; }
         public string DESC_ESTADO { get; set; }
     
-        public virtual ICollection<PEDIDO> PEDIDOS { get; set; }
+        public virtual ICollection<PEDIDOS> PEDIDOS { get; set; }
     }
 }

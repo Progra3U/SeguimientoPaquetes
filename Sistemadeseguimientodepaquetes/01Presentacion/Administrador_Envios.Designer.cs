@@ -36,9 +36,9 @@
             this.btnEditar = new System.Windows.Forms.PictureBox();
             this.btnBorrar = new System.Windows.Forms.PictureBox();
             this.panelCentral = new System.Windows.Forms.Panel();
-            this.txtdesc = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.txtenvio = new System.Windows.Forms.TextBox();
+            this.txtDesc = new System.Windows.Forms.TextBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.txtIdEnvio = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -92,6 +92,7 @@
             this.btnGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnGuardar.TabIndex = 5;
             this.btnGuardar.TabStop = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnBuscar
             // 
@@ -103,6 +104,7 @@
             this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.TabStop = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnEditar
             // 
@@ -114,6 +116,7 @@
             this.btnEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnEditar.TabIndex = 3;
             this.btnEditar.TabStop = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnBorrar
             // 
@@ -125,13 +128,14 @@
             this.btnBorrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnBorrar.TabIndex = 2;
             this.btnBorrar.TabStop = false;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // panelCentral
             // 
             this.panelCentral.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelCentral.Controls.Add(this.txtdesc);
-            this.panelCentral.Controls.Add(this.textBox5);
-            this.panelCentral.Controls.Add(this.txtenvio);
+            this.panelCentral.Controls.Add(this.txtDesc);
+            this.panelCentral.Controls.Add(this.txtPrecio);
+            this.panelCentral.Controls.Add(this.txtIdEnvio);
             this.panelCentral.Controls.Add(this.label2);
             this.panelCentral.Controls.Add(this.label7);
             this.panelCentral.Controls.Add(this.label5);
@@ -147,29 +151,29 @@
             this.panelCentral.Size = new System.Drawing.Size(520, 355);
             this.panelCentral.TabIndex = 7;
             // 
-            // txtdesc
+            // txtDesc
             // 
-            this.txtdesc.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtdesc.Location = new System.Drawing.Point(253, 93);
-            this.txtdesc.Name = "txtdesc";
-            this.txtdesc.Size = new System.Drawing.Size(115, 27);
-            this.txtdesc.TabIndex = 57;
+            this.txtDesc.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDesc.Location = new System.Drawing.Point(253, 93);
+            this.txtDesc.Name = "txtDesc";
+            this.txtDesc.Size = new System.Drawing.Size(115, 27);
+            this.txtDesc.TabIndex = 57;
             // 
-            // textBox5
+            // txtPrecio
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(253, 129);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(115, 27);
-            this.textBox5.TabIndex = 56;
+            this.txtPrecio.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrecio.Location = new System.Drawing.Point(253, 129);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(115, 27);
+            this.txtPrecio.TabIndex = 56;
             // 
-            // txtenvio
+            // txtIdEnvio
             // 
-            this.txtenvio.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtenvio.Location = new System.Drawing.Point(253, 60);
-            this.txtenvio.Name = "txtenvio";
-            this.txtenvio.Size = new System.Drawing.Size(115, 27);
-            this.txtenvio.TabIndex = 55;
+            this.txtIdEnvio.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdEnvio.Location = new System.Drawing.Point(253, 60);
+            this.txtIdEnvio.Name = "txtIdEnvio";
+            this.txtIdEnvio.Size = new System.Drawing.Size(115, 27);
+            this.txtIdEnvio.TabIndex = 55;
             // 
             // label2
             // 
@@ -294,9 +298,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Tabla;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtdesc;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox txtenvio;
+        private System.Windows.Forms.TextBox txtDesc;
+        private System.Windows.Forms.TextBox txtPrecio;
+        private System.Windows.Forms.TextBox txtIdEnvio;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;

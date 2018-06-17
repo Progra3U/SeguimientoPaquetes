@@ -6,8 +6,8 @@
     <EntitySet Name="ESTADOes" EntityType="SeguimientoPaquetesModel.ESTADO" />
     <EntitySet Name="ORIGENs" EntityType="SeguimientoPaquetesModel.ORIGEN" />
     <EntitySet Name="PAGOes" EntityType="SeguimientoPaquetesModel.PAGO" />
-    <EntitySet Name="PEDIDOS" EntityType="SeguimientoPaquetesModel.PEDIDO" />
-    <EntitySet Name="USUARIOS" EntityType="SeguimientoPaquetesModel.USUARIO" />
+    <EntitySet Name="PEDIDOS" EntityType="SeguimientoPaquetesModel.PEDIDOS" />
+    <EntitySet Name="USUARIOS" EntityType="SeguimientoPaquetesModel.USUARIOS" />
     <AssociationSet Name="FK_PEDIDOS_DESTINO" Association="SeguimientoPaquetesModel.FK_PEDIDOS_DESTINO">
       <End Role="DESTINO" EntitySet="DESTINOes" />
       <End Role="PEDIDO" EntitySet="PEDIDOS" />
@@ -28,9 +28,9 @@
       <End Role="PAGO" EntitySet="PAGOes" />
       <End Role="PEDIDO" EntitySet="PEDIDOS" />
     </AssociationSet>
-    <AssociationSet Name="FK_PEDIDOS_PEDIDOS" Association="SeguimientoPaquetesModel.FK_PEDIDOS_PEDIDOS">
+    <AssociationSet Name="FK_PEDIDOS_USUARIOS" Association="SeguimientoPaquetesModel.FK_PEDIDOS_USUARIOS">
+      <End Role="USUARIO" EntitySet="USUARIOS" />
       <End Role="PEDIDO" EntitySet="PEDIDOS" />
-      <End Role="PEDIDO1" EntitySet="PEDIDOS" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="DESTINO">
@@ -40,7 +40,7 @@
     <Property Name="IDDESTINO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="PAIS" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
     <Property Name="CIUDAD" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
-    <Property Name="INPUESTO" Type="Int32" Nullable="false" />
+    <Property Name="IMPUESTO" Type="Int32" Nullable="false" />
     <NavigationProperty Name="PEDIDOS" Relationship="SeguimientoPaquetesModel.FK_PEDIDOS_DESTINO" FromRole="DESTINO" ToRole="PEDIDO" />
   </EntityType>
   <EntityType Name="ENVIO">
@@ -49,6 +49,7 @@
     </Key>
     <Property Name="IDENVIO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="DESC_ENVIO" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="PRECIO_ENVIO" Type="Int32" Nullable="false" />
     <NavigationProperty Name="PEDIDOS" Relationship="SeguimientoPaquetesModel.FK_PEDIDOS_ENVIO" FromRole="ENVIO" ToRole="PEDIDO" />
   </EntityType>
   <EntityType Name="ESTADO">
@@ -76,7 +77,7 @@
     <Property Name="DESC_PAGO" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="PEDIDOS" Relationship="SeguimientoPaquetesModel.FK_PEDIDOS_PAGO" FromRole="PAGO" ToRole="PEDIDO" />
   </EntityType>
-  <EntityType Name="PEDIDO">
+  <EntityType Name="PEDIDOS">
     <Key>
       <PropertyRef Name="IDPEDIDO" />
       <PropertyRef Name="IDUSUARIO" />
@@ -94,28 +95,29 @@
     <Property Name="IDENVIO" Type="Int32" Nullable="false" />
     <Property Name="IDESTADO" Type="Int32" Nullable="false" />
     <Property Name="TOTAL" Type="Int32" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="DESTINO" Relationship="SeguimientoPaquetesModel.FK_PEDIDOS_DESTINO" FromRole="PEDIDO" ToRole="DESTINO" />
     <NavigationProperty Name="ENVIO" Relationship="SeguimientoPaquetesModel.FK_PEDIDOS_ENVIO" FromRole="PEDIDO" ToRole="ENVIO" />
     <NavigationProperty Name="ESTADO" Relationship="SeguimientoPaquetesModel.FK_PEDIDOS_ESTADO" FromRole="PEDIDO" ToRole="ESTADO" />
     <NavigationProperty Name="ORIGEN" Relationship="SeguimientoPaquetesModel.FK_PEDIDOS_ORIGEN" FromRole="PEDIDO" ToRole="ORIGEN" />
     <NavigationProperty Name="PAGO" Relationship="SeguimientoPaquetesModel.FK_PEDIDOS_PAGO" FromRole="PEDIDO" ToRole="PAGO" />
-    <NavigationProperty Name="PEDIDOS1" Relationship="SeguimientoPaquetesModel.FK_PEDIDOS_PEDIDOS" FromRole="PEDIDO" ToRole="PEDIDO1" />
-    <NavigationProperty Name="PEDIDO1" Relationship="SeguimientoPaquetesModel.FK_PEDIDOS_PEDIDOS" FromRole="PEDIDO1" ToRole="PEDIDO" />
+    <NavigationProperty Name="USUARIO" Relationship="SeguimientoPaquetesModel.FK_PEDIDOS_USUARIOS" FromRole="PEDIDO" ToRole="USUARIO" />
   </EntityType>
-  <EntityType Name="USUARIO">
+  <EntityType Name="USUARIOS">
     <Key>
       <PropertyRef Name="IDUSUARIO" />
     </Key>
     <Property Name="IDUSUARIO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="NOMBREUSER" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
-    <Property Name="ALIASUSER" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
-    <Property Name="PASSWORD" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="NOMBRE" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ALIAS" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="PASS" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
     <Property Name="TIPO_USUARIO" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
     <Property Name="ESTADO_USUARIO" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="PEDIDOS" Relationship="SeguimientoPaquetesModel.FK_PEDIDOS_USUARIOS" FromRole="USUARIO" ToRole="PEDIDO" />
   </EntityType>
   <Association Name="FK_PEDIDOS_DESTINO">
     <End Type="SeguimientoPaquetesModel.DESTINO" Role="DESTINO" Multiplicity="1" />
-    <End Type="SeguimientoPaquetesModel.PEDIDO" Role="PEDIDO" Multiplicity="*" />
+    <End Type="SeguimientoPaquetesModel.PEDIDOS" Role="PEDIDO" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="DESTINO">
         <PropertyRef Name="IDDESTINO" />
@@ -127,7 +129,7 @@
   </Association>
   <Association Name="FK_PEDIDOS_ENVIO">
     <End Type="SeguimientoPaquetesModel.ENVIO" Role="ENVIO" Multiplicity="1" />
-    <End Type="SeguimientoPaquetesModel.PEDIDO" Role="PEDIDO" Multiplicity="*" />
+    <End Type="SeguimientoPaquetesModel.PEDIDOS" Role="PEDIDO" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ENVIO">
         <PropertyRef Name="IDENVIO" />
@@ -139,7 +141,7 @@
   </Association>
   <Association Name="FK_PEDIDOS_ESTADO">
     <End Type="SeguimientoPaquetesModel.ESTADO" Role="ESTADO" Multiplicity="1" />
-    <End Type="SeguimientoPaquetesModel.PEDIDO" Role="PEDIDO" Multiplicity="*" />
+    <End Type="SeguimientoPaquetesModel.PEDIDOS" Role="PEDIDO" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ESTADO">
         <PropertyRef Name="IDESTADO" />
@@ -151,7 +153,7 @@
   </Association>
   <Association Name="FK_PEDIDOS_ORIGEN">
     <End Type="SeguimientoPaquetesModel.ORIGEN" Role="ORIGEN" Multiplicity="1" />
-    <End Type="SeguimientoPaquetesModel.PEDIDO" Role="PEDIDO" Multiplicity="*" />
+    <End Type="SeguimientoPaquetesModel.PEDIDOS" Role="PEDIDO" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ORIGEN">
         <PropertyRef Name="IDORIGEN" />
@@ -163,7 +165,7 @@
   </Association>
   <Association Name="FK_PEDIDOS_PAGO">
     <End Type="SeguimientoPaquetesModel.PAGO" Role="PAGO" Multiplicity="1" />
-    <End Type="SeguimientoPaquetesModel.PEDIDO" Role="PEDIDO" Multiplicity="*" />
+    <End Type="SeguimientoPaquetesModel.PEDIDOS" Role="PEDIDO" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="PAGO">
         <PropertyRef Name="IDPAGO" />
@@ -173,27 +175,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_PEDIDOS_PEDIDOS">
-    <End Type="SeguimientoPaquetesModel.PEDIDO" Role="PEDIDO" Multiplicity="1" />
-    <End Type="SeguimientoPaquetesModel.PEDIDO" Role="PEDIDO1" Multiplicity="0..1" />
+  <Association Name="FK_PEDIDOS_USUARIOS">
+    <End Type="SeguimientoPaquetesModel.USUARIOS" Role="USUARIO" Multiplicity="1" />
+    <End Type="SeguimientoPaquetesModel.PEDIDOS" Role="PEDIDO" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="PEDIDO">
-        <PropertyRef Name="IDPEDIDO" />
+      <Principal Role="USUARIO">
         <PropertyRef Name="IDUSUARIO" />
-        <PropertyRef Name="IDORIGEN" />
-        <PropertyRef Name="IDDESTINO" />
-        <PropertyRef Name="IDPAGO" />
-        <PropertyRef Name="IDENVIO" />
-        <PropertyRef Name="IDESTADO" />
       </Principal>
-      <Dependent Role="PEDIDO1">
-        <PropertyRef Name="IDPEDIDO" />
+      <Dependent Role="PEDIDO">
         <PropertyRef Name="IDUSUARIO" />
-        <PropertyRef Name="IDORIGEN" />
-        <PropertyRef Name="IDDESTINO" />
-        <PropertyRef Name="IDPAGO" />
-        <PropertyRef Name="IDENVIO" />
-        <PropertyRef Name="IDESTADO" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

@@ -30,7 +30,7 @@ namespace _04Entidades
         public DbSet<ESTADO> ESTADOes { get; set; }
         public DbSet<ORIGEN> ORIGENs { get; set; }
         public DbSet<PAGO> PAGOes { get; set; }
-        public DbSet<PEDIDO> PEDIDOS { get; set; }
-        public DbSet<USUARIO> USUARIOS { get; set; }
+        public DbSet<PEDIDOS> PEDIDOS { get; set; }
+        public DbSet<USUARIOS> USUARIOS { get; set; }
     }
 }

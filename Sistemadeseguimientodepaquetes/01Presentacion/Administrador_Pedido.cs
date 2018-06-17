@@ -19,37 +19,69 @@ namespace _01Presentacion
             InitializeComponent();
         }
 
-        #region  Botones_Guardar_Buscar_Editar_Eliminar From Administrador_Pedido
-        public PEDIDO processoBase()
+        #region Metodo Limpiar
+        public void Limpiar()
         {
-            PEDIDO destino = new PEDIDO();
-            destino.IDPEDIDO = Convert.ToInt16(txtIdPedido.Text.Trim());
-            destino.IDUSUARIO = Convert.ToInt16(txtIdUsuario.Text.Trim());
-            destino.IDORIGEN = Convert.ToInt16(txtIdOrigen.Text.Trim());
-            destino.IDDESTINO = Convert.ToInt16(txtIdDestino.Text.Trim());
-            destino.IDPAGO = Convert.ToInt16(txtIdPago.Text.Trim());
-            destino.IDENVIO = Convert.ToInt16(txtIdEnvio.Text.Trim());
-            destino.IDESTADO = Convert.ToInt16(txtIdEstado.Text.Trim());
-            destino.TOTAL = Convert.ToInt16(txtTotal.Text.Trim());
-            destino.DESCRIPCION = txtDescripcion.Text.Trim();
-            return destino;
+            txtIdUsuario.Text = "";
+            txtIdUsuario.Text = "";
+            txtIdOrigen.Text = "";
+            txtIdDestino.Text = "";
+            txtIdPago.Text = "";
+            txtIdEnvio.Text = "";
+            txtIdEstado.Text = "";
+            txtTotal.Text = "";
+            txtDescripcion.Text = "";
+        }
+        #endregion
+
+        #region Metodo para cargar info del DataGrid
+        private void CargarPedidos()
+        {
+            try
+            {
+                List<PEDIDOS> lstPedidos = Logica.obtPedidos();
+                this.dataGrid.DataSource = lstPedidos;
+                this.dataGrid.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        #endregion
+
+        #region  Botones_Guardar_Buscar_Editar_Eliminar From Administrador_Pedido
+        public PEDIDOS processoBase()
+        {
+            PEDIDOS pedido = new PEDIDOS();
+            pedido.IDPEDIDO = Convert.ToInt16(txtIdPedido.Text.Trim());
+            pedido.IDUSUARIO = Convert.ToInt16(txtIdUsuario.Text.Trim());
+            pedido.IDORIGEN = Convert.ToInt16(txtIdOrigen.Text.Trim());
+            pedido.IDDESTINO = Convert.ToInt16(txtIdDestino.Text.Trim());
+            pedido.IDPAGO = Convert.ToInt16(txtIdPago.Text.Trim());
+            pedido.IDENVIO = Convert.ToInt16(txtIdEnvio.Text.Trim());
+            pedido.IDESTADO = Convert.ToInt16(txtIdEstado.Text.Trim());
+            pedido.TOTAL = Convert.ToInt16(txtTotal.Text.Trim());
+            pedido.DESCRIPCION = txtDescripcion.Text.Trim();
+            return pedido;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             try
             {
-                PEDIDO destino = new PEDIDO();
-                destino.IDPEDIDO = Convert.ToInt16(txtIdPedido.Text.Trim());
-                destino.IDUSUARIO = Convert.ToInt16(txtIdUsuario.Text.Trim());
-                destino.IDORIGEN = Convert.ToInt16(txtIdOrigen.Text.Trim());
-                destino.IDDESTINO = Convert.ToInt16(txtIdDestino.Text.Trim());
-                destino.IDPAGO = Convert.ToInt16(txtIdPago.Text.Trim());
-                destino.IDENVIO = Convert.ToInt16(txtIdEnvio.Text.Trim());
-                destino.IDESTADO = Convert.ToInt16(txtIdEstado.Text.Trim());
-                destino.TOTAL = Convert.ToInt16(txtTotal.Text.Trim());
-                destino.DESCRIPCION = txtDescripcion.Text.Trim();
-                _02LogicadeNegocios.Logica.GuardarDato(destino);
+                PEDIDOS pedido = new PEDIDOS();
+                pedido.IDUSUARIO = Convert.ToInt16(txtIdUsuario.Text.Trim());
+                pedido.IDORIGEN = Convert.ToInt16(txtIdOrigen.Text.Trim());
+                pedido.IDDESTINO = Convert.ToInt16(txtIdDestino.Text.Trim());
+                pedido.IDPAGO = Convert.ToInt16(txtIdPago.Text.Trim());
+                pedido.IDENVIO = Convert.ToInt16(txtIdEnvio.Text.Trim());
+                pedido.IDESTADO = Convert.ToInt16(txtIdEstado.Text.Trim());
+                pedido.TOTAL = Convert.ToInt16(txtTotal.Text.Trim());
+                pedido.DESCRIPCION = txtDescripcion.Text.Trim();
+                _02LogicadeNegocios.Logica.GuardarDato(pedido);
+                MessageBox.Show("Usuario Agregado");
+                Limpiar();
             }
             catch (Exception ex)
             {
@@ -74,6 +106,8 @@ namespace _01Presentacion
             try
             {
                 _02LogicadeNegocios.Logica.ModificarDato(processoBase());
+                MessageBox.Show("Usuario Editado");
+                Limpiar();
             }
             catch (Exception ex)
             {
@@ -87,12 +121,43 @@ namespace _01Presentacion
             try
             {
                 _02LogicadeNegocios.Logica.EliminarDato(processoBase());
+                MessageBox.Show("Usuario Borrado");
+                Limpiar();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al Elminar Datos de Tabla Destino" + ex.Message);
+                MessageBox.Show("Error al Elminar Datos de Tabla Destino" + ex.Message); 
             }
 
+        }
+        #endregion
+
+        #region Evento Cargar Al Abrir
+        private void Administrador_Pedido_Load(object sender, EventArgs e)
+        {
+            CargarPedidos();
+        }
+        #endregion
+
+        #region EventoDatagrid
+        private void dataGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                txtIdUsuario.Text = dataGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtIdUsuario.Text = dataGrid.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtIdOrigen.Text = dataGrid.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtIdDestino.Text = dataGrid.Rows[e.RowIndex].Cells[3].Value.ToString();
+                txtIdPago.Text = dataGrid.Rows[e.RowIndex].Cells[4].Value.ToString();
+                txtIdEnvio.Text = dataGrid.Rows[e.RowIndex].Cells[5].Value.ToString();
+                txtIdEstado.Text = dataGrid.Rows[e.RowIndex].Cells[6].Value.ToString();
+                txtTotal.Text = dataGrid.Rows[e.RowIndex].Cells[7].Value.ToString();
+                txtDescripcion.Text = dataGrid.Rows[e.RowIndex].Cells[8].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         #endregion
     }

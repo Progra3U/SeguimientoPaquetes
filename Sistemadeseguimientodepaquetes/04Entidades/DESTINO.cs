@@ -16,7 +16,7 @@ namespace _04Entidades
     {
         public DESTINO()
         {
-            this.PEDIDOS = new HashSet<PEDIDO>();
+            this.PEDIDOS = new HashSet<PEDIDOS>();
         }
     
         public int IDDESTINO { get; set; }
@@ -24,6 +24,6 @@ namespace _04Entidades
         public string CIUDAD { get; set; }
         public int IMPUESTO { get; set; }
     
-        public virtual ICollection<PEDIDO> PEDIDOS { get; set; }
+        public virtual ICollection<PEDIDOS> PEDIDOS { get; set; }
     }
 }
