@@ -168,7 +168,7 @@
             this.MenuLateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuLateral.Location = new System.Drawing.Point(0, 35);
             this.MenuLateral.Name = "MenuLateral";
-            this.MenuLateral.Size = new System.Drawing.Size(130, 265);
+            this.MenuLateral.Size = new System.Drawing.Size(130, 355);
             this.MenuLateral.TabIndex = 5;
             // 
             // pictureBox3
@@ -229,14 +229,14 @@
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(130, 35);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(520, 265);
+            this.panelContenedor.Size = new System.Drawing.Size(520, 355);
             this.panelContenedor.TabIndex = 6;
             // 
             // Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(650, 300);
+            this.ClientSize = new System.Drawing.Size(650, 390);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.MenuLateral);
             this.Controls.Add(this.Barratitulo);

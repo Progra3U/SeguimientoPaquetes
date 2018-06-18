@@ -13,10 +13,12 @@ namespace _01Presentacion
 {
     public partial class Cliente : Form
     {
-        public Cliente(string nombre)
+        string codigo;
+        public Cliente(string nombre, string cod)
         {
             InitializeComponent();
             lblTipoUsuario.Text = nombre;
+            this.codigo = cod;
         }
 
         #region Barratitulo
@@ -99,12 +101,12 @@ namespace _01Presentacion
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new Cliente_Pedido());
+            AbrirFormularioHijo(new Cliente_Pedido(codigo));
         }
 
         private void btnDoPedido_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new Cliente_DoPedido());
+            AbrirFormularioHijo(new Cliente_DoPedido(codigo));
         }
 
         #endregion

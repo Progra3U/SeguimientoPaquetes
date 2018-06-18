@@ -1,4 +1,4 @@
-Ventana princial de Admin:
+Dimensiones de Ventanas:
 principal
 650, 390
 
@@ -10,7 +10,7 @@ panel lateral
 
 panelcontenedor
 520, 355
-
+------------------------------
 Venta Secunadria de Admin:
 principal
 520, 355
@@ -20,31 +20,6 @@ barra arriba
 
 panel central
 520, 320
-
-
-////////////////////////////
-Ventana princial de Clientes Y usuarios:
-principal
-650,300
-
-barra arriba
-650,35
-
-panel lateral
-130, 265
-
-panelcontenedor
-520, 265
-
-Venta Secunadria de Clientes Y usuarios:
-principal
-520, 265
-
-barra arriba
-520,35
-
-panel central
-520, 230
 
 
 /////////////////////////////

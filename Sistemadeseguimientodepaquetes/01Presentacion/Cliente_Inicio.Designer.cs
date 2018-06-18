@@ -45,7 +45,7 @@
             this.panelCentral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCentral.Location = new System.Drawing.Point(0, 35);
             this.panelCentral.Name = "panelCentral";
-            this.panelCentral.Size = new System.Drawing.Size(520, 230);
+            this.panelCentral.Size = new System.Drawing.Size(520, 320);
             this.panelCentral.TabIndex = 6;
             // 
             // lblTipoUsuario
@@ -53,11 +53,11 @@
             this.lblTipoUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblTipoUsuario.AutoSize = true;
             this.lblTipoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoUsuario.Location = new System.Drawing.Point(12, 197);
+            this.lblTipoUsuario.Location = new System.Drawing.Point(12, 287);
             this.lblTipoUsuario.Name = "lblTipoUsuario";
-            this.lblTipoUsuario.Size = new System.Drawing.Size(66, 24);
+            this.lblTipoUsuario.Size = new System.Drawing.Size(145, 24);
             this.lblTipoUsuario.TabIndex = 0;
-            this.lblTipoUsuario.Text = "label1";
+            this.lblTipoUsuario.Text = "lblTipoUsuario";
             // 
             // BarraTitulo
             // 
@@ -84,7 +84,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(520, 265);
+            this.ClientSize = new System.Drawing.Size(520, 355);
             this.Controls.Add(this.panelCentral);
             this.Controls.Add(this.BarraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

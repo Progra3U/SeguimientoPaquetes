@@ -12,9 +12,11 @@ namespace _01Presentacion
 {
     public partial class Cliente_DoPedido : Form
     {
-        public Cliente_DoPedido()
+        public Cliente_DoPedido(string codigo)
         {
             InitializeComponent();
+            txtIdUsuario.Text = codigo;
         }
+
     }
 }
