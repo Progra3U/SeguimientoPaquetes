@@ -21,7 +21,8 @@ namespace _01Presentacion
         #region Barratitulo
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            //Application.Exit();
+            this.Close();new FormLogin().Show();
         }
 
         private void btnMaximizar_Click(object sender, EventArgs e)
