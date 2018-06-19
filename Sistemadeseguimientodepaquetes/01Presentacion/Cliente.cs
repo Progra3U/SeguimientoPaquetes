@@ -19,6 +19,7 @@ namespace _01Presentacion
             InitializeComponent();
             lblTipoUsuario.Text = nombre;
             this.codigo = cod;
+            AbrirFormularioHijo(new Cliente_Inicio(lblTipoUsuario.Text));
         }
 
         #region Barratitulo

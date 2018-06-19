@@ -17,6 +17,7 @@ namespace _01Presentacion
         {
             InitializeComponent();
             lblTipoUsuario.Text = nombre;
+            AbrirFormularioHijo(new Administrador_Inicio(lblTipoUsuario.Text));
         }
         #region Barratitulo
         private void btnCerrar_Click(object sender, EventArgs e)
