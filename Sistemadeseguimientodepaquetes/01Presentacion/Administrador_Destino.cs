@@ -92,7 +92,7 @@ namespace _01Presentacion
             try
             {
                 _02LogicadeNegocios.Logica.ModificarDato(processoBase());
-                MessageBox.Show("Usuario Editado");
+                MessageBox.Show("Destino Editado");
                 Limpiar(); this.Close();
             }
             catch (Exception ex)
@@ -107,7 +107,7 @@ namespace _01Presentacion
             try
             {
                 _02LogicadeNegocios.Logica.EliminarDato(processoBase());
-                MessageBox.Show("Usuario Borrado");
+                MessageBox.Show("Destino Borrado");
                 Limpiar(); this.Close();
             }
             catch (Exception ex)

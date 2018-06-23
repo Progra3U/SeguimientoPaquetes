@@ -59,6 +59,8 @@ namespace _01Presentacion
             try
             {
                 _02LogicadeNegocios.Logica.EliminarDato(processoBase());
+                MessageBox.Show("Envio Borrado");
+                Limpiar(); this.Close();
             }
             catch (Exception ex)
             {
@@ -71,6 +73,8 @@ namespace _01Presentacion
             try
             {
                 _02LogicadeNegocios.Logica.ModificarDato(processoBase());
+                MessageBox.Show("Envio Editado");
+                Limpiar(); this.Close();
             }
             catch (Exception ex)
             {

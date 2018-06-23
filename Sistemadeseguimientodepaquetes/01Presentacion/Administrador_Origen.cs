@@ -90,6 +90,8 @@ namespace _01Presentacion
             try
             {
                 _02LogicadeNegocios.Logica.ModificarDato(processoBase());
+                MessageBox.Show("Origen Editado");
+                Limpiar(); this.Close();
             }
             catch (Exception ex)
             {
@@ -102,6 +104,8 @@ namespace _01Presentacion
             try
             {
                 _02LogicadeNegocios.Logica.EliminarDato(processoBase());
+                MessageBox.Show("Origen Eliminado");
+                Limpiar(); this.Close();
             }
             catch (Exception ex)
             {

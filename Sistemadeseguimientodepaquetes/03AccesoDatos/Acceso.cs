@@ -69,6 +69,10 @@ namespace _03AccesoDatos
                 cmd.Connection = objConexion; //asgnacion de la conexion
                 cmd.CommandText = objPeticion.PETICION; //Asignamos la peticion a ejecutar
                 cmd.CommandType = System.Data.CommandType.Text; //determinamos el tipo de data
+                if (objPeticion.LSTPARAMETROS.Count > 0)
+                {
+                    cmd.Parameters.AddRange(objPeticion.LSTPARAMETROS.ToArray());
+                }
                 ABRIR(); //abrimos la conexion
                 return cmd.ExecuteNonQuery(); //Ejecutamos la peticion almacenada en cmd.CommandText
             }

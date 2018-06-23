@@ -11,7 +11,7 @@ panel lateral
 panelcontenedor
 520, 355
 ------------------------------
-Venta Secunadria de Admin:
+Ventas Secundarias
 principal
 520, 355
 

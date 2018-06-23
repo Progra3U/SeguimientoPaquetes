@@ -53,10 +53,7 @@ namespace _01Presentacion
             pago.DESC_PAGO = txtDescPago.Text.Trim();
             return pago;
         }
-        private void label2_Click(object sender, EventArgs e)
-        {
-            
-        }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             try
@@ -91,6 +88,8 @@ namespace _01Presentacion
             try
             {
                 _02LogicadeNegocios.Logica.ModificarDato(processoBase());
+                MessageBox.Show("Pago Editado");
+                Limpiar(); this.Close();
             }
             catch (Exception ex)
             {
@@ -103,6 +102,8 @@ namespace _01Presentacion
             try
             {
                 _02LogicadeNegocios.Logica.EliminarDato(processoBase());
+                MessageBox.Show("Pago Eliminado");
+                Limpiar(); this.Close();
             }
             catch (Exception ex)
             {
