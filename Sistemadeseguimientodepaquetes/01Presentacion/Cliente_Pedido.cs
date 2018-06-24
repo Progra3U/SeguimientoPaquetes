@@ -23,8 +23,8 @@ namespace _01Presentacion
         #region Metodo Limpiar
         public void Limpiar()
         {
-            txtIdUsuario.Text = "";
-            txtIdUsuario.Text = "";
+            txtIdPedido.Text = "";
+            //txtIdUsuario.Text = "";
             txtIdPaisOrigen.Text = "";
             txtIdPaisDestino.Text = "";
             txtIdPago.Text = "";
@@ -47,7 +47,7 @@ namespace _01Presentacion
                  despues retornar el resultado y cargarlo al datagrid*/
                 PEDIDOS pedidoIdUser = new PEDIDOS();
                 pedidoIdUser.IDUSUARIO = Convert.ToInt32(txtIdUsuario.Text.Trim());
-                List<PEDIDOS> lstPedidos = Logica.BuscarDatoU(pedidoIdUser);
+                List<PEDIDOS> lstPedidos = Logica.BuscarDatoA(pedidoIdUser);
 
                 this.dataGrid.DataSource = lstPedidos;
                 this.dataGrid.Refresh();
@@ -126,7 +126,7 @@ namespace _01Presentacion
                 {
                     PEDIDOS pedidoIdUser = new PEDIDOS();
                     pedidoIdUser.IDPEDIDO = Convert.ToInt32(txtIdPedido.Text.Trim());
-                    List<PEDIDOS> lstPedidos = _02LogicadeNegocios.Logica.BuscarDatoP(pedidoIdUser);
+                    List<PEDIDOS> lstPedidos = _02LogicadeNegocios.Logica.BuscarDatoB(pedidoIdUser);
                     this.dataGrid.DataSource = lstPedidos;
                     this.dataGrid.Refresh();
                 }
@@ -136,6 +136,7 @@ namespace _01Presentacion
             {
                 MessageBox.Show("Error al Buscar el Id pedido" + ex.Message);
             }
+            Limpiar();
         }
     }
 }

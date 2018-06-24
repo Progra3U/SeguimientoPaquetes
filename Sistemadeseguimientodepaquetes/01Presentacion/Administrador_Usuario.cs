@@ -88,7 +88,7 @@ namespace _01Presentacion
                 {
                     USUARIOS pedidoIdUser = new USUARIOS();
                     pedidoIdUser.IDUSUARIO = Convert.ToInt32(txtIdUsuario.Text.Trim());
-                    List<USUARIOS> lstPedidos = _02LogicadeNegocios.Logica.BuscarDatoID(pedidoIdUser);
+                    List<USUARIOS> lstPedidos = _02LogicadeNegocios.Logica.BuscarDatoA(pedidoIdUser);
                     this.dataGrid.DataSource = lstPedidos;
                     this.dataGrid.Refresh();
 
@@ -97,7 +97,7 @@ namespace _01Presentacion
                 {
                     USUARIOS pedidoIdUser = new USUARIOS();
                     pedidoIdUser.ALIAS = txtAlias.Text.Trim();
-                    List<USUARIOS> lstPedidos = _02LogicadeNegocios.Logica.BuscarDatoA(pedidoIdUser);
+                    List<USUARIOS> lstPedidos = _02LogicadeNegocios.Logica.BuscarDatoB(pedidoIdUser);
                     this.dataGrid.DataSource = lstPedidos;
                     this.dataGrid.Refresh();
                 }

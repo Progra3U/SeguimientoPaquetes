@@ -148,14 +148,29 @@ namespace _02LogicadeNegocios
                     throw ex;
                 }
             } 
-            public static void BuscarDato(DESTINO destino) //Metodo para Buscar informacion en la tabla DESTINO
+            public static List<DESTINO> BuscarDatoA(DESTINO destino) //Metodo para Buscar informacion en la tabla DESTINO
             {
                 try
                 {
                     SQLSentencia sentencia = new SQLSentencia();
-                    sentencia.PETICION = @"";
+                    sentencia.PETICION = @"SELECT * FROM DESTINO WHERE IDDESTINO='" + destino.IDDESTINO + "'";
+                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                    return objAcceso.Obtener_Destino(sentencia);
+                }
+                catch (Exception e)
+                {
+
+                    throw e;
+                }
+            }
+            public static List<DESTINO> BuscarDatoB(DESTINO destino) //Metodo para Buscar informacion en la tabla DESTINO
+            {
+                try
+                {
+                    SQLSentencia sentencia = new SQLSentencia();
+                    sentencia.PETICION = @"SELECT * FROM DESTINO WHERE PAIS='" + destino.PAIS + "'";
                     _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                    objAcceso.EjecutarSentencia(sentencia);
+                    return objAcceso.Obtener_Destino(sentencia);
                 }
                 catch (Exception e)
                 {
@@ -164,10 +179,10 @@ namespace _02LogicadeNegocios
                 }
             }
 
-            #endregion
+        #endregion
 
             #region Metodos Para Tabla ENVIO 
-            public static void GuardarDato(ENVIO envio) //Metodo para Agregar informacion a la tabla Envio
+        public static void GuardarDato(ENVIO envio) //Metodo para Agregar informacion a la tabla Envio
             {
                 try
                 {
@@ -871,7 +886,7 @@ namespace _02LogicadeNegocios
                         throw ex;
                     }
                 }
-                public static List<PEDIDOS> BuscarDatoU(PEDIDOS pedido) //Metodo para Buscar informacion en la tabla DESTINO
+                public static List<PEDIDOS> BuscarDatoA(PEDIDOS pedido) //Metodo para Buscar informacion en la tabla DESTINO
                 {
                     /*Metodo recibe un parametro objeto PEDIDOS que viene de Presentacion con un campo pedido.IDUSUARIO
                      para realizar la bussqueda y el retorno de una lista, este metodo es transacionado por el acceso a datos
@@ -888,7 +903,7 @@ namespace _02LogicadeNegocios
                         throw ex;
                     }
                 }
-                public static List<PEDIDOS> BuscarDatoP(PEDIDOS pedido) //Metodo para Buscar informacion en la tabla DESTINO
+                public static List<PEDIDOS> BuscarDatoB(PEDIDOS pedido) //Metodo para Buscar informacion en la tabla DESTINO
                 {
                     /*Metodo recibe un parametro objeto PEDIDOS que viene de Presentacion con un campo pedido.IDPEDIDO
                         para realizar la bussqueda y el retorno de una lista, este metodo es transacionado por el acceso a datos
@@ -1057,7 +1072,7 @@ namespace _02LogicadeNegocios
                     throw ex;
                 }
             }
-            public static List<USUARIOS> BuscarDatoID(USUARIOS user) //Metodo para Buscar informacion en la tabla DESTINO
+            public static List<USUARIOS> BuscarDatoA(USUARIOS user) //Metodo para Buscar informacion en la tabla DESTINO
             {
                 try
                 {
@@ -1072,7 +1087,7 @@ namespace _02LogicadeNegocios
                     throw e;
                 }
             }
-            public static List<USUARIOS> BuscarDatoA(USUARIOS user) //Metodo para Buscar informacion en la tabla DESTINO
+            public static List<USUARIOS> BuscarDatoB(USUARIOS user) //Metodo para Buscar informacion en la tabla DESTINO
             {
                 try
                 {

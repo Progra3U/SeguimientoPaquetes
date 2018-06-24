@@ -79,12 +79,33 @@ namespace _01Presentacion
         {
             try
             {
-                //Agregar proceso
+                if (!txtIdDestino.Text.Equals(""))
+                {
+                    DESTINO pedidoIdUser = new DESTINO();
+                    pedidoIdUser.IDDESTINO = Convert.ToInt32(txtIdDestino.Text.Trim());
+                    List<DESTINO> lstPedidos = _02LogicadeNegocios.Logica.BuscarDatoA(pedidoIdUser);
+                    this.dataGrid.DataSource = lstPedidos;
+                    this.dataGrid.Refresh();
+
+                }
+                else if (!txtPais.Text.Equals(""))
+                {
+                    DESTINO pedidoIdUser = new DESTINO();
+                    pedidoIdUser.PAIS = txtPais.Text.Trim();
+                    List<DESTINO> lstPedidos = _02LogicadeNegocios.Logica.BuscarDatoB(pedidoIdUser);
+                    this.dataGrid.DataSource = lstPedidos;
+                    this.dataGrid.Refresh();
+                }
+                else if (txtIdDestino.Text.Equals("") && txtPais.Text.Equals(""))
+                {
+                    CargarDestinos();
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al Buscar Datos de Tabla Destino" + ex.Message);
             }
+            Limpiar();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
