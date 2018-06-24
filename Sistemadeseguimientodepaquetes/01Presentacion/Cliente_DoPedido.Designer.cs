@@ -31,9 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cliente_DoPedido));
             this.icono = new System.Windows.Forms.PictureBox();
             this.panelCentral = new System.Windows.Forms.Panel();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboPago = new System.Windows.Forms.ComboBox();
+            this.comboEnvio = new System.Windows.Forms.ComboBox();
+            this.comboDestino = new System.Windows.Forms.ComboBox();
+            this.comboOrigen = new System.Windows.Forms.ComboBox();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.txtIdEstado = new System.Windows.Forms.TextBox();
@@ -50,7 +51,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.btnGuardar = new System.Windows.Forms.PictureBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.icono)).BeginInit();
             this.panelCentral.SuspendLayout();
             this.BarraTitulo.SuspendLayout();
@@ -70,10 +70,10 @@
             // panelCentral
             // 
             this.panelCentral.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelCentral.Controls.Add(this.comboBox3);
-            this.panelCentral.Controls.Add(this.comboBox4);
-            this.panelCentral.Controls.Add(this.comboBox2);
-            this.panelCentral.Controls.Add(this.comboBox1);
+            this.panelCentral.Controls.Add(this.comboPago);
+            this.panelCentral.Controls.Add(this.comboEnvio);
+            this.panelCentral.Controls.Add(this.comboDestino);
+            this.panelCentral.Controls.Add(this.comboOrigen);
             this.panelCentral.Controls.Add(this.txtTotal);
             this.panelCentral.Controls.Add(this.txtDescripcion);
             this.panelCentral.Controls.Add(this.txtIdEstado);
@@ -94,32 +94,53 @@
             this.panelCentral.Size = new System.Drawing.Size(520, 320);
             this.panelCentral.TabIndex = 9;
             // 
-            // comboBox4
+            // comboPago
             // 
-            this.comboBox4.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(299, 122);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(181, 27);
-            this.comboBox4.TabIndex = 67;
+            this.comboPago.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboPago.FormattingEnabled = true;
+            this.comboPago.Items.AddRange(new object[] {
+            "TERRESTRE",
+            "MARITIMO",
+            "AEREO"});
+            this.comboPago.Location = new System.Drawing.Point(98, 122);
+            this.comboPago.Name = "comboPago";
+            this.comboPago.Size = new System.Drawing.Size(181, 28);
+            this.comboPago.TabIndex = 69;
             // 
-            // comboBox2
+            // comboEnvio
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(98, 70);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(382, 27);
-            this.comboBox2.TabIndex = 65;
+            this.comboEnvio.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboEnvio.FormattingEnabled = true;
+            this.comboEnvio.Items.AddRange(new object[] {
+            "TARJETA CREDITO",
+            "TARJETA DEBITO",
+            "EFECTIVO"});
+            this.comboEnvio.Location = new System.Drawing.Point(299, 122);
+            this.comboEnvio.Name = "comboEnvio";
+            this.comboEnvio.Size = new System.Drawing.Size(181, 28);
+            this.comboEnvio.TabIndex = 67;
             // 
-            // comboBox1
+            // comboDestino
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(98, 37);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(382, 27);
-            this.comboBox1.TabIndex = 64;
+            this.comboDestino.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboDestino.FormattingEnabled = true;
+            this.comboDestino.Items.AddRange(new object[] {
+            "Alabama (AL)"});
+            this.comboDestino.Location = new System.Drawing.Point(98, 70);
+            this.comboDestino.Name = "comboDestino";
+            this.comboDestino.Size = new System.Drawing.Size(382, 28);
+            this.comboDestino.TabIndex = 65;
+            // 
+            // comboOrigen
+            // 
+            this.comboOrigen.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboOrigen.FormattingEnabled = true;
+            this.comboOrigen.Items.AddRange(new object[] {
+            "Alabama (AL)"});
+            this.comboOrigen.Location = new System.Drawing.Point(98, 37);
+            this.comboOrigen.Name = "comboOrigen";
+            this.comboOrigen.Size = new System.Drawing.Size(382, 28);
+            this.comboOrigen.TabIndex = 64;
             // 
             // txtTotal
             // 
@@ -129,6 +150,7 @@
             this.txtTotal.ReadOnly = true;
             this.txtTotal.Size = new System.Drawing.Size(136, 27);
             this.txtTotal.TabIndex = 63;
+            this.txtTotal.Text = "5000";
             // 
             // txtDescripcion
             // 
@@ -146,6 +168,7 @@
             this.txtIdEstado.ReadOnly = true;
             this.txtIdEstado.Size = new System.Drawing.Size(303, 27);
             this.txtIdEstado.TabIndex = 58;
+            this.txtIdEstado.Text = "PROCESANDO";
             // 
             // txtIdUsuario
             // 
@@ -162,7 +185,7 @@
             this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(9, 163);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(104, 19);
+            this.label9.Size = new System.Drawing.Size(104, 20);
             this.label9.TabIndex = 55;
             this.label9.Text = "Desc Pedido:";
             // 
@@ -172,7 +195,7 @@
             this.label8.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(7, 12);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(86, 19);
+            this.label8.Size = new System.Drawing.Size(86, 20);
             this.label8.TabIndex = 54;
             this.label8.Text = "Id Usuario:";
             // 
@@ -182,7 +205,7 @@
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(8, 40);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 19);
+            this.label7.Size = new System.Drawing.Size(63, 20);
             this.label7.TabIndex = 53;
             this.label7.Text = "Origen:";
             // 
@@ -192,7 +215,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(8, 70);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 19);
+            this.label5.Size = new System.Drawing.Size(69, 20);
             this.label5.TabIndex = 52;
             this.label5.Text = "Destino:";
             // 
@@ -202,7 +225,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(295, 100);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 19);
+            this.label4.Size = new System.Drawing.Size(87, 20);
             this.label4.TabIndex = 51;
             this.label4.Text = "Tipo Pago:";
             // 
@@ -212,7 +235,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(94, 100);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 19);
+            this.label3.Size = new System.Drawing.Size(86, 20);
             this.label3.TabIndex = 50;
             this.label3.Text = "tipo Envio:";
             // 
@@ -222,7 +245,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 277);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 19);
+            this.label2.Size = new System.Drawing.Size(146, 20);
             this.label2.TabIndex = 49;
             this.label2.Text = "Estado del pedido:";
             // 
@@ -232,7 +255,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(273, 236);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 19);
+            this.label1.Size = new System.Drawing.Size(50, 20);
             this.label1.TabIndex = 48;
             this.label1.Text = "Total:";
             // 
@@ -251,7 +274,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(12, 236);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 19);
+            this.label6.Size = new System.Drawing.Size(83, 20);
             this.label6.TabIndex = 46;
             this.label6.Text = "Pedido  #:";
             // 
@@ -276,15 +299,7 @@
             this.btnGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnGuardar.TabIndex = 5;
             this.btnGuardar.TabStop = false;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(98, 122);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(181, 27);
-            this.comboBox3.TabIndex = 69;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // Cliente_DoPedido
             // 
@@ -325,9 +340,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtIdPedido;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboEnvio;
+        private System.Windows.Forms.ComboBox comboDestino;
+        private System.Windows.Forms.ComboBox comboOrigen;
+        private System.Windows.Forms.ComboBox comboPago;
     }
 }

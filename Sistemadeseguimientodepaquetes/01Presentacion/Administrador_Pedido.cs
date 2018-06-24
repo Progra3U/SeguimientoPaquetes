@@ -54,16 +54,29 @@ namespace _01Presentacion
         public PEDIDOS processoBase()
         {
             PEDIDOS pedido = new PEDIDOS();
-            pedido.IDPEDIDO = Convert.ToInt16(txtIdPedido.Text.Trim());
-            pedido.IDUSUARIO = Convert.ToInt16(txtIdUsuario.Text.Trim());
-            pedido.IDORIGEN = Convert.ToInt16(txtIdOrigen.Text.Trim());
-            pedido.IDDESTINO = Convert.ToInt16(txtIdDestino.Text.Trim());
-            pedido.IDPAGO = Convert.ToInt16(txtIdPago.Text.Trim());
-            pedido.IDENVIO = Convert.ToInt16(txtIdEnvio.Text.Trim());
-            pedido.IDESTADO = Convert.ToInt16(txtIdEstado.Text.Trim());
-            pedido.TOTAL = Convert.ToInt16(txtTotal.Text.Trim());
+            pedido.IDPEDIDO = Convert.ToInt32(txtIdPedido.Text.Trim());
+            pedido.IDUSUARIO = Convert.ToInt32(txtIdUsuario.Text.Trim());
+            pedido.IDORIGEN = txtIdOrigen.Text.Trim();
+            pedido.IDDESTINO = txtIdDestino.Text.Trim();
+            pedido.IDPAGO = txtIdPago.Text.Trim();
+            pedido.IDENVIO = txtIdEnvio.Text.Trim();
+            pedido.IDESTADO = txtIdEstado.Text.Trim();
+            pedido.TOTAL = Convert.ToInt32(txtTotal.Text.Trim());
             pedido.DESCRIPCION = txtDescripcion.Text.Trim();
             return pedido;
+        }
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _02LogicadeNegocios.Logica.EliminarDato(processoBase());
+                MessageBox.Show("Pedido Borrado");
+                Limpiar(); this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al Elminar Datos de Tabla Destino" + ex.Message);
+            }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -71,21 +84,35 @@ namespace _01Presentacion
             try
             {
                 PEDIDOS pedido = new PEDIDOS();
-                pedido.IDUSUARIO = Convert.ToInt16(txtIdUsuario.Text.Trim());
-                pedido.IDORIGEN = Convert.ToInt16(txtIdOrigen.Text.Trim());
-                pedido.IDDESTINO = Convert.ToInt16(txtIdDestino.Text.Trim());
-                pedido.IDPAGO = Convert.ToInt16(txtIdPago.Text.Trim());
-                pedido.IDENVIO = Convert.ToInt16(txtIdEnvio.Text.Trim());
-                pedido.IDESTADO = Convert.ToInt16(txtIdEstado.Text.Trim());
-                pedido.TOTAL = Convert.ToInt16(txtTotal.Text.Trim());
+                pedido.IDUSUARIO = Convert.ToInt32(txtIdUsuario.Text.Trim());
+                pedido.IDORIGEN = txtIdOrigen.Text.Trim();
+                pedido.IDDESTINO = txtIdDestino.Text.Trim();
+                pedido.IDPAGO = txtIdPago.Text.Trim();
+                pedido.IDENVIO = txtIdEnvio.Text.Trim();
+                pedido.IDESTADO = txtIdEstado.Text.Trim();
+                pedido.TOTAL = Convert.ToInt32(txtTotal.Text.Trim());
                 pedido.DESCRIPCION = txtDescripcion.Text.Trim();
                 _02LogicadeNegocios.Logica.GuardarDato(pedido);
-                MessageBox.Show("Usuario Agregado");
+                MessageBox.Show("Pedido Agregado");
                 Limpiar(); this.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al Guardar Datos en Tabla Destino" + ex.Message);
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _02LogicadeNegocios.Logica.ModificarDato(processoBase());
+                MessageBox.Show("Pedido Editado");
+                Limpiar(); this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al Editar Datos de Tabla Destino" + ex.Message);
             }
         }
 
@@ -99,40 +126,6 @@ namespace _01Presentacion
             {
                 MessageBox.Show("Error al Buscar Datos de Tabla Destino" + ex.Message);
             }
-        }
-
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                _02LogicadeNegocios.Logica.ModificarDato(processoBase());
-                MessageBox.Show("Usuario Editado");
-                Limpiar(); this.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al Editar Datos de Tabla Destino" + ex.Message);
-            }
-
-        }
-
-        private void btnBorrar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                _02LogicadeNegocios.Logica.EliminarDato(processoBase());
-                MessageBox.Show("Usuario Borrado");
-                Limpiar(); this.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al Elminar Datos de Tabla Destino" + ex.Message); 
-            }
-
-        }
-        private void btnBuscar_Click_1(object sender, EventArgs e)
-        {
-
         }
         #endregion
 
@@ -148,7 +141,7 @@ namespace _01Presentacion
         {
             try
             {
-                txtIdUsuario.Text = dataGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtIdPedido.Text = dataGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
                 txtIdUsuario.Text = dataGrid.Rows[e.RowIndex].Cells[1].Value.ToString();
                 txtIdOrigen.Text = dataGrid.Rows[e.RowIndex].Cells[2].Value.ToString();
                 txtIdDestino.Text = dataGrid.Rows[e.RowIndex].Cells[3].Value.ToString();

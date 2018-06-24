@@ -16,19 +16,12 @@ namespace _04Entidades
     {
         public int IDPEDIDO { get; set; }
         public int IDUSUARIO { get; set; }
-        public int IDORIGEN { get; set; }
-        public int IDDESTINO { get; set; }
-        public int IDPAGO { get; set; }
-        public int IDENVIO { get; set; }
-        public int IDESTADO { get; set; }
+        public string IDORIGEN { get; set; }
+        public string IDDESTINO { get; set; }
+        public string IDPAGO { get; set; }
+        public string IDENVIO { get; set; }
+        public string IDESTADO { get; set; }
         public int TOTAL { get; set; }
         public string DESCRIPCION { get; set; }
-    
-        public virtual DESTINO DESTINO { get; set; }
-        public virtual ENVIO ENVIO { get; set; }
-        public virtual ESTADO ESTADO { get; set; }
-        public virtual ORIGEN ORIGEN { get; set; }
-        public virtual PAGO PAGO { get; set; }
-        public virtual USUARIOS USUARIO { get; set; }
     }
 }

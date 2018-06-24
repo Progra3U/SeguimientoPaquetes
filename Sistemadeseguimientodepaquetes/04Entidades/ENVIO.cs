@@ -14,15 +14,8 @@ namespace _04Entidades
     
     public partial class ENVIO
     {
-        public ENVIO()
-        {
-            this.PEDIDOS = new HashSet<PEDIDOS>();
-        }
-    
         public int IDENVIO { get; set; }
         public string DESC_ENVIO { get; set; }
         public int PRECIO_ENVIO { get; set; }
-    
-        public virtual ICollection<PEDIDOS> PEDIDOS { get; set; }
     }
 }

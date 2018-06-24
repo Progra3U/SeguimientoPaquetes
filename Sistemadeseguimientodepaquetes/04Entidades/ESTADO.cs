@@ -14,14 +14,7 @@ namespace _04Entidades
     
     public partial class ESTADO
     {
-        public ESTADO()
-        {
-            this.PEDIDOS = new HashSet<PEDIDOS>();
-        }
-    
         public int IDESTADO { get; set; }
         public string DESC_ESTADO { get; set; }
-    
-        public virtual ICollection<PEDIDOS> PEDIDOS { get; set; }
     }
 }

@@ -14,15 +14,8 @@ namespace _04Entidades
     
     public partial class ORIGEN
     {
-        public ORIGEN()
-        {
-            this.PEDIDOS = new HashSet<PEDIDOS>();
-        }
-    
         public int IDORIGEN { get; set; }
         public string PAIS { get; set; }
         public string CIUDAD { get; set; }
-    
-        public virtual ICollection<PEDIDOS> PEDIDOS { get; set; }
     }
 }

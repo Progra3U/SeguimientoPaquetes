@@ -14,16 +14,9 @@ namespace _04Entidades
     
     public partial class DESTINO
     {
-        public DESTINO()
-        {
-            this.PEDIDOS = new HashSet<PEDIDOS>();
-        }
-    
         public int IDDESTINO { get; set; }
         public string PAIS { get; set; }
         public string CIUDAD { get; set; }
         public int IMPUESTO { get; set; }
-    
-        public virtual ICollection<PEDIDOS> PEDIDOS { get; set; }
     }
 }

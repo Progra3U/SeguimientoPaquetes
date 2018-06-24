@@ -295,11 +295,11 @@ namespace _03AccesoDatos
                         PEDIDOS objPedido = new PEDIDOS();
                         objPedido.IDPEDIDO = Convert.ToInt32(item.ItemArray[0].ToString());
                         objPedido.IDUSUARIO = Convert.ToInt32(item.ItemArray[1].ToString());
-                        objPedido.IDORIGEN = Convert.ToInt32(item.ItemArray[2].ToString());
-                        objPedido.IDDESTINO = Convert.ToInt32(item.ItemArray[3].ToString());
-                        objPedido.IDPAGO = Convert.ToInt32(item.ItemArray[4].ToString());
-                        objPedido.IDENVIO = Convert.ToInt32(item.ItemArray[5].ToString());
-                        objPedido.IDESTADO = Convert.ToInt32(item.ItemArray[6].ToString());
+                        objPedido.IDORIGEN = item.ItemArray[2].ToString();
+                        objPedido.IDDESTINO = item.ItemArray[3].ToString();
+                        objPedido.IDPAGO = item.ItemArray[4].ToString();
+                        objPedido.IDENVIO = item.ItemArray[5].ToString();
+                        objPedido.IDESTADO = item.ItemArray[6].ToString();
                         objPedido.TOTAL = Convert.ToInt32(item.ItemArray[7].ToString());
                         objPedido.DESCRIPCION = item.ItemArray[8].ToString();
                         lstPedidos.Add(objPedido);

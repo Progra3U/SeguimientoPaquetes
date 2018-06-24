@@ -14,14 +14,7 @@ namespace _04Entidades
     
     public partial class PAGO
     {
-        public PAGO()
-        {
-            this.PEDIDOS = new HashSet<PEDIDOS>();
-        }
-    
         public int IDPAGO { get; set; }
         public string DESC_PAGO { get; set; }
-    
-        public virtual ICollection<PEDIDOS> PEDIDOS { get; set; }
     }
 }

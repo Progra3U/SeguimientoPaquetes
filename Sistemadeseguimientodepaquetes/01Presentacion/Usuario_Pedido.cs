@@ -54,14 +54,14 @@ namespace _01Presentacion
         public PEDIDOS processoBase()
         {
             PEDIDOS pedido = new PEDIDOS();
-            pedido.IDPEDIDO = Convert.ToInt16(txtIdPedido.Text.Trim());
-            pedido.IDUSUARIO = Convert.ToInt16(txtIdUsuario.Text.Trim());
-            pedido.IDORIGEN = Convert.ToInt16(txtIdOrigen.Text.Trim());
-            pedido.IDDESTINO = Convert.ToInt16(txtIdDestino.Text.Trim());
-            pedido.IDPAGO = Convert.ToInt16(txtIdPago.Text.Trim());
-            pedido.IDENVIO = Convert.ToInt16(txtIdEnvio.Text.Trim());
-            pedido.IDESTADO = Convert.ToInt16(txtIdEstadoCB.Text.Trim());
-            pedido.TOTAL = Convert.ToInt16(txtTotal.Text.Trim());
+            pedido.IDPEDIDO = Convert.ToInt32(txtIdPedido.Text.Trim());
+            pedido.IDUSUARIO = Convert.ToInt32(txtIdUsuario.Text.Trim());
+            pedido.IDORIGEN = txtIdOrigen.Text.Trim();
+            pedido.IDDESTINO = txtIdDestino.Text.Trim();
+            pedido.IDPAGO = txtIdPago.Text.Trim();
+            pedido.IDENVIO = txtIdEnvio.Text.Trim();
+            pedido.IDESTADO = txtIdEstadoCB.Text.Trim();
+            pedido.TOTAL = Convert.ToInt32(txtTotal.Text.Trim());
             pedido.DESCRIPCION = txtDescripcion.Text.Trim();
             return pedido;
         }

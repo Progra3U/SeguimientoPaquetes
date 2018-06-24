@@ -5,19 +5,13 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="4c131064f1ae40e3bbd52e1931ee368d" Name="Diagram1">
-        <EntityTypeShape EntityType="SeguimientoPaquetesModel.DESTINO" Width="1.5" PointX="0.75" PointY="11.75" />
-        <EntityTypeShape EntityType="SeguimientoPaquetesModel.ENVIO" Width="1.5" PointX="0.75" PointY="9.25" />
-        <EntityTypeShape EntityType="SeguimientoPaquetesModel.ESTADO" Width="1.5" PointX="0.75" PointY="16.875" />
-        <EntityTypeShape EntityType="SeguimientoPaquetesModel.ORIGEN" Width="1.5" PointX="0.75" PointY="2.125" />
-        <EntityTypeShape EntityType="SeguimientoPaquetesModel.PAGO" Width="1.5" PointX="0.75" PointY="14.5" />
-        <EntityTypeShape EntityType="SeguimientoPaquetesModel.PEDIDOS" Width="1.5" PointX="3" PointY="1" />
-        <EntityTypeShape EntityType="SeguimientoPaquetesModel.USUARIOS" Width="1.5" PointX="0.75" PointY="6.125" />
-        <AssociationConnector Association="SeguimientoPaquetesModel.FK_PEDIDOS_DESTINO" />
-        <AssociationConnector Association="SeguimientoPaquetesModel.FK_PEDIDOS_ENVIO" />
-        <AssociationConnector Association="SeguimientoPaquetesModel.FK_PEDIDOS_ESTADO" />
-        <AssociationConnector Association="SeguimientoPaquetesModel.FK_PEDIDOS_ORIGEN" />
-        <AssociationConnector Association="SeguimientoPaquetesModel.FK_PEDIDOS_PAGO" />
-        <AssociationConnector Association="SeguimientoPaquetesModel.FK_PEDIDOS_USUARIOS" />
+        <EntityTypeShape EntityType="SeguimientoPaquetesModel.DESTINO" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SeguimientoPaquetesModel.ENVIO" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SeguimientoPaquetesModel.ESTADO" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="SeguimientoPaquetesModel.ORIGEN" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="SeguimientoPaquetesModel.PAGO" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SeguimientoPaquetesModel.PEDIDOS" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="SeguimientoPaquetesModel.USUARIOS" Width="1.5" PointX="6.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
