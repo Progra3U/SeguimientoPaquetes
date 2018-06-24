@@ -280,7 +280,7 @@ namespace _03AccesoDatos
 
             #region Administrador_Pedido
             public List<PEDIDOS> Obtener_Pedidos(SQLSentencia objSentencia)
-                {
+            {
                     List<PEDIDOS> lstPedidos = new List<PEDIDOS>();
                     System.Data.DataTable dt = new System.Data.DataTable();
                     try
@@ -319,6 +319,7 @@ namespace _03AccesoDatos
                     }
                     return lstPedidos;
                 }
+
             #endregion
 
             #region Administrador_Usuario

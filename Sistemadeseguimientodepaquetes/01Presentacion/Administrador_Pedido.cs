@@ -22,7 +22,7 @@ namespace _01Presentacion
         #region Metodo Limpiar
         public void Limpiar()
         {
-            txtIdUsuario.Text = "";
+            txtIdPedido.Text = "";
             txtIdUsuario.Text = "";
             txtIdPaisOrigen.Text = "";
             txtIdPaisDestino.Text = "";
@@ -127,12 +127,42 @@ namespace _01Presentacion
         {
             try
             {
-                //Agregar proceso
+                try
+                {
+                    if (!txtIdUsuario.Text.Equals(""))
+                    {
+                        PEDIDOS pedidoIdUser = new PEDIDOS();
+                        pedidoIdUser.IDUSUARIO = Convert.ToInt32(txtIdUsuario.Text.Trim());
+                        List<PEDIDOS> lstPedidos = _02LogicadeNegocios.Logica.BuscarDatoU(pedidoIdUser);
+                        this.dataGrid.DataSource = lstPedidos;
+                        this.dataGrid.Refresh();
+
+                    }
+                    else if (!txtIdPedido.Text.Equals(""))
+                    {
+                        PEDIDOS pedidoIdUser = new PEDIDOS();
+                        pedidoIdUser.IDPEDIDO = Convert.ToInt32(txtIdPedido.Text.Trim());
+                        List<PEDIDOS> lstPedidos = _02LogicadeNegocios.Logica.BuscarDatoP(pedidoIdUser);
+                        this.dataGrid.DataSource = lstPedidos;
+                        this.dataGrid.Refresh();
+                    }
+                    else if (txtIdPedido.Text.Equals("") && txtIdUsuario.Text.Equals(""))
+                    {
+                        CargarPedidos();
+                    }
+
+                }
+                catch (Exception ex)
+                {
+
+                    throw ex;
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al Buscar Datos de Tabla Destino" + ex.Message);
             }
+            Limpiar();
         }
         #endregion
 

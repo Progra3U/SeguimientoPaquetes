@@ -873,10 +873,13 @@ namespace _02LogicadeNegocios
                 }
                 public static List<PEDIDOS> BuscarDatoU(PEDIDOS pedido) //Metodo para Buscar informacion en la tabla DESTINO
                 {
+                    /*Metodo recibe un parametro objeto PEDIDOS que viene de Presentacion con un campo pedido.IDUSUARIO
+                     para realizar la bussqueda y el retorno de una lista, este metodo es transacionado por el acceso a datos
+                     en su metodo Obtener_Pedidos*/
                     try
                     {
                         SQLSentencia sentencia = new SQLSentencia();
-                        sentencia.PETICION = @"SELECT IDPEDIDO, IDUSUARIO, IDPAISORIGEN, IDPAISDESTINO, IDPAGO, IDENVIO, IDESTADO, TOTAL, DESCRIPCION, IDCIUDADDESTINO, IDCIUDADORIGEN  FROM PEDIDOS WHERE IDPEDIDO='" + pedido.IDUSUARIO+ "'";
+                        sentencia.PETICION = @"SELECT *  FROM PEDIDOS WHERE IDUSUARIO ='" + pedido.IDUSUARIO+ "'";
                         Acceso objacceso = new Acceso();
                         return objacceso.Obtener_Pedidos(sentencia);
                     }
@@ -887,10 +890,13 @@ namespace _02LogicadeNegocios
                 }
                 public static List<PEDIDOS> BuscarDatoP(PEDIDOS pedido) //Metodo para Buscar informacion en la tabla DESTINO
                 {
+                    /*Metodo recibe un parametro objeto PEDIDOS que viene de Presentacion con un campo pedido.IDPEDIDO
+                        para realizar la bussqueda y el retorno de una lista, este metodo es transacionado por el acceso a datos
+                        en su metodo Obtener_Pedidos*/
                     try
                     {
                         SQLSentencia sentencia = new SQLSentencia();
-                        sentencia.PETICION = @"SELECT IDPEDIDO, IDUSUARIO, IDPAISORIGEN, IDPAISDESTINO, IDPAGO, IDENVIO, IDESTADO, TOTAL, DESCRIPCION, IDCIUDADDESTINO, IDCIUDADORIGEN  FROM PEDIDOS WHERE IDPEDIDO='" + pedido.IDPEDIDO + "'";
+                        sentencia.PETICION = @"SELECT *  FROM PEDIDOS WHERE IDPEDIDO='" + pedido.IDPEDIDO + "'";
                         Acceso objacceso = new Acceso();
                         return objacceso.Obtener_Pedidos(sentencia);
                     }
