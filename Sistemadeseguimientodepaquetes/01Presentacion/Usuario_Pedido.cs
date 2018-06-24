@@ -24,8 +24,8 @@ namespace _01Presentacion
         {
             txtIdUsuario.Text = "";
             txtIdUsuario.Text = "";
-            txtIdOrigen.Text = "";
-            txtIdDestino.Text = "";
+            txtIdPaisOrigen.Text = "";
+            txtIdPaisDestino.Text = "";
             txtIdPago.Text = "";
             txtIdEnvio.Text = "";
             txtIdEstadoCB.Text = "";
@@ -56,13 +56,15 @@ namespace _01Presentacion
             PEDIDOS pedido = new PEDIDOS();
             pedido.IDPEDIDO = Convert.ToInt32(txtIdPedido.Text.Trim());
             pedido.IDUSUARIO = Convert.ToInt32(txtIdUsuario.Text.Trim());
-            pedido.IDORIGEN = txtIdOrigen.Text.Trim();
-            pedido.IDDESTINO = txtIdDestino.Text.Trim();
+            pedido.IDPAISORIGEN = txtIdPaisOrigen.Text.Trim();
+            pedido.IDPAISDESTINO = txtIdPaisDestino.Text.Trim();
             pedido.IDPAGO = txtIdPago.Text.Trim();
             pedido.IDENVIO = txtIdEnvio.Text.Trim();
             pedido.IDESTADO = txtIdEstadoCB.Text.Trim();
             pedido.TOTAL = Convert.ToInt32(txtTotal.Text.Trim());
             pedido.DESCRIPCION = txtDescripcion.Text.Trim();
+            pedido.IDCIUDADDESTINO = txtIdCiudadDestino.Text.Trim();
+            pedido.IDCIUDADORIGEN = txtIdCiudadOrigen.Text.Trim();
             return pedido;
         }
         private void btnGuardar_Click(object sender, EventArgs e)

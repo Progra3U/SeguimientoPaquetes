@@ -24,13 +24,15 @@ namespace _01Presentacion
         {
             txtIdUsuario.Text = "";
             txtIdUsuario.Text = "";
-            txtIdOrigen.Text = "";
-            txtIdDestino.Text = "";
+            txtIdPaisOrigen.Text = "";
+            txtIdPaisDestino.Text = "";
             txtIdPago.Text = "";
             txtIdEnvio.Text = "";
             txtIdEstado.Text = "";
             txtTotal.Text = "";
             txtDescripcion.Text = "";
+            txtIdCiudadDestino.Text = "";
+            txtIdCiudadOrigen.Text = "";
         }
         #endregion
 
@@ -56,14 +58,17 @@ namespace _01Presentacion
             PEDIDOS pedido = new PEDIDOS();
             pedido.IDPEDIDO = Convert.ToInt32(txtIdPedido.Text.Trim());
             pedido.IDUSUARIO = Convert.ToInt32(txtIdUsuario.Text.Trim());
-            pedido.IDORIGEN = txtIdOrigen.Text.Trim();
-            pedido.IDDESTINO = txtIdDestino.Text.Trim();
+            pedido.IDPAISORIGEN = txtIdPaisOrigen.Text.Trim();
+            pedido.IDPAISDESTINO = txtIdPaisDestino.Text.Trim();
             pedido.IDPAGO = txtIdPago.Text.Trim();
             pedido.IDENVIO = txtIdEnvio.Text.Trim();
             pedido.IDESTADO = txtIdEstado.Text.Trim();
             pedido.TOTAL = Convert.ToInt32(txtTotal.Text.Trim());
             pedido.DESCRIPCION = txtDescripcion.Text.Trim();
+            pedido.IDCIUDADDESTINO = txtIdCiudadDestino.Text.Trim();
+            pedido.IDCIUDADORIGEN = txtIdCiudadOrigen.Text.Trim();
             return pedido;
+
         }
         private void btnBorrar_Click(object sender, EventArgs e)
         {
@@ -85,13 +90,15 @@ namespace _01Presentacion
             {
                 PEDIDOS pedido = new PEDIDOS();
                 pedido.IDUSUARIO = Convert.ToInt32(txtIdUsuario.Text.Trim());
-                pedido.IDORIGEN = txtIdOrigen.Text.Trim();
-                pedido.IDDESTINO = txtIdDestino.Text.Trim();
+                pedido.IDPAISORIGEN = txtIdPaisOrigen.Text.Trim();
+                pedido.IDPAISDESTINO = txtIdPaisDestino.Text.Trim();
                 pedido.IDPAGO = txtIdPago.Text.Trim();
                 pedido.IDENVIO = txtIdEnvio.Text.Trim();
                 pedido.IDESTADO = txtIdEstado.Text.Trim();
                 pedido.TOTAL = Convert.ToInt32(txtTotal.Text.Trim());
                 pedido.DESCRIPCION = txtDescripcion.Text.Trim();
+                pedido.IDCIUDADDESTINO = txtIdCiudadDestino.Text.Trim();
+                pedido.IDCIUDADORIGEN = txtIdCiudadOrigen.Text.Trim();
                 _02LogicadeNegocios.Logica.GuardarDato(pedido);
                 MessageBox.Show("Pedido Agregado");
                 Limpiar(); this.Close();
@@ -143,13 +150,15 @@ namespace _01Presentacion
             {
                 txtIdPedido.Text = dataGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
                 txtIdUsuario.Text = dataGrid.Rows[e.RowIndex].Cells[1].Value.ToString();
-                txtIdOrigen.Text = dataGrid.Rows[e.RowIndex].Cells[2].Value.ToString();
-                txtIdDestino.Text = dataGrid.Rows[e.RowIndex].Cells[3].Value.ToString();
+                txtIdPaisOrigen.Text = dataGrid.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtIdPaisDestino.Text = dataGrid.Rows[e.RowIndex].Cells[3].Value.ToString();
                 txtIdPago.Text = dataGrid.Rows[e.RowIndex].Cells[4].Value.ToString();
                 txtIdEnvio.Text = dataGrid.Rows[e.RowIndex].Cells[5].Value.ToString();
                 txtIdEstado.Text = dataGrid.Rows[e.RowIndex].Cells[6].Value.ToString();
                 txtTotal.Text = dataGrid.Rows[e.RowIndex].Cells[7].Value.ToString();
                 txtDescripcion.Text = dataGrid.Rows[e.RowIndex].Cells[8].Value.ToString();
+                txtIdCiudadDestino.Text = dataGrid.Rows[e.RowIndex].Cells[9].Value.ToString();
+                txtIdCiudadOrigen.Text = dataGrid.Rows[e.RowIndex].Cells[10].Value.ToString();
             }
             catch (Exception ex)
             {

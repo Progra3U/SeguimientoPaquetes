@@ -16,12 +16,14 @@ namespace _04Entidades
     {
         public int IDPEDIDO { get; set; }
         public int IDUSUARIO { get; set; }
-        public string IDORIGEN { get; set; }
-        public string IDDESTINO { get; set; }
+        public string IDPAISORIGEN { get; set; }
+        public string IDPAISDESTINO { get; set; }
         public string IDPAGO { get; set; }
         public string IDENVIO { get; set; }
         public string IDESTADO { get; set; }
         public int TOTAL { get; set; }
         public string DESCRIPCION { get; set; }
+        public string IDCIUDADDESTINO { get; set; }
+        public string IDCIUDADORIGEN { get; set; }
     }
 }

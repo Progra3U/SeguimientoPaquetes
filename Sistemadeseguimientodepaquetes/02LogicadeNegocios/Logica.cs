@@ -671,22 +671,22 @@ namespace _02LogicadeNegocios
                     {
                         ArrayList listParametros = new ArrayList();
                         SQLSentencia sentencia = new SQLSentencia();
-                        sentencia.PETICION = @"INSERT INTO PEDIDOS VALUES (@IDUSUARIO, @IDORIGEN, @IDDESTINO, @IDPAGO, @IDENVIO, @IDESTADO, @TOTAL, @DESCRIPCION)";
+                        sentencia.PETICION = @"INSERT INTO PEDIDOS VALUES (@IDUSUARIO, @IDPAISORIGEN, @IDPAISDESTINO, @IDPAGO, @IDENVIO, @IDESTADO, @TOTAL, @DESCRIPCION, @IDCIUDADDESTINO, @IDCIUDADORIGEN)";
                         #region Parametrización
                         SqlParameter IDUSUARIO = new SqlParameter();
                         IDUSUARIO.SqlDbType = System.Data.SqlDbType.Int;
                         IDUSUARIO.ParameterName = "@IDUSUARIO";
                         IDUSUARIO.Value = pedido.IDUSUARIO;
 
-                        SqlParameter IDORIGEN = new SqlParameter();
-                        IDORIGEN.SqlDbType = System.Data.SqlDbType.NVarChar;
-                        IDORIGEN.ParameterName = "@IDORIGEN";
-                        IDORIGEN.Value = pedido.IDORIGEN;
+                        SqlParameter IDPAISORIGEN = new SqlParameter();
+                        IDPAISORIGEN.SqlDbType = System.Data.SqlDbType.NVarChar;
+                        IDPAISORIGEN.ParameterName = "@IDPAISORIGEN";
+                        IDPAISORIGEN.Value = pedido.IDPAISORIGEN;
 
-                        SqlParameter IDDESTINO = new SqlParameter();
-                        IDDESTINO.SqlDbType = System.Data.SqlDbType.NVarChar;
-                        IDDESTINO.ParameterName = "@IDDESTINO";
-                        IDDESTINO.Value = pedido.IDDESTINO;
+                        SqlParameter IDPAISDESTINO = new SqlParameter();
+                        IDPAISDESTINO.SqlDbType = System.Data.SqlDbType.NVarChar;
+                        IDPAISDESTINO.ParameterName = "@IDPAISDESTINO";
+                        IDPAISDESTINO.Value = pedido.IDPAISDESTINO;
 
                         SqlParameter IDPAGO = new SqlParameter();
                         IDPAGO.SqlDbType = System.Data.SqlDbType.NVarChar;
@@ -713,14 +713,26 @@ namespace _02LogicadeNegocios
                         DESCRIPCION.ParameterName = "@DESCRIPCION";
                         DESCRIPCION.Value = pedido.DESCRIPCION;
 
+                        SqlParameter IDCIUDADDESTINO = new SqlParameter();
+                        IDCIUDADDESTINO.SqlDbType = System.Data.SqlDbType.NVarChar;
+                        IDCIUDADDESTINO.ParameterName = "@IDCIUDADDESTINO";
+                        IDCIUDADDESTINO.Value = pedido.IDCIUDADDESTINO;
+
+                        SqlParameter IDCIUDADORIGEN = new SqlParameter();
+                        IDCIUDADORIGEN.SqlDbType = System.Data.SqlDbType.NVarChar;
+                        IDCIUDADORIGEN.ParameterName = "@IDCIUDADORIGEN";
+                        IDCIUDADORIGEN.Value = pedido.IDCIUDADORIGEN;
+
                         listParametros.Add(IDUSUARIO);
-                        listParametros.Add(IDORIGEN);
-                        listParametros.Add(IDDESTINO);
+                        listParametros.Add(IDPAISORIGEN);
+                        listParametros.Add(IDPAISDESTINO);
                         listParametros.Add(IDPAGO);
                         listParametros.Add(IDENVIO);
                         listParametros.Add(IDESTADO);
                         listParametros.Add(TOTAL);
                         listParametros.Add(DESCRIPCION);
+                        listParametros.Add(IDCIUDADDESTINO);
+                        listParametros.Add(IDCIUDADORIGEN);
 
                         sentencia.LSTPARAMETROS = listParametros;
                         #endregion
@@ -739,22 +751,22 @@ namespace _02LogicadeNegocios
                         ArrayList listParametros = new ArrayList();
                         SQLSentencia sentencia = new SQLSentencia();
                         //sentencia.PETICION = @"UPDATE PEDIDOS SET IDUSUARIO='" + pedido.IDUSUARIO + "', IDORIGEN='" + pedido.IDORIGEN + "', IDDESTINO='" + pedido.IDDESTINO + "', IDPAGO='" + pedido.IDPAGO + "', IDENVIO='" + pedido.IDENVIO + "', IDESTADO='" + pedido.IDESTADO + "', TOTAL='" + pedido.TOTAL + "', DESCRIPCION='" + pedido.DESCRIPCION + "' WHERE IDPEDIDO='" + pedido.IDPEDIDO + "'";
-                        sentencia.PETICION = @"UPDATE PEDIDOS SET IDUSUARIO= @IDUSUARIO, IDORIGEN= @IDORIGEN, IDDESTINO= @IDDESTINO, IDPAGO= @IDPAGO, IDENVIO= @IDENVIO, IDESTADO= @IDESTADO, TOTAL= @TOTAL, DESCRIPCION= @DESCRIPCION WHERE IDPEDIDO= @IDPEDIDO";
+                        sentencia.PETICION = @"UPDATE PEDIDOS SET IDUSUARIO= @IDUSUARIO, IDPAISORIGEN= @IDPAISORIGEN, IDPAISDESTINO= @IDPAISDESTINO, IDPAGO= @IDPAGO, IDENVIO= @IDENVIO, IDESTADO= @IDESTADO, TOTAL= @TOTAL, DESCRIPCION= @DESCRIPCION, IDCIUDADDESTINO= @IDCIUDADDESTINO, IDCIUDADORIGEN= @IDCIUDADORIGEN WHERE IDPEDIDO= @IDPEDIDO";
                         #region Parametrización
                         SqlParameter IDUSUARIO = new SqlParameter();
                         IDUSUARIO.SqlDbType = System.Data.SqlDbType.Int;
                         IDUSUARIO.ParameterName = "@IDUSUARIO";
                         IDUSUARIO.Value = pedido.IDUSUARIO;
 
-                        SqlParameter IDORIGEN = new SqlParameter();
-                        IDORIGEN.SqlDbType = System.Data.SqlDbType.NVarChar;
-                        IDORIGEN.ParameterName = "@IDORIGEN";
-                        IDORIGEN.Value = pedido.IDORIGEN;
+                        SqlParameter IDPAISORIGEN = new SqlParameter();
+                        IDPAISORIGEN.SqlDbType = System.Data.SqlDbType.NVarChar;
+                        IDPAISORIGEN.ParameterName = "@IDPAISORIGEN";
+                        IDPAISORIGEN.Value = pedido.IDPAISORIGEN;
 
-                        SqlParameter IDDESTINO = new SqlParameter();
-                        IDDESTINO.SqlDbType = System.Data.SqlDbType.NVarChar;
-                        IDDESTINO.ParameterName = "@IDDESTINO";
-                        IDDESTINO.Value = pedido.IDDESTINO;
+                        SqlParameter IDPAISDESTINO = new SqlParameter();
+                        IDPAISDESTINO.SqlDbType = System.Data.SqlDbType.NVarChar;
+                        IDPAISDESTINO.ParameterName = "@IDPAISDESTINO";
+                        IDPAISDESTINO.Value = pedido.IDPAISDESTINO;
 
                         SqlParameter IDPAGO = new SqlParameter();
                         IDPAGO.SqlDbType = System.Data.SqlDbType.NVarChar;
@@ -781,20 +793,32 @@ namespace _02LogicadeNegocios
                         DESCRIPCION.ParameterName = "@DESCRIPCION";
                         DESCRIPCION.Value = pedido.DESCRIPCION;
 
+                        SqlParameter IDCIUDADDESTINO = new SqlParameter();
+                        IDCIUDADDESTINO.SqlDbType = System.Data.SqlDbType.NVarChar;
+                        IDCIUDADDESTINO.ParameterName = "@IDCIUDADDESTINO";
+                        IDCIUDADDESTINO.Value = pedido.IDCIUDADDESTINO;
+
+                        SqlParameter IDCIUDADORIGEN = new SqlParameter();
+                        IDCIUDADORIGEN.SqlDbType = System.Data.SqlDbType.NVarChar;
+                        IDCIUDADORIGEN.ParameterName = "@IDCIUDADORIGEN";
+                        IDCIUDADORIGEN.Value = pedido.IDCIUDADORIGEN;
+
                         SqlParameter IDPEDIDO = new SqlParameter();
                         IDPEDIDO.SqlDbType = System.Data.SqlDbType.Int;
                         IDPEDIDO.ParameterName = "@IDPEDIDO";
                         IDPEDIDO.Value = pedido.IDPEDIDO;
 
                         listParametros.Add(IDUSUARIO);
-                        listParametros.Add(IDORIGEN);
-                        listParametros.Add(IDDESTINO);
+                        listParametros.Add(IDPAISORIGEN);
+                        listParametros.Add(IDPAISDESTINO);
                         listParametros.Add(IDPAGO);
                         listParametros.Add(IDENVIO);
                         listParametros.Add(IDESTADO);
                         listParametros.Add(TOTAL);
                         listParametros.Add(DESCRIPCION);
                         listParametros.Add(IDPEDIDO);
+                        listParametros.Add(IDCIUDADDESTINO);
+                        listParametros.Add(IDCIUDADORIGEN);
 
                         sentencia.LSTPARAMETROS = listParametros;
                         #endregion
@@ -838,7 +862,7 @@ namespace _02LogicadeNegocios
                     try
                     {
                         SQLSentencia sentencia = new SQLSentencia();
-                        sentencia.PETICION = @"SELECT IDPEDIDO, IDUSUARIO, IDORIGEN, IDDESTINO, IDPAGO, IDENVIO, IDESTADO, TOTAL, DESCRIPCION  FROM PEDIDOS";
+                        sentencia.PETICION = @"SELECT IDPEDIDO, IDUSUARIO, IDPAISORIGEN, IDPAISDESTINO, IDPAGO, IDENVIO, IDESTADO, TOTAL, DESCRIPCION, IDCIUDADDESTINO, IDCIUDADORIGEN  FROM PEDIDOS";
                         Acceso objacceso = new Acceso();
                         return objacceso.Obtener_Pedidos(sentencia);
                     }
@@ -852,7 +876,7 @@ namespace _02LogicadeNegocios
                     try
                     {
                         SQLSentencia sentencia = new SQLSentencia();
-                        sentencia.PETICION = @"SELECT IDPEDIDO, IDUSUARIO, IDORIGEN, IDDESTINO, IDPAGO, IDENVIO, IDESTADO, TOTAL, DESCRIPCION  FROM PEDIDOS WHERE IDPEDIDO='"+ pedido.IDUSUARIO+ "'";
+                        sentencia.PETICION = @"SELECT IDPEDIDO, IDUSUARIO, IDPAISORIGEN, IDPAISDESTINO, IDPAGO, IDENVIO, IDESTADO, TOTAL, DESCRIPCION, IDCIUDADDESTINO, IDCIUDADORIGEN  FROM PEDIDOS WHERE IDPEDIDO='" + pedido.IDUSUARIO+ "'";
                         Acceso objacceso = new Acceso();
                         return objacceso.Obtener_Pedidos(sentencia);
                     }
@@ -866,7 +890,7 @@ namespace _02LogicadeNegocios
                     try
                     {
                         SQLSentencia sentencia = new SQLSentencia();
-                        sentencia.PETICION = @"SELECT IDPEDIDO, IDUSUARIO, IDORIGEN, IDDESTINO, IDPAGO, IDENVIO, IDESTADO, TOTAL, DESCRIPCION  FROM PEDIDOS WHERE IDPEDIDO='" + pedido.IDPEDIDO + "'";
+                        sentencia.PETICION = @"SELECT IDPEDIDO, IDUSUARIO, IDPAISORIGEN, IDPAISDESTINO, IDPAGO, IDENVIO, IDESTADO, TOTAL, DESCRIPCION, IDCIUDADDESTINO, IDCIUDADORIGEN  FROM PEDIDOS WHERE IDPEDIDO='" + pedido.IDPEDIDO + "'";
                         Acceso objacceso = new Acceso();
                         return objacceso.Obtener_Pedidos(sentencia);
                     }

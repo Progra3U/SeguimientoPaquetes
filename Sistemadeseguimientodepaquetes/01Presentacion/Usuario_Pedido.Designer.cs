@@ -36,9 +36,9 @@
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.txtIdPago = new System.Windows.Forms.TextBox();
             this.txtIdEnvio = new System.Windows.Forms.TextBox();
-            this.txtIdOrigen = new System.Windows.Forms.TextBox();
+            this.txtIdPaisOrigen = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.txtIdDestino = new System.Windows.Forms.TextBox();
+            this.txtIdPaisDestino = new System.Windows.Forms.TextBox();
             this.txtIdUsuario = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -55,6 +55,8 @@
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.btnGuardar = new System.Windows.Forms.PictureBox();
             this.btnBuscar = new System.Windows.Forms.PictureBox();
+            this.txtIdCiudadOrigen = new System.Windows.Forms.TextBox();
+            this.txtIdCiudadDestino = new System.Windows.Forms.TextBox();
             this.panelCentral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icono)).BeginInit();
@@ -66,15 +68,17 @@
             // panelCentral
             // 
             this.panelCentral.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelCentral.Controls.Add(this.txtIdCiudadDestino);
+            this.panelCentral.Controls.Add(this.txtIdCiudadOrigen);
             this.panelCentral.Controls.Add(this.txtEleccionCB);
             this.panelCentral.Controls.Add(this.label10);
             this.panelCentral.Controls.Add(this.txtIdEstadoCB);
             this.panelCentral.Controls.Add(this.txtTotal);
             this.panelCentral.Controls.Add(this.txtIdPago);
             this.panelCentral.Controls.Add(this.txtIdEnvio);
-            this.panelCentral.Controls.Add(this.txtIdOrigen);
+            this.panelCentral.Controls.Add(this.txtIdPaisOrigen);
             this.panelCentral.Controls.Add(this.txtDescripcion);
-            this.panelCentral.Controls.Add(this.txtIdDestino);
+            this.panelCentral.Controls.Add(this.txtIdPaisDestino);
             this.panelCentral.Controls.Add(this.txtIdUsuario);
             this.panelCentral.Controls.Add(this.label9);
             this.panelCentral.Controls.Add(this.label8);
@@ -120,24 +124,24 @@
             // 
             this.txtIdEstadoCB.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdEstadoCB.FormattingEnabled = true;
-            this.txtIdEstadoCB.Location = new System.Drawing.Point(334, 103);
+            this.txtIdEstadoCB.Location = new System.Drawing.Point(334, 135);
             this.txtIdEstadoCB.Name = "txtIdEstadoCB";
-            this.txtIdEstadoCB.Size = new System.Drawing.Size(154, 28);
+            this.txtIdEstadoCB.Size = new System.Drawing.Size(137, 28);
             this.txtIdEstadoCB.TabIndex = 66;
             // 
             // txtTotal
             // 
             this.txtTotal.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(334, 136);
+            this.txtTotal.Location = new System.Drawing.Point(334, 168);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
-            this.txtTotal.Size = new System.Drawing.Size(154, 27);
+            this.txtTotal.Size = new System.Drawing.Size(137, 27);
             this.txtTotal.TabIndex = 65;
             // 
             // txtIdPago
             // 
             this.txtIdPago.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdPago.Location = new System.Drawing.Point(98, 136);
+            this.txtIdPago.Location = new System.Drawing.Point(98, 168);
             this.txtIdPago.Name = "txtIdPago";
             this.txtIdPago.ReadOnly = true;
             this.txtIdPago.Size = new System.Drawing.Size(137, 27);
@@ -146,39 +150,39 @@
             // txtIdEnvio
             // 
             this.txtIdEnvio.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdEnvio.Location = new System.Drawing.Point(98, 103);
+            this.txtIdEnvio.Location = new System.Drawing.Point(98, 135);
             this.txtIdEnvio.Name = "txtIdEnvio";
             this.txtIdEnvio.ReadOnly = true;
             this.txtIdEnvio.Size = new System.Drawing.Size(137, 27);
             this.txtIdEnvio.TabIndex = 63;
             // 
-            // txtIdOrigen
+            // txtIdPaisOrigen
             // 
-            this.txtIdOrigen.Enabled = false;
-            this.txtIdOrigen.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdOrigen.Location = new System.Drawing.Point(98, 70);
-            this.txtIdOrigen.Name = "txtIdOrigen";
-            this.txtIdOrigen.ReadOnly = true;
-            this.txtIdOrigen.Size = new System.Drawing.Size(137, 27);
-            this.txtIdOrigen.TabIndex = 62;
+            this.txtIdPaisOrigen.Enabled = false;
+            this.txtIdPaisOrigen.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdPaisOrigen.Location = new System.Drawing.Point(98, 70);
+            this.txtIdPaisOrigen.Name = "txtIdPaisOrigen";
+            this.txtIdPaisOrigen.ReadOnly = true;
+            this.txtIdPaisOrigen.Size = new System.Drawing.Size(137, 27);
+            this.txtIdPaisOrigen.TabIndex = 62;
             // 
             // txtDescripcion
             // 
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(98, 175);
+            this.txtDescripcion.Location = new System.Drawing.Point(98, 207);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.ReadOnly = true;
-            this.txtDescripcion.Size = new System.Drawing.Size(390, 27);
+            this.txtDescripcion.Size = new System.Drawing.Size(373, 27);
             this.txtDescripcion.TabIndex = 61;
             // 
-            // txtIdDestino
+            // txtIdPaisDestino
             // 
-            this.txtIdDestino.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdDestino.Location = new System.Drawing.Point(334, 70);
-            this.txtIdDestino.Name = "txtIdDestino";
-            this.txtIdDestino.ReadOnly = true;
-            this.txtIdDestino.Size = new System.Drawing.Size(154, 27);
-            this.txtIdDestino.TabIndex = 59;
+            this.txtIdPaisDestino.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdPaisDestino.Location = new System.Drawing.Point(98, 103);
+            this.txtIdPaisDestino.Name = "txtIdPaisDestino";
+            this.txtIdPaisDestino.ReadOnly = true;
+            this.txtIdPaisDestino.Size = new System.Drawing.Size(137, 27);
+            this.txtIdPaisDestino.TabIndex = 59;
             // 
             // txtIdUsuario
             // 
@@ -186,14 +190,14 @@
             this.txtIdUsuario.Location = new System.Drawing.Point(334, 36);
             this.txtIdUsuario.Name = "txtIdUsuario";
             this.txtIdUsuario.ReadOnly = true;
-            this.txtIdUsuario.Size = new System.Drawing.Size(154, 27);
+            this.txtIdUsuario.Size = new System.Drawing.Size(137, 27);
             this.txtIdUsuario.TabIndex = 58;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(40, 183);
+            this.label9.Location = new System.Drawing.Point(40, 215);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(48, 20);
             this.label9.TabIndex = 56;
@@ -223,7 +227,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(249, 73);
+            this.label5.Location = new System.Drawing.Point(13, 106);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 20);
             this.label5.TabIndex = 53;
@@ -233,7 +237,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(38, 144);
+            this.label4.Location = new System.Drawing.Point(38, 176);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 20);
             this.label4.TabIndex = 52;
@@ -243,7 +247,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(36, 111);
+            this.label3.Location = new System.Drawing.Point(36, 143);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 20);
             this.label3.TabIndex = 51;
@@ -253,7 +257,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(256, 111);
+            this.label2.Location = new System.Drawing.Point(256, 143);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 20);
             this.label2.TabIndex = 50;
@@ -263,7 +267,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(265, 144);
+            this.label1.Location = new System.Drawing.Point(265, 176);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 20);
             this.label1.TabIndex = 49;
@@ -292,9 +296,9 @@
             // 
             this.dataGrid.AllowUserToOrderColumns = true;
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid.Location = new System.Drawing.Point(3, 207);
+            this.dataGrid.Location = new System.Drawing.Point(3, 240);
             this.dataGrid.Name = "dataGrid";
-            this.dataGrid.Size = new System.Drawing.Size(514, 106);
+            this.dataGrid.Size = new System.Drawing.Size(514, 73);
             this.dataGrid.TabIndex = 46;
             // 
             // icono
@@ -343,6 +347,25 @@
             this.btnBuscar.TabStop = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // txtIdCiudadOrigen
+            // 
+            this.txtIdCiudadOrigen.Enabled = false;
+            this.txtIdCiudadOrigen.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdCiudadOrigen.Location = new System.Drawing.Point(334, 73);
+            this.txtIdCiudadOrigen.Name = "txtIdCiudadOrigen";
+            this.txtIdCiudadOrigen.ReadOnly = true;
+            this.txtIdCiudadOrigen.Size = new System.Drawing.Size(137, 27);
+            this.txtIdCiudadOrigen.TabIndex = 69;
+            // 
+            // txtIdCiudadDestino
+            // 
+            this.txtIdCiudadDestino.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdCiudadDestino.Location = new System.Drawing.Point(334, 106);
+            this.txtIdCiudadDestino.Name = "txtIdCiudadDestino";
+            this.txtIdCiudadDestino.ReadOnly = true;
+            this.txtIdCiudadDestino.Size = new System.Drawing.Size(137, 27);
+            this.txtIdCiudadDestino.TabIndex = 70;
+            // 
             // Usuario_Pedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -375,9 +398,9 @@
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.TextBox txtIdPago;
         private System.Windows.Forms.TextBox txtIdEnvio;
-        private System.Windows.Forms.TextBox txtIdOrigen;
+        private System.Windows.Forms.TextBox txtIdPaisOrigen;
         private System.Windows.Forms.TextBox txtDescripcion;
-        private System.Windows.Forms.TextBox txtIdDestino;
+        private System.Windows.Forms.TextBox txtIdPaisDestino;
         private System.Windows.Forms.TextBox txtIdUsuario;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -393,5 +416,7 @@
         private System.Windows.Forms.ComboBox txtIdEstadoCB;
         private System.Windows.Forms.ComboBox txtEleccionCB;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtIdCiudadDestino;
+        private System.Windows.Forms.TextBox txtIdCiudadOrigen;
     }
 }

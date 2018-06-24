@@ -50,13 +50,15 @@
           </Key>
           <Property Name="IDPEDIDO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IDUSUARIO" Type="int" Nullable="false" />
-          <Property Name="IDORIGEN" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="IDDESTINO" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IDPAISORIGEN" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IDPAISDESTINO" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="IDPAGO" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="IDENVIO" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="IDESTADO" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="TOTAL" Type="int" Nullable="false" />
           <Property Name="DESCRIPCION" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IDCIUDADDESTINO" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IDCIUDADORIGEN" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="USUARIOS">
           <Key>
@@ -136,13 +138,15 @@
           </Key>
           <Property Name="IDPEDIDO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IDUSUARIO" Type="Int32" Nullable="false" />
-          <Property Name="IDORIGEN" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="IDDESTINO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IDPAISORIGEN" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IDPAISDESTINO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="IDPAGO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="IDENVIO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="IDESTADO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="TOTAL" Type="Int32" Nullable="false" />
           <Property Name="DESCRIPCION" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IDCIUDADDESTINO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IDCIUDADORIGEN" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="USUARIOS">
           <Key>
@@ -208,13 +212,15 @@
           <EntitySetMapping Name="PEDIDOS">
             <EntityTypeMapping TypeName="SeguimientoPaquetesModel.PEDIDOS">
               <MappingFragment StoreEntitySet="PEDIDOS">
+                <ScalarProperty Name="IDCIUDADORIGEN" ColumnName="IDCIUDADORIGEN" />
+                <ScalarProperty Name="IDCIUDADDESTINO" ColumnName="IDCIUDADDESTINO" />
                 <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
                 <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
                 <ScalarProperty Name="IDESTADO" ColumnName="IDESTADO" />
                 <ScalarProperty Name="IDENVIO" ColumnName="IDENVIO" />
                 <ScalarProperty Name="IDPAGO" ColumnName="IDPAGO" />
-                <ScalarProperty Name="IDDESTINO" ColumnName="IDDESTINO" />
-                <ScalarProperty Name="IDORIGEN" ColumnName="IDORIGEN" />
+                <ScalarProperty Name="IDPAISDESTINO" ColumnName="IDPAISDESTINO" />
+                <ScalarProperty Name="IDPAISORIGEN" ColumnName="IDPAISORIGEN" />
                 <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
                 <ScalarProperty Name="IDPEDIDO" ColumnName="IDPEDIDO" />
               </MappingFragment>

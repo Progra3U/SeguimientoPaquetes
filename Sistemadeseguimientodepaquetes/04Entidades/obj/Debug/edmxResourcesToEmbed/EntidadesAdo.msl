@@ -48,13 +48,15 @@
     <EntitySetMapping Name="PEDIDOS">
       <EntityTypeMapping TypeName="SeguimientoPaquetesModel.PEDIDOS">
         <MappingFragment StoreEntitySet="PEDIDOS">
+          <ScalarProperty Name="IDCIUDADORIGEN" ColumnName="IDCIUDADORIGEN" />
+          <ScalarProperty Name="IDCIUDADDESTINO" ColumnName="IDCIUDADDESTINO" />
           <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
           <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
           <ScalarProperty Name="IDESTADO" ColumnName="IDESTADO" />
           <ScalarProperty Name="IDENVIO" ColumnName="IDENVIO" />
           <ScalarProperty Name="IDPAGO" ColumnName="IDPAGO" />
-          <ScalarProperty Name="IDDESTINO" ColumnName="IDDESTINO" />
-          <ScalarProperty Name="IDORIGEN" ColumnName="IDORIGEN" />
+          <ScalarProperty Name="IDPAISDESTINO" ColumnName="IDPAISDESTINO" />
+          <ScalarProperty Name="IDPAISORIGEN" ColumnName="IDPAISORIGEN" />
           <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
           <ScalarProperty Name="IDPEDIDO" ColumnName="IDPEDIDO" />
         </MappingFragment>

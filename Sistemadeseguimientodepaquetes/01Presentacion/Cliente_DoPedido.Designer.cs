@@ -31,10 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cliente_DoPedido));
             this.icono = new System.Windows.Forms.PictureBox();
             this.panelCentral = new System.Windows.Forms.Panel();
+            this.comboCiudadDestino = new System.Windows.Forms.ComboBox();
+            this.comboCiudadOrigen = new System.Windows.Forms.ComboBox();
             this.comboPago = new System.Windows.Forms.ComboBox();
             this.comboEnvio = new System.Windows.Forms.ComboBox();
-            this.comboDestino = new System.Windows.Forms.ComboBox();
-            this.comboOrigen = new System.Windows.Forms.ComboBox();
+            this.comboPaisDestino = new System.Windows.Forms.ComboBox();
+            this.comboPaisOrigen = new System.Windows.Forms.ComboBox();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.txtIdEstado = new System.Windows.Forms.TextBox();
@@ -70,10 +72,12 @@
             // panelCentral
             // 
             this.panelCentral.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelCentral.Controls.Add(this.comboCiudadDestino);
+            this.panelCentral.Controls.Add(this.comboCiudadOrigen);
             this.panelCentral.Controls.Add(this.comboPago);
             this.panelCentral.Controls.Add(this.comboEnvio);
-            this.panelCentral.Controls.Add(this.comboDestino);
-            this.panelCentral.Controls.Add(this.comboOrigen);
+            this.panelCentral.Controls.Add(this.comboPaisDestino);
+            this.panelCentral.Controls.Add(this.comboPaisOrigen);
             this.panelCentral.Controls.Add(this.txtTotal);
             this.panelCentral.Controls.Add(this.txtDescripcion);
             this.panelCentral.Controls.Add(this.txtIdEstado);
@@ -93,6 +97,28 @@
             this.panelCentral.Name = "panelCentral";
             this.panelCentral.Size = new System.Drawing.Size(520, 320);
             this.panelCentral.TabIndex = 9;
+            // 
+            // comboCiudadDestino
+            // 
+            this.comboCiudadDestino.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboCiudadDestino.FormattingEnabled = true;
+            this.comboCiudadDestino.Items.AddRange(new object[] {
+            "Alabama (AL)"});
+            this.comboCiudadDestino.Location = new System.Drawing.Point(299, 70);
+            this.comboCiudadDestino.Name = "comboCiudadDestino";
+            this.comboCiudadDestino.Size = new System.Drawing.Size(181, 28);
+            this.comboCiudadDestino.TabIndex = 71;
+            // 
+            // comboCiudadOrigen
+            // 
+            this.comboCiudadOrigen.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboCiudadOrigen.FormattingEnabled = true;
+            this.comboCiudadOrigen.Items.AddRange(new object[] {
+            "Alabama (AL)"});
+            this.comboCiudadOrigen.Location = new System.Drawing.Point(299, 37);
+            this.comboCiudadOrigen.Name = "comboCiudadOrigen";
+            this.comboCiudadOrigen.Size = new System.Drawing.Size(181, 28);
+            this.comboCiudadOrigen.TabIndex = 70;
             // 
             // comboPago
             // 
@@ -120,27 +146,27 @@
             this.comboEnvio.Size = new System.Drawing.Size(181, 28);
             this.comboEnvio.TabIndex = 67;
             // 
-            // comboDestino
+            // comboPaisDestino
             // 
-            this.comboDestino.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboDestino.FormattingEnabled = true;
-            this.comboDestino.Items.AddRange(new object[] {
+            this.comboPaisDestino.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboPaisDestino.FormattingEnabled = true;
+            this.comboPaisDestino.Items.AddRange(new object[] {
             "Alabama (AL)"});
-            this.comboDestino.Location = new System.Drawing.Point(98, 70);
-            this.comboDestino.Name = "comboDestino";
-            this.comboDestino.Size = new System.Drawing.Size(382, 28);
-            this.comboDestino.TabIndex = 65;
+            this.comboPaisDestino.Location = new System.Drawing.Point(98, 70);
+            this.comboPaisDestino.Name = "comboPaisDestino";
+            this.comboPaisDestino.Size = new System.Drawing.Size(181, 28);
+            this.comboPaisDestino.TabIndex = 65;
             // 
-            // comboOrigen
+            // comboPaisOrigen
             // 
-            this.comboOrigen.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboOrigen.FormattingEnabled = true;
-            this.comboOrigen.Items.AddRange(new object[] {
+            this.comboPaisOrigen.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboPaisOrigen.FormattingEnabled = true;
+            this.comboPaisOrigen.Items.AddRange(new object[] {
             "Alabama (AL)"});
-            this.comboOrigen.Location = new System.Drawing.Point(98, 37);
-            this.comboOrigen.Name = "comboOrigen";
-            this.comboOrigen.Size = new System.Drawing.Size(382, 28);
-            this.comboOrigen.TabIndex = 64;
+            this.comboPaisOrigen.Location = new System.Drawing.Point(98, 37);
+            this.comboPaisOrigen.Name = "comboPaisOrigen";
+            this.comboPaisOrigen.Size = new System.Drawing.Size(181, 28);
+            this.comboPaisOrigen.TabIndex = 64;
             // 
             // txtTotal
             // 
@@ -341,8 +367,10 @@
         private System.Windows.Forms.TextBox txtIdPedido;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboEnvio;
-        private System.Windows.Forms.ComboBox comboDestino;
-        private System.Windows.Forms.ComboBox comboOrigen;
+        private System.Windows.Forms.ComboBox comboPaisDestino;
+        private System.Windows.Forms.ComboBox comboPaisOrigen;
         private System.Windows.Forms.ComboBox comboPago;
+        private System.Windows.Forms.ComboBox comboCiudadDestino;
+        private System.Windows.Forms.ComboBox comboCiudadOrigen;
     }
 }
