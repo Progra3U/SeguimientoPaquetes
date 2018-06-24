@@ -127,35 +127,26 @@ namespace _01Presentacion
         {
             try
             {
-                try
+                if (!txtIdUsuario.Text.Equals(""))
                 {
-                    if (!txtIdUsuario.Text.Equals(""))
-                    {
-                        PEDIDOS pedidoIdUser = new PEDIDOS();
-                        pedidoIdUser.IDUSUARIO = Convert.ToInt32(txtIdUsuario.Text.Trim());
-                        List<PEDIDOS> lstPedidos = _02LogicadeNegocios.Logica.BuscarDatoU(pedidoIdUser);
-                        this.dataGrid.DataSource = lstPedidos;
-                        this.dataGrid.Refresh();
-
-                    }
-                    else if (!txtIdPedido.Text.Equals(""))
-                    {
-                        PEDIDOS pedidoIdUser = new PEDIDOS();
-                        pedidoIdUser.IDPEDIDO = Convert.ToInt32(txtIdPedido.Text.Trim());
-                        List<PEDIDOS> lstPedidos = _02LogicadeNegocios.Logica.BuscarDatoP(pedidoIdUser);
-                        this.dataGrid.DataSource = lstPedidos;
-                        this.dataGrid.Refresh();
-                    }
-                    else if (txtIdPedido.Text.Equals("") && txtIdUsuario.Text.Equals(""))
-                    {
-                        CargarPedidos();
-                    }
+                    PEDIDOS pedidoIdUser = new PEDIDOS();
+                    pedidoIdUser.IDUSUARIO = Convert.ToInt32(txtIdUsuario.Text.Trim());
+                    List<PEDIDOS> lstPedidos = _02LogicadeNegocios.Logica.BuscarDatoU(pedidoIdUser);
+                    this.dataGrid.DataSource = lstPedidos;
+                    this.dataGrid.Refresh();
 
                 }
-                catch (Exception ex)
+                else if (!txtIdPedido.Text.Equals(""))
                 {
-
-                    throw ex;
+                    PEDIDOS pedidoIdUser = new PEDIDOS();
+                    pedidoIdUser.IDPEDIDO = Convert.ToInt32(txtIdPedido.Text.Trim());
+                    List<PEDIDOS> lstPedidos = _02LogicadeNegocios.Logica.BuscarDatoP(pedidoIdUser);
+                    this.dataGrid.DataSource = lstPedidos;
+                    this.dataGrid.Refresh();
+                }
+                else if (txtIdPedido.Text.Equals("") && txtIdUsuario.Text.Equals(""))
+                {
+                    CargarPedidos();
                 }
             }
             catch (Exception ex)

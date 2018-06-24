@@ -1057,14 +1057,29 @@ namespace _02LogicadeNegocios
                     throw ex;
                 }
             }
-            public static void BuscarDato(USUARIOS destino) //Metodo para Buscar informacion en la tabla DESTINO
+            public static List<USUARIOS> BuscarDatoID(USUARIOS user) //Metodo para Buscar informacion en la tabla DESTINO
             {
                 try
                 {
                     SQLSentencia sentencia = new SQLSentencia();
-                    sentencia.PETICION = @"";
+                    sentencia.PETICION = @"SELECT *  FROM USUARIOS WHERE IDUSUARIO ='" + user.IDUSUARIO + "'";
                     _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                    objAcceso.EjecutarSentencia(sentencia);
+                    return objAcceso.Obtener_Usuarios(sentencia);
+                }
+                catch (Exception e)
+                {
+
+                    throw e;
+                }
+            }
+            public static List<USUARIOS> BuscarDatoA(USUARIOS user) //Metodo para Buscar informacion en la tabla DESTINO
+            {
+                try
+                {
+                    SQLSentencia sentencia = new SQLSentencia();
+                    sentencia.PETICION = @"SELECT *  FROM USUARIOS WHERE ALIAS ='" + user.ALIAS + "'";
+                    _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                    return objAcceso.Obtener_Usuarios(sentencia);
                 }
                 catch (Exception e)
                 {

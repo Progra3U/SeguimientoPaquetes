@@ -185,7 +185,7 @@
             "CLIENT",
             "ADMIN",
             "USER"});
-            this.txtTipoUserCB.Location = new System.Drawing.Point(326, 74);
+            this.txtTipoUserCB.Location = new System.Drawing.Point(331, 74);
             this.txtTipoUserCB.Name = "txtTipoUserCB";
             this.txtTipoUserCB.Size = new System.Drawing.Size(177, 28);
             this.txtTipoUserCB.TabIndex = 30;
@@ -201,7 +201,7 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(273, 5);
+            this.txtNombre.Location = new System.Drawing.Point(278, 39);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(230, 27);
             this.txtNombre.TabIndex = 29;
@@ -210,7 +210,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(192, 13);
+            this.label1.Location = new System.Drawing.Point(197, 47);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 20);
             this.label1.TabIndex = 19;
@@ -228,7 +228,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(192, 46);
+            this.label2.Location = new System.Drawing.Point(197, 11);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 20);
             this.label2.TabIndex = 20;
@@ -237,7 +237,7 @@
             // txtAlias
             // 
             this.txtAlias.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAlias.Location = new System.Drawing.Point(273, 41);
+            this.txtAlias.Location = new System.Drawing.Point(278, 6);
             this.txtAlias.Name = "txtAlias";
             this.txtAlias.Size = new System.Drawing.Size(230, 27);
             this.txtAlias.TabIndex = 27;

@@ -84,12 +84,33 @@ namespace _01Presentacion
         {
             try
             {
-                //Agregar proceso
+                if (!txtIdUsuario.Text.Equals(""))
+                {
+                    USUARIOS pedidoIdUser = new USUARIOS();
+                    pedidoIdUser.IDUSUARIO = Convert.ToInt32(txtIdUsuario.Text.Trim());
+                    List<USUARIOS> lstPedidos = _02LogicadeNegocios.Logica.BuscarDatoID(pedidoIdUser);
+                    this.dataGrid.DataSource = lstPedidos;
+                    this.dataGrid.Refresh();
+
+                }
+                else if (!txtAlias.Text.Equals(""))
+                {
+                    USUARIOS pedidoIdUser = new USUARIOS();
+                    pedidoIdUser.ALIAS = txtAlias.Text.Trim();
+                    List<USUARIOS> lstPedidos = _02LogicadeNegocios.Logica.BuscarDatoA(pedidoIdUser);
+                    this.dataGrid.DataSource = lstPedidos;
+                    this.dataGrid.Refresh();
+                }
+                else if (txtIdUsuario.Text.Equals("") && txtAlias.Text.Equals(""))
+                {
+                    CargarUsuarios();
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al Buscar Datos de Tabla Destino" + ex.Message);
+                MessageBox.Show("Error al Buscar Datos de Tabla Usuarios" + ex.Message);
             }
+            Limpiar();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -105,6 +126,7 @@ namespace _01Presentacion
                 MessageBox.Show("Error al Editar Datos de Tabla Destino" + ex.Message);
             }
         }
+
         private void btnBorrar_Click(object sender, EventArgs e)
         {
             try
