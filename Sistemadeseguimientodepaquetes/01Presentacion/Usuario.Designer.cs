@@ -194,7 +194,7 @@
             // 
             // panelContenedor
             // 
-            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.panelContenedor.BackColor = System.Drawing.Color.Teal;
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(130, 35);
             this.panelContenedor.Name = "panelContenedor";

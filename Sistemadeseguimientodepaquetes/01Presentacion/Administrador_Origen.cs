@@ -55,6 +55,7 @@ namespace _01Presentacion
             origen.CIUDAD = txtCiudad.Text.Trim();
             return origen;
         }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             try
@@ -77,12 +78,33 @@ namespace _01Presentacion
         {
             try
             {
-                //Agregar proceso
+                if (!txtIdOrigen.Text.Equals(""))
+                {
+                    ORIGEN pedidoIdUser = new ORIGEN();
+                    pedidoIdUser.IDORIGEN = Convert.ToInt32(txtIdOrigen.Text.Trim());
+                    List<ORIGEN> lstPedidos = _02LogicadeNegocios.Logica.BuscarDatoA(pedidoIdUser);
+                    this.dataGrid.DataSource = lstPedidos;
+                    this.dataGrid.Refresh();
+
+                }
+                else if (!txtPais.Text.Equals(""))
+                {
+                    ORIGEN pedidoIdUser = new ORIGEN();
+                    pedidoIdUser.PAIS = txtPais.Text.Trim();
+                    List<ORIGEN> lstPedidos = _02LogicadeNegocios.Logica.BuscarDatoB(pedidoIdUser);
+                    this.dataGrid.DataSource = lstPedidos;
+                    this.dataGrid.Refresh();
+                }
+                else if (txtIdOrigen.Text.Equals("") && txtPais.Text.Equals(""))
+                {
+                    CargarOrigen();
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al Buscar Datos de Tabla Origen" + ex.Message);
             }
+            Limpiar();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)

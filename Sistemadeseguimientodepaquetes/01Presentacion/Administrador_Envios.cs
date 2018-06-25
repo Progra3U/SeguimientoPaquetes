@@ -86,12 +86,33 @@ namespace _01Presentacion
         {
             try
             {
-                //Agregar proceso
+                if (!txtIdEnvio.Text.Equals(""))
+                {
+                    ENVIO pedidoIdUser = new ENVIO();
+                    pedidoIdUser.IDENVIO = Convert.ToInt32(txtIdEnvio.Text.Trim());
+                    List<ENVIO> lstPedidos = _02LogicadeNegocios.Logica.BuscarDatoA(pedidoIdUser);
+                    this.dataGrid.DataSource = lstPedidos;
+                    this.dataGrid.Refresh();
+
+                }
+                else if (!txtDesc.Text.Equals(""))
+                {
+                    ENVIO pedidoIdUser = new ENVIO();
+                    pedidoIdUser.DESC_ENVIO = txtDesc.Text.Trim();
+                    List<ENVIO> lstPedidos = _02LogicadeNegocios.Logica.BuscarDatoB(pedidoIdUser);
+                    this.dataGrid.DataSource = lstPedidos;
+                    this.dataGrid.Refresh();
+                }
+                else if (txtIdEnvio.Text.Equals("") && txtDesc.Text.Equals(""))
+                {
+                    CargarEnvios();
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al Buscar Datos de Tabla Envio" + ex.Message);
+                MessageBox.Show("Error al Buscar Datos de Tabla Envios" + ex.Message);
             }
+            Limpiar();
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)

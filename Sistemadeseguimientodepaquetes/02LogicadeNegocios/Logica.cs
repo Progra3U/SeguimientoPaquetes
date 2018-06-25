@@ -214,7 +214,7 @@ namespace _02LogicadeNegocios
                     throw e;
                 }
             }
-            public static void ModificarDato(ENVIO envio) //Metodo para Modificar informacion en la tabla envio
+        public static void ModificarDato(ENVIO envio) //Metodo para Modificar informacion en la tabla envio
 
             {
                 try
@@ -252,9 +252,8 @@ namespace _02LogicadeNegocios
                 {
                     throw e;
                 }
-            }
-        
-            public static void EliminarDato(ENVIO envio) //Metodo para Eliminar informacion en la tabla envio
+            }  
+        public static void EliminarDato(ENVIO envio) //Metodo para Eliminar informacion en la tabla envio
 
             {
                 try
@@ -281,8 +280,7 @@ namespace _02LogicadeNegocios
                     throw e;
                 }
             }
-
-            public static List<ENVIO> obtEnvio()
+        public static List<ENVIO> obtEnvio()
             {
                 try
                 {
@@ -296,25 +294,40 @@ namespace _02LogicadeNegocios
                     throw ex;
                 }
             }
-        
-            public static void BuscarDato(ENVIO envio) //Metodo para Buscar informacion en la tabla envio
+        public static List<ENVIO> BuscarDatoA(ENVIO envio) //Metodo para Buscar informacion en la tabla envio
+        {
+            try
             {
-                try
-                {
-                    SQLSentencia sentencia = new SQLSentencia();
-                    sentencia.PETICION = @"";
-                    _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                    objAcceso.EjecutarSentencia(sentencia);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
+                SQLSentencia sentencia = new SQLSentencia();
+                sentencia.PETICION = @"SELECT * FROM ENVIO WHERE IDENVIO='" + envio.IDENVIO + "'";
+                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                return objAcceso.Obtener_Envio(sentencia);
             }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+        }
+        public static List<ENVIO> BuscarDatoB(ENVIO envio) //Metodo para Buscar informacion en la tabla envio
+        {
+            try
+            {
+                SQLSentencia sentencia = new SQLSentencia();
+                sentencia.PETICION = @"SELECT * FROM ENVIO WHERE DESC_ENVIO='" + envio.DESC_ENVIO+ "'";
+                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                return objAcceso.Obtener_Envio(sentencia);
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+        }
             #endregion
 
             #region Metodos Para Tabla ESTADO 
-            public static void GuardarDato(ESTADO estado) //Metodo para Agregar informacion a la tabla Estado
+        public static void GuardarDato(ESTADO estado) //Metodo para Agregar informacion a la tabla Estado
             {
                 try
                 {
@@ -340,8 +353,7 @@ namespace _02LogicadeNegocios
                     throw ex;
                 }
             }
-
-            public static void ModificarDato(ESTADO estado) //Metodo para Modificar informacion en la tabla Estado
+        public static void ModificarDato(ESTADO estado) //Metodo para Modificar informacion en la tabla Estado
             {
                 try
                 {
@@ -373,8 +385,7 @@ namespace _02LogicadeNegocios
                     throw ex;
                 }
             }
-
-            public static void EliminarDato(ESTADO estado) //Metodo para Eliminar informacion en la tabla Estado
+        public static void EliminarDato(ESTADO estado) //Metodo para Eliminar informacion en la tabla Estado
 
             {
                 try
@@ -401,8 +412,7 @@ namespace _02LogicadeNegocios
                     throw ex;
                 }
             }
-
-            public static List<ESTADO> obtEstado()
+        public static List<ESTADO> obtEstado()
             {
                 try
                 {
@@ -416,24 +426,40 @@ namespace _02LogicadeNegocios
                     throw ex;
                 }
             }
-            public static void BuscarDato(ESTADO estado) //Metodo para Buscar informacion en la tabla Estado
+        public static List<ESTADO> BuscarDatoA(ESTADO estado) //Metodo para Buscar informacion en la tabla estado
+        {
+            try
             {
-                try
-                {
-                    SQLSentencia sentencia = new SQLSentencia();
-                    sentencia.PETICION = @"";
-                    _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                    objAcceso.EjecutarSentencia(sentencia);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
+                SQLSentencia sentencia = new SQLSentencia();
+                sentencia.PETICION = @"SELECT * FROM ESTADO WHERE IDESTADO='" + estado.IDESTADO + "'";
+                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                return objAcceso.Obtener_Estado(sentencia);
             }
-            #endregion
+            catch (Exception e)
+            {
 
-            #region Metodos Para Tabla ORIGEN 
-            public static void GuardarDato(ORIGEN origen) //Metodo para Agregar informacion a la tabla Origen
+                throw e;
+            }
+        }
+        public static List<ESTADO> BuscarDatoB(ESTADO estado) //Metodo para Buscar informacion en la tabla envio
+        {
+            try
+            {
+                SQLSentencia sentencia = new SQLSentencia();
+                sentencia.PETICION = @"SELECT * FROM ESTADO WHERE DESC_ESTADO='" + estado.DESC_ESTADO + "'";
+                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                return objAcceso.Obtener_Estado(sentencia);
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+        }
+        #endregion
+
+        #region Metodos Para Tabla ORIGEN 
+        public static void GuardarDato(ORIGEN origen) //Metodo para Agregar informacion a la tabla Origen
             {
                 try
                 {
@@ -465,8 +491,7 @@ namespace _02LogicadeNegocios
                     throw ex;
                 }
             }
-
-            public static void ModificarDato(ORIGEN origen) //Metodo para Modificar informacion en la tabla Origen
+        public static void ModificarDato(ORIGEN origen) //Metodo para Modificar informacion en la tabla Origen
             {
                 try
                 {
@@ -503,8 +528,7 @@ namespace _02LogicadeNegocios
                     throw ex;
                 }
             }
-
-            public static void EliminarDato(ORIGEN origen) //Metodo para Eliminar informacion en la tabla origen
+        public static void EliminarDato(ORIGEN origen) //Metodo para Eliminar informacion en la tabla origen
             {
                 try
                 {
@@ -529,8 +553,7 @@ namespace _02LogicadeNegocios
                     throw ex;
                 }
             }
-
-            public static List<ORIGEN> obtOrigen()
+        public static List<ORIGEN> obtOrigen()
             {
                 try
                 {
@@ -544,26 +567,40 @@ namespace _02LogicadeNegocios
                     throw ex;
                 }
             }
-
-            public static void BuscarDato(ORIGEN origen) //Metodo para Buscar informacion en la tabla origen
-
+        public static List<ORIGEN> BuscarDatoA(ORIGEN origen) //Metodo para Buscar informacion en la tabla origen
+        {
+            try
             {
-                try
-                {
-                    SQLSentencia sentencia = new SQLSentencia();
-                    sentencia.PETICION = @"";
-                    _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                    objAcceso.EjecutarSentencia(sentencia);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
+                SQLSentencia sentencia = new SQLSentencia();
+                sentencia.PETICION = @"SELECT * FROM ORIGEN WHERE IDORIGEN='" + origen.IDORIGEN+ "'";
+                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                return objAcceso.Obtener_Origen(sentencia);
             }
-            #endregion
+            catch (Exception e)
+            {
 
-            #region Metodos Para Tabla PAGO
-            public static void GuardarDato(PAGO pago) //Metodo para Agregar informacion a la tabla Pago
+                throw e;
+            }
+        }
+        public static List<ORIGEN> BuscarDatoB(ORIGEN origen) //Metodo para Buscar informacion en la tabla origen
+        {
+            try
+            {
+                SQLSentencia sentencia = new SQLSentencia();
+                sentencia.PETICION = @"SELECT * FROM ORIGEN WHERE PAIS='" + origen.PAIS + "'";
+                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                return objAcceso.Obtener_Origen(sentencia);
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+        }
+        #endregion
+
+        #region Metodos Para Tabla PAGO
+        public static void GuardarDato(PAGO pago) //Metodo para Agregar informacion a la tabla Pago
             {
                 try
                 {
@@ -589,8 +626,7 @@ namespace _02LogicadeNegocios
                     throw ex;
                 }
             }
-        
-            public static void ModificarDato(PAGO pago) //Metodo para Modificar informacion en la tabla Pago
+        public static void ModificarDato(PAGO pago) //Metodo para Modificar informacion en la tabla Pago
             {
                 try
                 {
@@ -621,8 +657,7 @@ namespace _02LogicadeNegocios
                     throw ex;
                 }
             }
-
-            public static void EliminarDato(PAGO pago) //Metodo para Eliminar informacion en la tabla Pago
+        public static void EliminarDato(PAGO pago) //Metodo para Eliminar informacion en la tabla Pago
             {
                 try
                 {
@@ -648,8 +683,7 @@ namespace _02LogicadeNegocios
                     throw ex;
                 }
             }
-
-            public static List<PAGO> obtPago()
+        public static List<PAGO> obtPago()
             {
                 try
                 {
@@ -663,24 +697,40 @@ namespace _02LogicadeNegocios
                     throw ex;
                 }
             }
-            public static void BuscarDato(PAGO pago) //Metodo para Buscar informacion en la tabla Pago
+        public static List<PAGO> BuscarDatoA(PAGO pago) //Metodo para Buscar informacion en la tabla estado
+        {
+            try
             {
-                try
-                {
-                    SQLSentencia sentencia = new SQLSentencia();
-                    sentencia.PETICION = @"";
-                    _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                    objAcceso.EjecutarSentencia(sentencia);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
+                SQLSentencia sentencia = new SQLSentencia();
+                sentencia.PETICION = @"SELECT * FROM PAGO WHERE IDPAGO='" + pago.IDPAGO+ "'";
+                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                return objAcceso.Obtener_Pago(sentencia);
             }
-            #endregion
+            catch (Exception e)
+            {
 
-            #region Metodos Para Tabla PEDIDOS 
-                public static void GuardarDato(PEDIDOS pedido) //Metodo para Agregar informacion a la tabla DESTINO
+                throw e;
+            }
+        }
+        public static List<PAGO> BuscarDatoB(PAGO pago) //Metodo para Buscar informacion en la tabla envio
+        {
+            try
+            {
+                SQLSentencia sentencia = new SQLSentencia();
+                sentencia.PETICION = @"SELECT * FROM PAGO WHERE DESC_PAGO='" + pago.DESC_PAGO + "'";
+                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                return objAcceso.Obtener_Pago(sentencia);
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+        }
+        #endregion
+
+        #region Metodos Para Tabla PEDIDOS 
+        public static void GuardarDato(PEDIDOS pedido) //Metodo para Agregar informacion a la tabla DESTINO
                 {
                     try
                     {
@@ -759,7 +809,7 @@ namespace _02LogicadeNegocios
                         throw e;
                     }
                 }
-                public static void ModificarDato(PEDIDOS pedido) //Metodo para Modificar informacion en la tabla DESTINO
+        public static void ModificarDato(PEDIDOS pedido) //Metodo para Modificar informacion en la tabla DESTINO
                 {
                     try
                     {
@@ -846,7 +896,7 @@ namespace _02LogicadeNegocios
                         throw e;
                     }
                 }
-                public static void EliminarDato(PEDIDOS pedido) //Metodo para Eliminar informacion en la tabla DESTINO
+        public static void EliminarDato(PEDIDOS pedido) //Metodo para Eliminar informacion en la tabla DESTINO
                 {
                     try
                     {
@@ -872,7 +922,7 @@ namespace _02LogicadeNegocios
                         throw e;
                     }
                 }
-                public static List<PEDIDOS> obtPedidos()
+        public static List<PEDIDOS> obtPedidos()
                 {
                     try
                     {
@@ -886,7 +936,7 @@ namespace _02LogicadeNegocios
                         throw ex;
                     }
                 }
-                public static List<PEDIDOS> BuscarDatoA(PEDIDOS pedido) //Metodo para Buscar informacion en la tabla DESTINO
+        public static List<PEDIDOS> BuscarDatoA(PEDIDOS pedido) //Metodo para Buscar informacion en la tabla DESTINO
                 {
                     /*Metodo recibe un parametro objeto PEDIDOS que viene de Presentacion con un campo pedido.IDUSUARIO
                      para realizar la bussqueda y el retorno de una lista, este metodo es transacionado por el acceso a datos
@@ -903,7 +953,7 @@ namespace _02LogicadeNegocios
                         throw ex;
                     }
                 }
-                public static List<PEDIDOS> BuscarDatoB(PEDIDOS pedido) //Metodo para Buscar informacion en la tabla DESTINO
+        public static List<PEDIDOS> BuscarDatoB(PEDIDOS pedido) //Metodo para Buscar informacion en la tabla DESTINO
                 {
                     /*Metodo recibe un parametro objeto PEDIDOS que viene de Presentacion con un campo pedido.IDPEDIDO
                         para realizar la bussqueda y el retorno de una lista, este metodo es transacionado por el acceso a datos

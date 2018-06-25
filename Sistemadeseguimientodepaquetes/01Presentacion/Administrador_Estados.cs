@@ -46,6 +46,7 @@ namespace _01Presentacion
         #endregion
 
         #region  Botones_Guardar_Buscar_Editar_Eliminar Form Administrador_ESTADO
+
         public ESTADO processoBase()
         {
             ESTADO estado = new ESTADO();
@@ -53,6 +54,7 @@ namespace _01Presentacion
             estado.DESC_ESTADO = txtDescEstado.Text.Trim();
             return estado;
         }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             try
@@ -74,12 +76,33 @@ namespace _01Presentacion
         {
             try
             {
-                //Agregar proceso
+                if (!txtIdEstado.Text.Equals(""))
+                {
+                    ESTADO pedidoIdUser = new ESTADO();
+                    pedidoIdUser.IDESTADO = Convert.ToInt32(txtIdEstado.Text.Trim());
+                    List<ESTADO> lstPedidos = _02LogicadeNegocios.Logica.BuscarDatoA(pedidoIdUser);
+                    this.dataGrid.DataSource = lstPedidos;
+                    this.dataGrid.Refresh();
+
+                }
+                else if (!txtDescEstado.Text.Equals(""))
+                {
+                    ESTADO pedidoIdUser = new ESTADO();
+                    pedidoIdUser.DESC_ESTADO = txtDescEstado.Text.Trim();
+                    List<ESTADO> lstPedidos = _02LogicadeNegocios.Logica.BuscarDatoB(pedidoIdUser);
+                    this.dataGrid.DataSource = lstPedidos;
+                    this.dataGrid.Refresh();
+                }
+                else if (txtIdEstado.Text.Equals("") && txtDescEstado.Text.Equals(""))
+                {
+                    CargarEstados();
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al Buscar Datos de Tabla Estado" + ex.Message);
+                MessageBox.Show("Error al Buscar Datos de Tabla Estados" + ex.Message);
             }
+            Limpiar();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)

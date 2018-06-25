@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuario_Pedido));
             this.panelCentral = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.txtIdCiudadDestino = new System.Windows.Forms.TextBox();
             this.txtIdCiudadOrigen = new System.Windows.Forms.TextBox();
             this.txtEleccionCB = new System.Windows.Forms.ComboBox();
@@ -57,8 +59,6 @@
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.btnGuardar = new System.Windows.Forms.PictureBox();
             this.btnBuscar = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.panelCentral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icono)).BeginInit();
@@ -69,7 +69,7 @@
             // 
             // panelCentral
             // 
-            this.panelCentral.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelCentral.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panelCentral.Controls.Add(this.label12);
             this.panelCentral.Controls.Add(this.label11);
             this.panelCentral.Controls.Add(this.txtIdCiudadDestino);
@@ -100,6 +100,26 @@
             this.panelCentral.Name = "panelCentral";
             this.panelCentral.Size = new System.Drawing.Size(520, 320);
             this.panelCentral.TabIndex = 9;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(240, 79);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(124, 20);
+            this.label12.TabIndex = 72;
+            this.label12.Text = "Ciudad Destino:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(246, 43);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(118, 20);
+            this.label11.TabIndex = 71;
+            this.label11.Text = "Ciudad Origen:";
             // 
             // txtIdCiudadDestino
             // 
@@ -324,6 +344,7 @@
             // dataGrid
             // 
             this.dataGrid.AllowUserToOrderColumns = true;
+            this.dataGrid.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGrid.Location = new System.Drawing.Point(3, 210);
             this.dataGrid.Name = "dataGrid";
@@ -343,7 +364,7 @@
             // 
             // BarraTitulo
             // 
-            this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BarraTitulo.Controls.Add(this.btnGuardar);
             this.BarraTitulo.Controls.Add(this.icono);
             this.BarraTitulo.Controls.Add(this.btnBuscar);
@@ -376,26 +397,6 @@
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.TabStop = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(246, 43);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(118, 20);
-            this.label11.TabIndex = 71;
-            this.label11.Text = "Ciudad Origen:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(240, 79);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(124, 20);
-            this.label12.TabIndex = 72;
-            this.label12.Text = "Ciudad Destino:";
             // 
             // Usuario_Pedido
             // 

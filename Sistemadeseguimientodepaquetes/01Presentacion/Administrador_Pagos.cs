@@ -75,12 +75,33 @@ namespace _01Presentacion
         {
             try
             {
-                //Agregar proceso
+                if (!txtIdPago.Text.Equals(""))
+                {
+                   PAGO pedidoIdUser = new PAGO();
+                    pedidoIdUser.IDPAGO = Convert.ToInt32(txtIdPago.Text.Trim());
+                    List<PAGO> lstPedidos = _02LogicadeNegocios.Logica.BuscarDatoA(pedidoIdUser);
+                    this.dataGrid.DataSource = lstPedidos;
+                    this.dataGrid.Refresh();
+
+                }
+                else if (!txtIdPago.Text.Equals(""))
+                {
+                    PAGO pedidoIdUser = new PAGO();
+                    pedidoIdUser.DESC_PAGO = txtDescPago.Text.Trim();
+                    List<PAGO> lstPedidos = _02LogicadeNegocios.Logica.BuscarDatoB(pedidoIdUser);
+                    this.dataGrid.DataSource = lstPedidos;
+                    this.dataGrid.Refresh();
+                }
+                else if (txtIdPago.Text.Equals("") && txtDescPago.Text.Equals(""))
+                {
+                    CargarPago();
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al Buscar Datos de Tabla Pago" + ex.Message);
+                MessageBox.Show("Error al Buscar Datos de Tabla Pagos" + ex.Message);
             }
+            Limpiar();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
