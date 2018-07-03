@@ -8,15 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices; //para poder mover la ventana
+using _04Entidades; //referencio la solucion Entidades para recibir el nombre por parametro
 
 namespace _01Presentacion
 {
     public partial class Administrador : Form
     {
-        public Administrador(string nombre)
+        public Administrador(USUARIOS user) //cambio los parametros de recibir un [string nombre] a recibir un [USUARIOS user]
         {
             InitializeComponent();
-            lblTipoUsuario.Text = nombre;
+            //lblTipoUsuario.Text = nombre;
+            lblTipoUsuario.Text = user.NOMBRE; //asigno del objeto user su atributo nombre al lblTipoUsuario
             AbrirFormularioHijo(new Administrador_Inicio(lblTipoUsuario.Text));
         }
         #region Barratitulo

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices; //para poder mover la ventana
 using System.Data.SqlClient; //para conexion de db quitar despues de las pruebas
+using _04Entidades; //referencio la solucion Entidades para pasar el nombre por parametro
 
 namespace _01Presentacion
 {
@@ -112,6 +113,7 @@ namespace _01Presentacion
         }*/
         #endregion
 
+        #region Login
         private void btnLogin_Click(object sender, EventArgs e)
         {
             #region ProcesoLogin
@@ -121,13 +123,16 @@ namespace _01Presentacion
             //objE.typeuser = comboTipo.Text;
             dt = objLN.LNlogin(objE);
 
+            //creo objeto Usuario
+            USUARIOS user = new USUARIOS();
+            user.NOMBRE = dt.Rows[0][1].ToString(); //asigno el elemento [0][1] del dt al objeto use en su atributo nombre
 
             if (dt.Rows.Count == 1)
             {
                 this.Hide();
                 if (dt.Rows[0][4].ToString() == "ADMIN" && dt.Rows[0][5].ToString() == "ACTIVO")
                 {
-                    new Administrador(dt.Rows[0][1].ToString()).Show();
+                    new Administrador(user).Show();
                 }
                 else if (dt.Rows[0][4].ToString() == "USER" && dt.Rows[0][5].ToString() == "ACTIVO")
                 {
@@ -149,5 +154,6 @@ namespace _01Presentacion
             }
             #endregion
         }
+        #endregion
     }
 }
