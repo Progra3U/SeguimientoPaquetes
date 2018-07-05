@@ -14,11 +14,71 @@ namespace _01Presentacion
 {
     public partial class Cliente_DoPedido : Form
     {
+        int impuesto, CostEnvio; //intento de hacer que el textbox cambien
         public Cliente_DoPedido(string codigo)
         {
             InitializeComponent();
             txtIdUsuario.Text = codigo;
         }
+
+        private void CargarCombos()
+        {
+            try
+            {
+                //Listas de asignacion a combos
+                List<DESTINO> lstDestino = _02LogicadeNegocios.Logica.obtDestinos();
+                List<ORIGEN> lstOrigen = _02LogicadeNegocios.Logica.obtOrigen();
+                List<PAGO> lstPago = _02LogicadeNegocios.Logica.obtPago();
+                List<ENVIO> lstEnvio = _02LogicadeNegocios.Logica.obtEnvio();
+
+                //Asigancion del listado a la fuente de datos del elemento
+                comboPaisDestino.DataSource = lstDestino;
+                comboCiudadDestino.DataSource = lstDestino;
+                comboPaisOrigen.DataSource = lstOrigen;
+                comboCiudadOrigen.DataSource = lstOrigen;
+                comboPago.DataSource = lstPago;
+                comboEnvio.DataSource = lstEnvio;
+                comboImpuesto.DataSource = lstDestino;
+                comboCostEnvio.DataSource = lstEnvio;
+
+                //Especificacion de campos de la fuente de datos a cada caracteristica del
+                //combo. El valuemember es el valor escondido
+                comboPaisDestino.ValueMember = "IMPUESTO";
+                comboPaisDestino.DisplayMember = "PAIS";
+       
+
+                comboCiudadDestino.ValueMember = "CIUDAD";
+                comboCiudadDestino.DisplayMember = "CIUDAD";
+
+                comboPaisOrigen.ValueMember = "PAIS";
+                comboPaisOrigen.DisplayMember = "PAIS";
+                comboCiudadOrigen.ValueMember = "CIUDAD";
+                comboCiudadOrigen.DisplayMember = "CIUDAD";
+
+                comboPago.ValueMember = "DESC_PAGO";
+                comboPago.DisplayMember = "DESC_PAGO";
+
+                comboEnvio.ValueMember = "PRECIO_ENVIO";
+                comboEnvio.DisplayMember = "DESC_ENVIO";
+
+                comboImpuesto.ValueMember = "IMPUESTO";
+                comboImpuesto.DisplayMember = "IMPUESTO";
+
+                comboCostEnvio.ValueMember = "PRECIO_ENVIO";
+                comboCostEnvio.DisplayMember = "PRECIO_ENVIO";
+
+                //intento de hacer que el textbox cambien
+                impuesto = Convert.ToInt32(comboImpuesto.Text);
+                CostEnvio = Convert.ToInt32(comboCostEnvio.Text);
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
         #region Metodo Limpiar
         public void Limpiar()
         {
@@ -33,6 +93,8 @@ namespace _01Presentacion
             txtDescripcion.Text = "";
         }
         #endregion
+
+        #region Accion Botones
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             try
@@ -58,6 +120,24 @@ namespace _01Presentacion
                 MessageBox.Show("Error al Guardar Datos en Tabla Destino" + ex.Message);
             }
 
+        }
+        #endregion
+
+        private void Cliente_DoPedido_Load(object sender, EventArgs e)
+        {
+            CargarCombos();
+        }
+
+        private void button1_Click(object sender, EventArgs e) //intento de hacer que el textbox cambien
+        {
+
+            txtTotal.Text = calcular(this.impuesto, this.CostEnvio);
+        }
+
+        private string calcular(int impuesto, int CostEnvio) //intento de hacer que el textbox cambien
+        {
+            int Total = impuesto + CostEnvio;
+            return Total.ToString();
         }
     }
 }
