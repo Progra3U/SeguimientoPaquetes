@@ -8,15 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices; //para poder mover la ventana
+using _04Entidades;
 
 namespace _01Presentacion
 {
     public partial class Usuario : Form
     {
-        public Usuario(string nombre)
+        public Usuario(USUARIOS user)
         {
             InitializeComponent();
-            lblTipoUsuario.Text = nombre;
+            lblTipoUsuario.Text = user.NOMBRE;
             AbrirFormularioHijo(new Usuario_Inicio(lblTipoUsuario.Text));
         }
 

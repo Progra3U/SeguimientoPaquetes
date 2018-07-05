@@ -126,6 +126,7 @@ namespace _01Presentacion
             //creo objeto Usuario
             USUARIOS user = new USUARIOS();
             user.NOMBRE = dt.Rows[0][1].ToString(); //asigno el elemento [0][1] del dt al objeto use en su atributo nombre
+            user.IDUSUARIO = Convert.ToInt32(dt.Rows[0][0].ToString());
 
             if (dt.Rows.Count == 1)
             {
@@ -136,11 +137,11 @@ namespace _01Presentacion
                 }
                 else if (dt.Rows[0][4].ToString() == "USER" && dt.Rows[0][5].ToString() == "ACTIVO")
                 {
-                    new Usuario(dt.Rows[0][1].ToString()).Show();
+                    new Usuario(user).Show();
                 }
                 else if (dt.Rows[0][4].ToString() == "CLIENT" && dt.Rows[0][5].ToString() == "ACTIVO")
                 {
-                    new Cliente(dt.Rows[0][1].ToString(), dt.Rows[0][0].ToString()).Show();
+                    new Cliente(user).Show();
                 }
                 else
                 {
