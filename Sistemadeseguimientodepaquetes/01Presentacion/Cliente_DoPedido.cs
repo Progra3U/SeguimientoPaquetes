@@ -14,13 +14,13 @@ namespace _01Presentacion
 {
     public partial class Cliente_DoPedido : Form
     {
-        int impuesto, CostEnvio; //intento de hacer que el textbox cambien
         public Cliente_DoPedido(string codigo)
         {
             InitializeComponent();
             txtIdUsuario.Text = codigo;
         }
 
+        #region CargarCombos Metodo
         private void CargarCombos()
         {
             try
@@ -68,8 +68,8 @@ namespace _01Presentacion
                 comboCostEnvio.DisplayMember = "PRECIO_ENVIO";
 
                 //intento de hacer que el textbox cambien
-                impuesto = Convert.ToInt32(comboImpuesto.Text);
-                CostEnvio = Convert.ToInt32(comboCostEnvio.Text);
+                //impuesto = Convert.ToInt32(comboImpuesto.Text);
+                //CostEnvio = Convert.ToInt32(comboCostEnvio.Text);
 
             }
             catch (Exception ex)
@@ -78,6 +78,7 @@ namespace _01Presentacion
                 throw ex;
             }
         }
+        #endregion
 
         #region Metodo Limpiar
         public void Limpiar()
@@ -123,21 +124,22 @@ namespace _01Presentacion
         }
         #endregion
 
+        #region Cargar combos
         private void Cliente_DoPedido_Load(object sender, EventArgs e)
         {
             CargarCombos();
         }
+        #endregion
 
-        private void button1_Click(object sender, EventArgs e) //intento de hacer que el textbox cambien
+        #region Calcular Precio
+        private void btncalcular_Click(object sender, EventArgs e)
         {
-
-            txtTotal.Text = calcular(this.impuesto, this.CostEnvio);
-        }
-
-        private string calcular(int impuesto, int CostEnvio) //intento de hacer que el textbox cambien
-        {
+            //intento hacer que txtTotal.Text se modifique con el precio
+            int impuesto = Convert.ToInt32(comboImpuesto.Text);
+            int CostEnvio = Convert.ToInt32(comboCostEnvio.Text);
             int Total = impuesto + CostEnvio;
-            return Total.ToString();
+            txtTotal.Text = Total.ToString();
         }
+        #endregion
     }
 }

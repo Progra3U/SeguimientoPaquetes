@@ -52,6 +52,31 @@ namespace _01Presentacion
         }
         #endregion
 
+        #region CargarCombos Metodo
+        private void CargarCombos()
+        {
+            try
+            {
+                //Listas de asignacion a combos
+                List<ESTADO> lstEstados = _02LogicadeNegocios.Logica.obtEstado();
+
+                //Asigancion del listado a la fuente de datos del elemento
+                txtIdEstadoCB.DataSource = lstEstados;
+
+                //Especificacion de campos de la fuente de datos a cada caracteristica del
+                //combo. El valuemember es el valor escondido
+                txtIdEstadoCB.ValueMember = "IDESTADO";
+                txtIdEstadoCB.DisplayMember = "DESC_ESTADO";
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+        #endregion
+
         #region  Botones_Guardar_Buscar_Editar_Eliminar From Administrador_Pedido
         public PEDIDOS processoBase()
         {
@@ -127,6 +152,7 @@ namespace _01Presentacion
         }
         #endregion
 
+        #region eleccion de busqueda por comboBox
         private void txtEleccionCB_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (txtEleccionCB.Text.Equals("Usuario"))
@@ -141,11 +167,12 @@ namespace _01Presentacion
             }
             
         }
+        #endregion
 
         #region Evento Cargar Al Abrir
         private void Usuario_Pedido_Load(object sender, EventArgs e)
         {
-            CargarPedidos();
+            CargarPedidos(); CargarCombos();
         }
         #endregion
 

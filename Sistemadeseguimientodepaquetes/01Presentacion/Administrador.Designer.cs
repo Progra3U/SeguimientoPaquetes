@@ -198,6 +198,7 @@
             // 
             // btnEstado
             // 
+            this.btnEstado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEstado.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnEstado.FlatAppearance.BorderSize = 0;
             this.btnEstado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
@@ -224,6 +225,7 @@
             // 
             // btnPagos
             // 
+            this.btnPagos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPagos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnPagos.FlatAppearance.BorderSize = 0;
             this.btnPagos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
@@ -250,6 +252,7 @@
             // 
             // btnEnvio
             // 
+            this.btnEnvio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEnvio.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnEnvio.FlatAppearance.BorderSize = 0;
             this.btnEnvio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
@@ -276,6 +279,7 @@
             // 
             // btnOrigen
             // 
+            this.btnOrigen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOrigen.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnOrigen.FlatAppearance.BorderSize = 0;
             this.btnOrigen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
@@ -302,6 +306,7 @@
             // 
             // btnDestinos
             // 
+            this.btnDestinos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDestinos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnDestinos.FlatAppearance.BorderSize = 0;
             this.btnDestinos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
@@ -338,6 +343,7 @@
             // 
             // btnUsuarios
             // 
+            this.btnUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUsuarios.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnUsuarios.FlatAppearance.BorderSize = 0;
             this.btnUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
@@ -354,6 +360,7 @@
             // 
             // btnPedidos
             // 
+            this.btnPedidos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPedidos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnPedidos.FlatAppearance.BorderSize = 0;
             this.btnPedidos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
@@ -370,6 +377,7 @@
             // 
             // btnInicio
             // 
+            this.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInicio.Image = ((System.Drawing.Image)(resources.GetObject("btnInicio.Image")));
             this.btnInicio.Location = new System.Drawing.Point(0, 0);
             this.btnInicio.Name = "btnInicio";

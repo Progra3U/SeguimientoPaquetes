@@ -1,4 +1,4 @@
-# SeguimientoPaquetes
+﻿# SeguimientoPaquetes
 Proyecto : Sistema de seguimiento de paquetes
 Programación III , Proyecto # 1
 
@@ -20,3 +20,8 @@ Caracteristicas del Sistema:
 		a.	Listado usuarios activos
 		b.	Seguimiento de paquetes por id de cliente o codigo unico de paquete
 		c.	Informacion de register del ciente por ID o nombre.
+
+
+Proyecto realizado por:
+	Carlos Perez Medina 
+	Marcela Salas Montoya

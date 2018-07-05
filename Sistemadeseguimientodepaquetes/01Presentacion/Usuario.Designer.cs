@@ -145,6 +145,7 @@
             // 
             // btnInicio
             // 
+            this.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInicio.Image = ((System.Drawing.Image)(resources.GetObject("btnInicio.Image")));
             this.btnInicio.Location = new System.Drawing.Point(0, 0);
             this.btnInicio.Name = "btnInicio";
@@ -178,6 +179,7 @@
             // 
             // btnPedidos
             // 
+            this.btnPedidos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPedidos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnPedidos.FlatAppearance.BorderSize = 0;
             this.btnPedidos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
@@ -194,7 +196,7 @@
             // 
             // panelContenedor
             // 
-            this.panelContenedor.BackColor = System.Drawing.Color.Teal;
+            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(130, 35);
             this.panelContenedor.Name = "panelContenedor";

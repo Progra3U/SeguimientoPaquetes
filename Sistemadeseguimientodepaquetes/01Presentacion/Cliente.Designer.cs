@@ -148,6 +148,7 @@
             // 
             // btnInicio
             // 
+            this.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInicio.Image = ((System.Drawing.Image)(resources.GetObject("btnInicio.Image")));
             this.btnInicio.Location = new System.Drawing.Point(0, 0);
             this.btnInicio.Name = "btnInicio";
@@ -183,6 +184,7 @@
             // 
             // btnDoPedido
             // 
+            this.btnDoPedido.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDoPedido.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnDoPedido.FlatAppearance.BorderSize = 0;
             this.btnDoPedido.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
@@ -209,6 +211,7 @@
             // 
             // btnPedidos
             // 
+            this.btnPedidos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPedidos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnPedidos.FlatAppearance.BorderSize = 0;
             this.btnPedidos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
