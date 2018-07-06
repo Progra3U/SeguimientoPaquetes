@@ -98,8 +98,12 @@ namespace _01Presentacion
         {
             try
             {
-                _02LogicadeNegocios.Logica.ModificarDato(processoBase());
-                Limpiar(); this.Close();
+                DialogResult resultado = MessageBox.Show("Desea Modificar el pedido", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                if (resultado == DialogResult.Yes)
+                {
+                    _02LogicadeNegocios.Logica.ModificarDato(processoBase());
+                    Limpiar(); this.Close();
+                }
             }
             catch (Exception ex)
             {

@@ -64,21 +64,26 @@ namespace _01Presentacion
         {
             try
             {
-                PEDIDOS pedido = new PEDIDOS();
-                pedido.IDPEDIDO = Convert.ToInt32(txtIdPedido.Text.Trim());
-                pedido.IDUSUARIO = Convert.ToInt32(txtIdUsuario.Text.Trim());
-                pedido.IDPAISORIGEN = txtIdPaisOrigen.Text.Trim();
-                pedido.IDPAISDESTINO = txtIdPaisDestino.Text.Trim();
-                pedido.IDPAGO = txtIdPago.Text.Trim();
-                pedido.IDENVIO = txtIdEnvio.Text.Trim();
-                pedido.IDESTADO = txtIdEstado.Text.Trim();
-                pedido.TOTAL = Convert.ToInt32(txtTotal.Text.Trim());
-                pedido.DESCRIPCION = txtDescripcion.Text.Trim();
-                pedido.IDCIUDADDESTINO = txtIdCiudadDestino.Text.Trim();
-                pedido.IDCIUDADORIGEN = txtIdCiudadOrigen.Text.Trim();
-                _02LogicadeNegocios.Logica.EliminarDato(pedido);
-                MessageBox.Show("Pedido Borrado");
-                Limpiar(); this.Close();
+                DialogResult resultado = MessageBox.Show("Desea realmente eliminar el pedido", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                if (resultado == DialogResult.Yes)
+                {
+                    PEDIDOS pedido = new PEDIDOS();
+                    pedido.IDPEDIDO = Convert.ToInt32(txtIdPedido.Text.Trim());
+                    pedido.IDUSUARIO = Convert.ToInt32(txtIdUsuario.Text.Trim());
+                    pedido.IDPAISORIGEN = txtIdPaisOrigen.Text.Trim();
+                    pedido.IDPAISDESTINO = txtIdPaisDestino.Text.Trim();
+                    pedido.IDPAGO = txtIdPago.Text.Trim();
+                    pedido.IDENVIO = txtIdEnvio.Text.Trim();
+                    pedido.IDESTADO = txtIdEstado.Text.Trim();
+                    pedido.TOTAL = Convert.ToInt32(txtTotal.Text.Trim());
+                    pedido.DESCRIPCION = txtDescripcion.Text.Trim();
+                    pedido.IDCIUDADDESTINO = txtIdCiudadDestino.Text.Trim();
+                    pedido.IDCIUDADORIGEN = txtIdCiudadOrigen.Text.Trim();
+                    _02LogicadeNegocios.Logica.EliminarDato(pedido);
+                    MessageBox.Show("Pedido Borrado");
+                    Limpiar(); this.Close();
+                }
+                
             }
             catch (Exception ex)
             {

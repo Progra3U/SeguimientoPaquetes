@@ -20,11 +20,10 @@ namespace _02LogicadeNegocios
         {
             try
             {
-                return objAD.ADLogin(objE);
+                return objAD.Login(objE);
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }

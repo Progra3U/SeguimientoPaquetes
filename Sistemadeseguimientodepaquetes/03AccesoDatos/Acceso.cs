@@ -323,46 +323,46 @@ namespace _03AccesoDatos
             #endregion
 
             #region Administrador_Usuario
-                public List<USUARIOS> Obtener_Usuarios(SQLSentencia objSentencia)
+            public List<USUARIOS> Obtener_Usuarios(SQLSentencia objSentencia)
+            {
+                List<USUARIOS> lstUsuarios = new List<USUARIOS>();
+                System.Data.DataTable dt = new System.Data.DataTable();
+                try
                 {
-                    List<USUARIOS> lstUsuarios = new List<USUARIOS>();
-                    System.Data.DataTable dt = new System.Data.DataTable();
-                    try
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.CommandText = objSentencia.PETICION;
+                    cmd.Connection = objConexion;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    SqlDataAdapter objcarga = new SqlDataAdapter(cmd);
+                    objcarga.Fill(dt);
+                    foreach (System.Data.DataRow item in dt.Rows)
                     {
-                        SqlCommand cmd = new SqlCommand();
-                        cmd.CommandText = objSentencia.PETICION;
-                        cmd.Connection = objConexion;
-                        cmd.CommandType = System.Data.CommandType.Text;
-                        SqlDataAdapter objcarga = new SqlDataAdapter(cmd);
-                        objcarga.Fill(dt);
-                        foreach (System.Data.DataRow item in dt.Rows)
-                        {
-                            USUARIOS objUsuario = new USUARIOS();
-                            objUsuario.IDUSUARIO = Convert.ToInt32(item.ItemArray[0].ToString());
-                            objUsuario.NOMBRE = item.ItemArray[1].ToString();
-                            objUsuario.ALIAS = item.ItemArray[2].ToString();
-                            objUsuario.PASS = item.ItemArray[3].ToString();
-                            objUsuario.TIPO_USUARIO = item.ItemArray[4].ToString();
-                            objUsuario.ESTADO_USUARIO = item.ItemArray[5].ToString();
-                            lstUsuarios.Add(objUsuario);
-                        }
+                        USUARIOS objUsuario = new USUARIOS();
+                        objUsuario.IDUSUARIO = Convert.ToInt32(item.ItemArray[0].ToString());
+                        objUsuario.NOMBRE = item.ItemArray[1].ToString();
+                        objUsuario.ALIAS = item.ItemArray[2].ToString();
+                        objUsuario.PASS = item.ItemArray[3].ToString();
+                        objUsuario.TIPO_USUARIO = item.ItemArray[4].ToString();
+                        objUsuario.ESTADO_USUARIO = item.ItemArray[5].ToString();
+                        lstUsuarios.Add(objUsuario);
+                    }
 
-                    }
-                    catch (Exception e)
-                    {
-                        throw e;
-                    }
-                    finally
-                    {
-                        CERRAR();
-                    }
-                    return lstUsuarios;
                 }
-                #endregion
+                catch (Exception e)
+                {
+                    throw e;
+                }
+                finally
+                {
+                    CERRAR();
+                }
+                return lstUsuarios;
+            }
+            #endregion
         #endregion
 
         #region ProcesoLogin
-        public DataTable ADLogin(_04Entidades.SQLSentencia objE)
+        public DataTable Login(_04Entidades.SQLSentencia objE)
         {
             SqlCommand cmd = new SqlCommand("LOGIN", objConexion);
             cmd.CommandType = System.Data.CommandType.StoredProcedure;

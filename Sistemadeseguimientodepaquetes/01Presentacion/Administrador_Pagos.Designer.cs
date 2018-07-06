@@ -174,7 +174,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(121, 68);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 19);
+            this.label2.Size = new System.Drawing.Size(68, 20);
             this.label2.TabIndex = 43;
             this.label2.Text = "Id Pago:";
             // 
@@ -185,7 +185,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(121, 108);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 19);
+            this.label3.Size = new System.Drawing.Size(89, 20);
             this.label3.TabIndex = 42;
             this.label3.Text = "Desc Pago:";
             // 
@@ -221,7 +221,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(192, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 19);
+            this.label1.Size = new System.Drawing.Size(74, 20);
             this.label1.TabIndex = 19;
             this.label1.Text = "Nombre:";
             // 
@@ -232,7 +232,7 @@
             this.Tabla.ForeColor = System.Drawing.Color.White;
             this.Tabla.Location = new System.Drawing.Point(401, 190);
             this.Tabla.Name = "Tabla";
-            this.Tabla.Size = new System.Drawing.Size(96, 19);
+            this.Tabla.Size = new System.Drawing.Size(96, 20);
             this.Tabla.TabIndex = 25;
             this.Tabla.Text = "Tabla Pagos";
             // 
@@ -242,7 +242,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(11, 13);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 19);
+            this.label6.Size = new System.Drawing.Size(86, 20);
             this.label6.TabIndex = 24;
             this.label6.Text = "Id Usuario:";
             // 
